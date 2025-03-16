@@ -62,6 +62,40 @@
                                     "12oz": 3.50
                                 },
                                 defaultSize: "8oz"
+                            },
+                            {
+                                name: "Americano",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/36658a40f506d50b79ffeaa8ca605da8/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                description: "A rich, full-bodied coffee made with bold espresso and hot water.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 2.95,
+                                    "16oz": 3.15,
+                                    "20oz": 3.35
+                                },
+                                defaultSize: "12oz"
+                            },
+                            {
+                                name: "Cortado",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/d81e83ef548b0118e1ee0d2bb788dcc9/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                description: "A perfect balance of espresso and smooth steamed milk, in a delicate and velvety ratio.",
+                                sizes: ["6oz"],
+                                prices: {
+                                    "6oz": 3.30
+                                },
+                                defaultSize: "6oz"
+                            },
+                            {
+                                name: "Espresso",
+                                image: "https://u.cubeupload.com/ryanjhope/espresso.png",
+                                description: "Pure espresso, served in a small cup.",
+                                sizes: ["Single", "Double"],
+                                prices: {
+                                    "Single": 2.30,
+                                    "Double": 2.50
+                                },
+                                defaultSize: "Single",
+                                disableCustomization: true
                             }
                             // Add more coffee items here
                         ]
@@ -69,13 +103,123 @@
                     "specialty-coffee": {
                         title: "Specialty Coffee",
                         items: [
-                            // Add specialty coffee items here
+                            {
+                                name: "Matcha Latte",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/af107c3b5621fdc5ff25d27212f0c0bb/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                description: "Subtle, grassy flavor of green tea combined with smooth steamed milk.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.40,
+                                    "20oz": 4.60
+                                },
+                                defaultSize: "16oz"
+                            },
+                            {
+                                name: "Pistachio Cream Latte",
+                                image: "https://u.cubeupload.com/ryanjhope/CopyofpistachioIced.png",
+                                description: "Latte made with creamy pistachio butter, topped with sauce and real pistachio crumbs.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.40,
+                                    "20oz": 4.60
+                                },
+                                defaultSize: "16oz",
+                                badge: "NEW" // Added badge
+                            }
                         ]
                     },
                     "hot-chocolate": {
                         title: "Hot Chocolate",
                         items: [
-                            // Add hot chocolate items here
+                            {
+                                name: "Crunchie Hot Chocolate",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/dcf9ea138be6a31aef3c03cd64bd25b9/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                description: "Rich chocolate and honeycomb flavouring, topped with real Crunchie.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 3.90,
+                                    "16oz": 4.10,
+                                    "20oz": 4.50
+                                },
+                                defaultSize: "12oz"
+                            }
+                        ]
+                    },
+                    "tea": {
+                        title: "Tea",
+                        items: [
+                            {
+                                name: "English Breakfast Tea",
+                                image: null, // No image provided
+                                description: "A traditional blend of black teas with a full-bodied, robust flavor.",
+                                sizes: ["16oz"], // Standard size only
+                                prices: {
+                                    "16oz": 2.60
+                                },
+                                defaultSize: "16oz",
+                                itemType: "tea", // Custom item type for tea-specific options
+                                singleSize: true // Flag to indicate this has only one size
+                            },
+                            {
+                                name: "Earl Grey",
+                                image: null,
+                                description: "Black tea infused with bergamot oil, giving it a distinctive citrus flavor.",
+                                sizes: ["16oz"],
+                                prices: {
+                                    "16oz": 2.60
+                                },
+                                defaultSize: "16oz",
+                                itemType: "herbal-tea",
+                                singleSize: true
+                            },
+                            {
+                                name: "Green Tea",
+                                image: null,
+                                description: "Light, refreshing tea with a smooth, delicate flavor.",
+                                sizes: ["16oz"],
+                                prices: {
+                                    "16oz": 2.60
+                                },
+                                defaultSize: "16oz",
+                                itemType: "herbal-tea",
+                                singleSize: true
+                            },
+                            {
+                                name: "Peppermint Tea",
+                                image: null,
+                                description: "Refreshing and cool herbal tea with a clean, minty flavor.",
+                                sizes: ["16oz"],
+                                prices: {
+                                    "16oz": 2.60
+                                },
+                                defaultSize: "16oz",
+                                itemType: "herbal-tea",
+                                singleSize: true
+                            },
+                            {
+                                name: "Lemon & Ginger Tea",
+                                image: null,
+                                description: "Warming herbal infusion of ginger and lemon, soothing and invigorating.",
+                                sizes: ["16oz"],
+                                prices: {
+                                    "16oz": 2.60
+                                },
+                                defaultSize: "16oz",
+                                itemType: "herbal-tea",
+                                singleSize: true
+                            },
+                            {
+                                name: "Blackberry & Raspberry Tea",
+                                image: null,
+                                description: "Sweet and fruity infusion with bright berry flavors.",
+                                sizes: ["16oz"],
+                                prices: {
+                                    "16oz": 2.60
+                                },
+                                defaultSize: "16oz",
+                                itemType: "herbal-tea",
+                                singleSize: true
+                            }
                         ]
                     }
                 }
@@ -87,7 +231,17 @@
                     "iced-coffee": {
                         title: "Iced Coffee",
                         items: [
-                            // Add iced coffee items here
+                            {
+                                name: "Pistachio Iced Latte",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/e06df32a1fb2dc9d9f2d92585a4937c9/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                description: "Iced Latte made with creamy and rich pistachio butter.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.10,
+                                    "20oz": 4.25
+                                },
+                                defaultSize: "16oz"
+                            }
                         ]
                     },
                     "blended-drinks": {
@@ -106,56 +260,179 @@
             },
             // Food Tab
             "food": {
-                title: "Food & Pastries",
+                title: "Food",
                 categories: {
-                    "breakfast": {
-                        title: "Breakfast",
-                        items: [
-                            // Add breakfast items here
-                        ]
-                    },
                     "pastries": {
                         title: "Pastries",
                         items: [
-                            // Add pastry items here
+                            {
+                                name: "Cinnamon Swirl",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/fb76fa210734e7d46d4708377ed7d354/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                price: 2.45,
+                                foodItem: true
+                            },
+                            {
+                                name: "Chocolate Twist",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/54e41537c0958d8a12b0c9f3f0607056/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                price: 2.50,
+                                foodItem: true
+                            },
+                            {
+                                name: "Butter Croissant",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/158df3c8bd7a25888f15dcb1bbf1f13b/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                price: 2.20,
+                                foodItem: true
+                            },
+                            {
+                                name: "Pain Aux Raisin",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/2c02391621e0537b4d36ef08d3ed9b3c/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                price: 2.45,
+                                foodItem: true
+                            },
+                            {
+                                name: "Apple Crown",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/e030340445b6f053a977cca165f3dfc4/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                price: 2.80,
+                                foodItem: true
+                            },
+                            {
+                                name: "Pistachio Croissant",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/6c48b522cc34eddbf58dfe7fb3c4b8a5/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                price: 3.45,
+                                foodItem: true,
+                                badge: "POPULAR" // Added badge
+                            },
+                            {
+                                name: "Almond Croissant",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/55bfb2ff9fed75b5a7d7e171d0686804/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                price: 2.40,
+                                foodItem: true
+                            },
+                            {
+                                name: "Large Fruit Scone",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/9f842cf2cd1e7f56511fe585a3a6b3bf/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                price: 2.50,
+                                foodItem: true
+                            },
+                            {
+                                name: "Toasted Tea Cake",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/307b37e61ae9f702391b615925d89c9b/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                price: 2.50,
+                                foodItem: true
+                            }
                         ]
                     },
-                    "lunch": {
-                        title: "Lunch",
+                    "toasties": {
+                        title: "Toasties",
                         items: [
-                            // Add lunch items here
-                        ]
-                    }
-                }
-            },
-            // Specials Tab
-            "specials": {
-                title: "Seasonal Specials",
-                categories: {
-                    "seasonal-drinks": {
-                        title: "Seasonal Drinks",
-                        items: [
-                            // Add seasonal drinks here
+                            {
+                                name: "Ham & Cheese Toastie",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/3f2ab241ff4876626d22488bb6366c97/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                price: 3.70,
+                                foodItem: true
+                            },
+                            {
+                                name: "Cheese & Onion Toastie",
+                                image: null,
+                                price: 3.70,
+                                foodItem: true
+                            },
+                            {
+                                name: "Cheese & Tomato Toastie",
+                                image: null,
+                                price: 3.70,
+                                foodItem: true
+                            },
+                            {
+                                name: "BBQ Chicken Panini",
+                                image: null,
+                                price: 4.50,
+                                foodItem: true
+                            },
+                            {
+                                name: "Sweet Chilli Chicken Panini",
+                                image: null,
+                                price: 4.50,
+                                foodItem: true
+                            },
+                            {
+                                name: "Ham & Cheese Panini",
+                                image: null,
+                                price: 4.50,
+                                foodItem: true
+                            },
+                            {
+                                name: "Ham & Cheese Croque",
+                                image: null,
+                                price: 4.50,
+                                foodItem: true
+                            },
+                            {
+                                name: "Mushroom Croque",
+                                image: null,
+                                price: 4.50,
+                                foodItem: true
+                            }
                         ]
                     },
-                    "limited-edition": {
-                        title: "Limited Edition",
+                    "cakes-treats": {
+                        title: "Cakes & Treats",
                         items: [
-                            // Add limited edition items here
-                        ]
-                    },
-                    "combo-deals": {
-                        title: "Combo Deals",
-                        items: [
-                            // Add combo deals here
+                            {
+                                name: "Honeycomb Tiffin",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/2fda9f7d2e3f4a111a9fc4295d0d35a1/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                price: 2.60,
+                                foodItem: true
+                            },
+                            {
+                                name: "Apple Slice",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/d1de5478b0e171640d594dbf19381255/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                price: 2.60,
+                                foodItem: true
+                            },
+                            {
+                                name: "Apricot Slice",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/dd850ad4d007baf753597ad302fcb851/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                price: 2.60,
+                                foodItem: true
+                            },
+                            {
+                                name: "Tiramisu Slice",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/c1ccbbc0851e35cce954540722bcbcc4/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                price: 2.60,
+                                foodItem: true
+                            },
+                            {
+                                name: "Oreo Muffin",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/e5765c394d426af12b5b32428ab2e748/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                price: 2.60,
+                                foodItem: true
+                            },
+                            {
+                                name: "Chocolate Muffin",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/e3c835a249d1dd0aa8d3e6ddf2aac756/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                price: 2.60,
+                                foodItem: true
+                            },
+                            {
+                                name: "Blueberry Muffin",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/f5e690e36716ab783ddee68fce7ed57f/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                price: 2.60,
+                                foodItem: true
+                            }
                         ]
                     }
                 }
             }
         };
         
-        // Available extras for customization
+        // Available extras for coffee and general items
         const extras = [
+            {
+                id: "decaf",
+                name: "Decaf",
+                price: 0.00
+            },
             {
                 id: "extra-shot",
                 name: "Extra Shot",
@@ -170,6 +447,29 @@
                 id: "syrup",
                 name: "Add Syrup",
                 price: 0.50
+            }
+        ];
+        
+        // Tea-specific extras (with decaf)
+        const teaExtras = [
+            {
+                id: "decaf",
+                name: "Decaf",
+                price: 0.00
+            },
+            {
+                id: "extra-tea-bag",
+                name: "Extra Tea Bag",
+                price: 0.30
+            }
+        ];
+        
+        // Herbal tea extras (without decaf, just extra tea bag)
+        const herbalTeaExtras = [
+            {
+                id: "extra-tea-bag",
+                name: "Extra Tea Bag",
+                price: 0.30
             }
         ];
         
@@ -194,6 +494,30 @@
                 id: "almond",
                 name: "Almond",
                 price: 0.50
+            }
+        ];
+        
+        // Tea-specific milk options with reduced prices
+        const teaMilkOptions = [
+            {
+                id: "soya",
+                name: "Soya",
+                price: 0.00
+            },
+            {
+                id: "oat",
+                name: "Oat",
+                price: 0.25
+            },
+            {
+                id: "coconut",
+                name: "Coconut",
+                price: 0.25
+            },
+            {
+                id: "almond",
+                name: "Almond",
+                price: 0.25
             }
         ];
     </script>
@@ -232,6 +556,7 @@
             overflow-y: auto;
             padding: 10px;
             box-sizing: border-box;
+            text-align: center;
         }
         
         /* Tab functionality */
@@ -249,6 +574,7 @@
             padding-bottom: 5px;
             border-bottom: 2px solid #f86400;
             display: inline-block;
+            text-align: center;
         }
         
         /* Responsive grid layout */
@@ -256,6 +582,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* 2 columns by default (mobile) */
             gap: 12px;
+            margin: 0 auto;
         }
         
         /* Medium screens - 3 columns */
@@ -282,6 +609,8 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             transition: all 0.2s ease;
             overflow: hidden;
+            text-align: center;
+            position: relative;
         }
         
         /* Image container - force square aspect ratio */
@@ -290,6 +619,31 @@
             width: 100%;
             padding-bottom: 100%; /* This creates a square aspect ratio */
             overflow: hidden;
+        }
+        
+        /* No image placeholder */
+        .no-image-placeholder {
+            position: relative;
+            width: 100%;
+            padding-bottom: 60%; /* Shorter than image container */
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .placeholder-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
         }
         
         /* Tile image styles - position absolute within the container */
@@ -307,72 +661,47 @@
         .item-header {
             padding: 10px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             cursor: pointer;
+            text-align: center;
+            flex-direction: column;
         }
         
         /* Make menu item name smaller to fit multiple items per row */
         .item-header h4 {
             font-size: 14px;
             margin: 0;
+            text-align: center;
         }
         
-        /* Accordion styles */
-        .item-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            padding: 0 10px;
-        }
-        
-        .menu-item.expanded .item-details {
-            max-height: 800px;
-            padding-bottom: 15px;
-        }
-        
-        /* Size and customization options */
-        .options-section {
-            margin: 15px 0;
-        }
-        
-        .section-title {
+        /* Larger name for items without images */
+        .large-name {
+            font-size: 16px;
             font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #333;
+            margin: 0 0 8px 0;
         }
         
-        /* Button grid for options */
-        .options-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        
-        /* Option button styles */
-        .option-btn {
-            font-size: 12px;
-            padding: 5px 8px;
-            border-radius: 4px;
-            background-color: #f3f4f6;
-            border: 1px solid #e5e7eb;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .option-btn.active {
-            background-color: #f86400;
+        /* Badge styling */
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
             color: white;
-            border-color: #f86400;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 12px;
+            z-index: 20;
+            text-transform: uppercase;
         }
         
-        .option-btn:hover {
-            background-color: #f9f9f9;
+        .badge-new {
+            background-color: #4CAF50; /* Green */
         }
         
-        .option-btn.active:hover {
-            background-color: #e05a00;
+        .badge-popular {
+            background-color: #FF9800; /* Orange */
         }
         
         /* Price badge */
@@ -389,12 +718,37 @@
             z-index: 10;
         }
         
+        /* Inline price badge for items without images */
+        .inline-price-badge {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        /* Food item styles */
+        .food-item-header {
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .food-item-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+        }
+        
         /* Empty category style */
         .empty-category {
             padding: 15px;
             color: #666;
             font-style: italic;
             grid-column: span 2;
+            text-align: center;
         }
         
         /* Adjust empty category span for different screen sizes */
@@ -414,6 +768,103 @@
         .item-details p {
             font-size: 12px;
             line-height: 1.4;
+            text-align: center;
+        }
+        
+        /* Center all headings */
+        h2, h3, h4 {
+            text-align: center;
+        }
+        
+        /* Notice for non-customizable items */
+        .no-customization-notice {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            margin-top: 8px;
+        }
+        
+        /* Size info for single-sized items */
+        .size-info {
+            font-size: 12px;
+            color: #666;
+            margin: 8px 0;
+        }
+        
+        /* Accordion styles */
+        .item-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 10px;
+            text-align: center;
+        }
+        
+        .menu-item.expanded .item-details {
+            max-height: 800px;
+            padding-bottom: 15px;
+        }
+        
+        /* Options section styles */
+        .options-section {
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #333;
+            text-align: center;
+        }
+        
+        /* Button grid for options */
+        .options-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+        
+        /* Option button styles */
+        .option-btn {
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            background-color: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #333;
+            font-weight: 500;
+            min-width: 60px;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .option-btn:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .option-btn.active {
+            background-color: #f86400;
+            color: white;
+            border-color: #f86400;
+        }
+        
+        .option-btn.active:hover {
+            background-color: #e05a00;
+        }
+        
+        /* Section divider */
+        .section-divider {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+            height: 2px;
+            background-color: #f0f0f0;
+            grid-column: 1 / -1;
         }
     </style>
 </head>
@@ -462,7 +913,7 @@
                 
                 // Add tab title
                 const tabTitle = document.createElement('h2');
-                tabTitle.className = 'text-2xl font-bold mb-4 text-black';
+                tabTitle.className = 'text-2xl font-bold mb-4 text-black text-center';
                 tabTitle.style.fontFamily = "'Poppins', sans-serif";
                 tabTitle.textContent = tab.title;
                 tabContent.appendChild(tabTitle);
@@ -473,7 +924,7 @@
                     
                     // Add category title
                     const categoryTitle = document.createElement('h3');
-                    categoryTitle.className = 'text-xl font-semibold text-black category-title';
+                    categoryTitle.className = 'text-xl font-semibold text-black category-title text-center mx-auto';
                     categoryTitle.style.fontFamily = "'Poppins', sans-serif";
                     categoryTitle.textContent = category.title;
                     tabContent.appendChild(categoryTitle);
@@ -485,103 +936,314 @@
                     // If no items, show "Coming soon"
                     if (category.items.length === 0) {
                         const emptyMessage = document.createElement('p');
-                        emptyMessage.className = 'empty-category';
+                        emptyMessage.className = 'empty-category text-center';
                         emptyMessage.textContent = 'Coming soon!';
                         itemsGrid.appendChild(emptyMessage);
                     } else {
-                        // Generate items
-                        category.items.forEach((item, index) => {
-                            // Generate a unique ID for this item
-                            const itemId = `${categoryId}-item-${index}`;
-                            
-                            // Create item element
-                            const itemElement = document.createElement('div');
-                            itemElement.className = 'menu-item';
-                            itemElement.id = itemId;
-                            
-                            // Create image container with price badge
-                            const imageContainer = document.createElement('div');
-                            imageContainer.className = 'image-container';
-                            
-                            // Create image
-                            const img = document.createElement('img');
-                            img.className = 'item-image';
-                            img.src = item.image;
-                            img.alt = item.name;
-                            
-                            // Create price badge
-                            const priceBadge = document.createElement('div');
-                            priceBadge.className = 'price-badge';
-                            priceBadge.textContent = `£${item.prices[item.defaultSize].toFixed(2)}`;
-                            
-                            imageContainer.appendChild(img);
-                            imageContainer.appendChild(priceBadge);
-                            
-                            // Create header with name
-                            const headerDiv = document.createElement('div');
-                            headerDiv.className = 'item-header';
-                            
-                            // Item name
-                            const itemName = document.createElement('h4');
-                            itemName.className = 'text-md font-semibold';
-                            itemName.textContent = item.name;
-                            
-                            // Item price (hidden in header when using badge)
-                            const priceSpan = document.createElement('span');
-                            priceSpan.className = 'item-price font-semibold';
-                            priceSpan.style.color = '#f86400';
-                            priceSpan.style.display = 'none'; // Hidden but used for calculations
-                            priceSpan.dataset.basePrice = item.prices[item.defaultSize];
-                            priceSpan.dataset.extras = '0.00';
-                            
-                            headerDiv.appendChild(itemName);
-                            headerDiv.appendChild(priceSpan);
-                            
-                            // Create expandable details section
-                            const detailsDiv = document.createElement('div');
-                            detailsDiv.className = 'item-details';
-                            
-                            // Description
-                            const descriptionPara = document.createElement('p');
-                            descriptionPara.className = 'text-sm text-gray-600 mt-2';
-                            descriptionPara.textContent = item.description;
-                            detailsDiv.appendChild(descriptionPara);
-                            
-                            // Size options section
-                            const sizeSection = document.createElement('div');
-                            sizeSection.className = 'options-section';
-                            
-                            // Size heading
-                            const sizeHeading = document.createElement('div');
-                            sizeHeading.className = 'section-title';
-                            sizeHeading.textContent = 'Size:';
-                            sizeSection.appendChild(sizeHeading);
-                            
-                            // Size options
-                            const sizeOptionsDiv = document.createElement('div');
-                            sizeOptionsDiv.className = 'options-grid';
-                            sizeOptionsDiv.dataset.prices = JSON.stringify(item.prices);
-                            sizeOptionsDiv.dataset.itemId = itemId;
-                            
-                            // Add size buttons
-                            item.sizes.forEach(size => {
-                                const sizeBtn = document.createElement('button');
-                                sizeBtn.className = `option-btn size-btn ${size === item.defaultSize ? 'active' : ''}`;
-                                sizeBtn.dataset.size = size;
-                                sizeBtn.textContent = size;
-                                sizeOptionsDiv.appendChild(sizeBtn);
-                            });
-                            
-                            sizeSection.appendChild(sizeOptionsDiv);
-                            detailsDiv.appendChild(sizeSection);
-                            
-                            // Extras section
+                        // Split items into those with images and those without
+                        const itemsWithImages = [];
+                        const itemsWithoutImages = [];
+                        
+                        category.items.forEach(item => {
+                            if (item.image) {
+                                itemsWithImages.push(item);
+                            } else {
+                                itemsWithoutImages.push(item);
+                            }
+                        });
+                        
+                        // First generate items with images
+                        itemsWithImages.forEach((item, index) => {
+                            const itemId = `${categoryId}-with-image-${index}`;
+                            const itemElement = createMenuItem(item, itemId, categoryId);
+                            itemsGrid.appendChild(itemElement);
+                        });
+                        
+                        // If there are items without images, add a divider and then those items
+                        if (itemsWithoutImages.length > 0 && itemsWithImages.length > 0) {
+                            // Add a divider after items with images if needed
+                            const divider = document.createElement('div');
+                            divider.className = 'section-divider';
+                            itemsGrid.appendChild(divider);
+                        }
+                        
+                        // Then generate items without images
+                        itemsWithoutImages.forEach((item, index) => {
+                            const itemId = `${categoryId}-without-image-${index}`;
+                            const itemElement = createMenuItem(item, itemId, categoryId);
+                            itemsGrid.appendChild(itemElement);
+                        });
+                    }
+                    
+                    tabContent.appendChild(itemsGrid);
+                }
+                
+                tabContentContainer.appendChild(tabContent);
+                isFirst = false;
+            }
+            
+            // Function to create a menu item element
+            function createMenuItem(item, itemId, categoryId) {
+                // Create item element
+                const itemElement = document.createElement('div');
+                itemElement.className = 'menu-item';
+                itemElement.id = itemId;
+                
+                // Handle food items differently
+                if (item.foodItem) {
+                    // Create image container for the food item (same as drink items)
+                    if (item.image) {
+                        // Create image container with price badge (identical to drink items)
+                        const imageContainer = document.createElement('div');
+                        imageContainer.className = 'image-container';
+                        
+                        // Create image
+                        const img = document.createElement('img');
+                        img.className = 'item-image';
+                        img.src = item.image;
+                        img.alt = item.name;
+                        
+                        // Create price badge
+                        const priceBadge = document.createElement('div');
+                        priceBadge.className = 'price-badge';
+                        priceBadge.textContent = `£${item.price.toFixed(2)}`;
+                        
+                        // Add badge if needed
+                        if (item.badge) {
+                            const badge = document.createElement('div');
+                            badge.className = `badge badge-${item.badge.toLowerCase()}`;
+                            badge.textContent = item.badge;
+                            itemElement.appendChild(badge);
+                        }
+                        
+                        imageContainer.appendChild(img);
+                        imageContainer.appendChild(priceBadge);
+                        itemElement.appendChild(imageContainer);
+                        
+                        // Add name
+                        const headerDiv = document.createElement('div');
+                        headerDiv.className = 'food-item-header';
+                        
+                        const foodItemName = document.createElement('h4');
+                        foodItemName.className = 'food-item-name';
+                        foodItemName.textContent = item.name;
+                        
+                        headerDiv.appendChild(foodItemName);
+                        itemElement.appendChild(headerDiv);
+                    } else {
+                        // Simple layout for food items without images
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'no-image-placeholder';
+                        
+                        const placeholderContent = document.createElement('div');
+                        placeholderContent.className = 'placeholder-content';
+                        
+                        const foodItemName = document.createElement('h3');
+                        foodItemName.className = 'large-name';
+                        foodItemName.textContent = item.name;
+                        
+                        const foodItemPrice = document.createElement('div');
+                        foodItemPrice.className = 'inline-price-badge';
+                        foodItemPrice.textContent = `£${item.price.toFixed(2)}`;
+                        
+                        // Add badge if needed
+                        if (item.badge) {
+                            const badge = document.createElement('div');
+                            badge.className = `badge badge-${item.badge.toLowerCase()}`;
+                            badge.textContent = item.badge;
+                            itemElement.appendChild(badge);
+                        }
+                        
+                        placeholderContent.appendChild(foodItemName);
+                        placeholderContent.appendChild(foodItemPrice);
+                        placeholder.appendChild(placeholderContent);
+                        itemElement.appendChild(placeholder);
+                    }
+                    
+                    return itemElement;
+                }
+                
+                // Create regular item element
+                if (item.image) {
+                    // Create image container with price badge
+                    const imageContainer = document.createElement('div');
+                    imageContainer.className = 'image-container';
+                    
+                    // Create image
+                    const img = document.createElement('img');
+                    img.className = 'item-image';
+                    img.src = item.image;
+                    img.alt = item.name;
+                    
+                    // Create price badge
+                    const priceBadge = document.createElement('div');
+                    priceBadge.className = 'price-badge';
+                    priceBadge.textContent = `£${item.prices[item.defaultSize].toFixed(2)}`;
+                    
+                    // Add badge if needed
+                    if (item.badge) {
+                        const badge = document.createElement('div');
+                        badge.className = `badge badge-${item.badge.toLowerCase()}`;
+                        badge.textContent = item.badge;
+                        itemElement.appendChild(badge);
+                    }
+                    
+                    imageContainer.appendChild(img);
+                    imageContainer.appendChild(priceBadge);
+                    itemElement.appendChild(imageContainer);
+                    
+                    // Make image clickable to toggle accordion
+                    img.addEventListener('click', function() {
+                        toggleAccordion(itemElement);
+                    });
+                } else {
+                    // Create placeholder for items without images - with price below name
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'no-image-placeholder';
+                    
+                    // Create content inside placeholder
+                    const placeholderContent = document.createElement('div');
+                    placeholderContent.className = 'placeholder-content';
+                    
+                    // Add large item name
+                    const placeholderName = document.createElement('h3');
+                    placeholderName.className = 'large-name';
+                    placeholderName.textContent = item.name;
+                    
+                    // Add price below name in the same style as the price badge
+                    const inlinePriceBadge = document.createElement('div');
+                    inlinePriceBadge.className = 'inline-price-badge';
+                    inlinePriceBadge.textContent = `£${item.prices[item.defaultSize].toFixed(2)}`;
+                    
+                    // Add badge if needed
+                    if (item.badge) {
+                        const badge = document.createElement('div');
+                        badge.className = `badge badge-${item.badge.toLowerCase()}`;
+                        badge.textContent = item.badge;
+                        itemElement.appendChild(badge);
+                    }
+                    
+                    placeholderContent.appendChild(placeholderName);
+                    placeholderContent.appendChild(inlinePriceBadge);
+                    placeholder.appendChild(placeholderContent);
+                    itemElement.appendChild(placeholder);
+                    
+                    // Make placeholder clickable to toggle accordion
+                    placeholderContent.addEventListener('click', function() {
+                        toggleAccordion(itemElement);
+                    });
+                }
+                
+                // Create header with name (only for items with images)
+                if (item.image) {
+                    const headerDiv = document.createElement('div');
+                    headerDiv.className = 'item-header text-center';
+                    
+                    // Item name
+                    const itemName = document.createElement('h4');
+                    itemName.className = 'text-md font-semibold text-center';
+                    itemName.textContent = item.name;
+                    
+                    // Item price (hidden in header when using badge)
+                    const priceSpan = document.createElement('span');
+                    priceSpan.className = 'item-price font-semibold';
+                    priceSpan.style.color = '#f86400';
+                    priceSpan.style.display = 'none'; // Hidden but used for calculations
+                    priceSpan.dataset.basePrice = item.prices ? item.prices[item.defaultSize] : item.price;
+                    priceSpan.dataset.extras = '0.00';
+                    
+                    headerDiv.appendChild(itemName);
+                    headerDiv.appendChild(priceSpan);
+                    itemElement.appendChild(headerDiv);
+                    
+                    // Make header clickable to toggle accordion
+                    headerDiv.addEventListener('click', function() {
+                        toggleAccordion(itemElement);
+                    });
+                } else {
+                    // For items without images, we still need the hidden price span
+                    const priceSpan = document.createElement('span');
+                    priceSpan.className = 'item-price font-semibold';
+                    priceSpan.style.color = '#f86400';
+                    priceSpan.style.display = 'none'; // Hidden but used for calculations
+                    if (item.prices) {
+                        priceSpan.dataset.basePrice = item.prices[item.defaultSize];
+                    } else {
+                        priceSpan.dataset.basePrice = item.price;
+                    }
+                    priceSpan.dataset.extras = '0.00';
+                    itemElement.appendChild(priceSpan);
+                }
+                
+                // Create expandable details section (for drinks)
+                if (!item.foodItem) {
+                    const detailsDiv = document.createElement('div');
+                    detailsDiv.className = 'item-details text-center';
+                    
+                    // Description
+                    const descriptionPara = document.createElement('p');
+                    descriptionPara.className = 'text-sm text-gray-600 mt-2 text-center';
+                    descriptionPara.textContent = item.description;
+                    detailsDiv.appendChild(descriptionPara);
+                    
+                    // Size options section - only if item doesn't have singleSize flag
+                    if (!item.singleSize) {
+                        const sizeSection = document.createElement('div');
+                        sizeSection.className = 'options-section text-center';
+                        
+                        // Size heading
+                        const sizeHeading = document.createElement('div');
+                        sizeHeading.className = 'section-title text-center';
+                        sizeHeading.textContent = 'Size:';
+                        sizeSection.appendChild(sizeHeading);
+                        
+                        // Size options
+                        const sizeOptionsDiv = document.createElement('div');
+                        sizeOptionsDiv.className = 'options-grid';
+                        sizeOptionsDiv.dataset.prices = JSON.stringify(item.prices);
+                        sizeOptionsDiv.dataset.itemId = itemId;
+                        
+                        // Add size buttons
+                        item.sizes.forEach(size => {
+                            const sizeBtn = document.createElement('button');
+                            sizeBtn.className = `option-btn size-btn ${size === item.defaultSize ? 'active' : ''}`;
+                            sizeBtn.dataset.size = size;
+                            sizeBtn.textContent = size;
+                            sizeOptionsDiv.appendChild(sizeBtn);
+                        });
+                        
+                        sizeSection.appendChild(sizeOptionsDiv);
+                        detailsDiv.appendChild(sizeSection);
+                    } else {
+                        // For single size items like tea, show size info text instead
+                        const sizeInfo = document.createElement('p');
+                        sizeInfo.className = 'size-info';
+                        sizeInfo.textContent = `Standard ${item.defaultSize} size`;
+                        detailsDiv.appendChild(sizeInfo);
+                    }
+                    
+                    // Only add customization options if not disabled
+                    if (!item.disableCustomization) {
+                        // First determine which extras to use based on item type
+                        let itemExtras = extras; // Default
+                        let showMilkOptions = true;
+                        
+                        if (item.itemType === 'tea') {
+                            itemExtras = teaExtras;
+                            // For regular tea, use tea milk options
+                        } else if (item.itemType === 'herbal-tea') {
+                            itemExtras = herbalTeaExtras;
+                            showMilkOptions = false; // No milk options for herbal tea
+                        }
+                        
+                        // Only show extras section if there are extras to show
+                        if (itemExtras.length > 0) {
                             const extrasSection = document.createElement('div');
-                            extrasSection.className = 'options-section';
+                            extrasSection.className = 'options-section text-center';
                             
                             // Extras heading
                             const extrasHeading = document.createElement('div');
-                            extrasHeading.className = 'section-title';
+                            extrasHeading.className = 'section-title text-center';
                             extrasHeading.textContent = 'Extras:';
                             extrasSection.appendChild(extrasHeading);
                             
@@ -590,12 +1252,12 @@
                             extrasGrid.className = 'options-grid';
                             
                             // Add extras as buttons
-                            extras.forEach(extra => {
+                            itemExtras.forEach(extra => {
                                 const extraBtn = document.createElement('button');
                                 extraBtn.className = 'option-btn extra-btn';
                                 extraBtn.dataset.extraId = extra.id;
                                 extraBtn.dataset.price = extra.price;
-                                extraBtn.textContent = `${extra.name} (+£${extra.price.toFixed(2)})`;
+                                extraBtn.textContent = `${extra.name} ${extra.price > 0 ? `(+£${extra.price.toFixed(2)})` : ''}`;
                                 
                                 extraBtn.addEventListener('click', function(e) {
                                     e.stopPropagation(); // Prevent closing the menu
@@ -608,14 +1270,17 @@
                             
                             extrasSection.appendChild(extrasGrid);
                             detailsDiv.appendChild(extrasSection);
-                            
-                            // Alternative milk section
+                        }
+                        
+                        // Only show milk options for items that should have them
+                        if (showMilkOptions) {
+                            // Alternative milk section - use tea-specific milk options if item type is tea
                             const milkSection = document.createElement('div');
-                            milkSection.className = 'options-section';
+                            milkSection.className = 'options-section text-center';
                             
                             // Milk heading
                             const milkHeading = document.createElement('div');
-                            milkHeading.className = 'section-title';
+                            milkHeading.className = 'section-title text-center';
                             milkHeading.textContent = 'Alternative Milk:';
                             milkSection.appendChild(milkHeading);
                             
@@ -623,8 +1288,11 @@
                             const milkGrid = document.createElement('div');
                             milkGrid.className = 'options-grid';
                             
+                            // Determine which milk options to use based on item type
+                            const itemMilkOptions = item.itemType === 'tea' ? teaMilkOptions : milkOptions;
+                            
                             // Add milk options as buttons
-                            milkOptions.forEach(milk => {
+                            itemMilkOptions.forEach(milk => {
                                 const milkBtn = document.createElement('button');
                                 milkBtn.className = 'option-btn milk-btn';
                                 milkBtn.dataset.milkId = milk.id;
@@ -654,36 +1322,25 @@
                             
                             milkSection.appendChild(milkGrid);
                             detailsDiv.appendChild(milkSection);
-                            
-                            // Assemble the item
-                            itemElement.appendChild(imageContainer);
-                            itemElement.appendChild(headerDiv);
-                            itemElement.appendChild(detailsDiv);
-                            
-                            itemsGrid.appendChild(itemElement);
-                            
-                            // Make image clickable to toggle accordion
-                            img.addEventListener('click', function() {
-                                toggleAccordion(itemElement);
-                            });
-                            
-                            // Make header clickable to toggle accordion
-                            headerDiv.addEventListener('click', function() {
-                                toggleAccordion(itemElement);
-                            });
-                            
-                            // Prevent option buttons from closing accordion when clicked
-                            detailsDiv.addEventListener('click', function(e) {
-                                e.stopPropagation();
-                            });
-                        });
+                        }
+                    } else {
+                        // Add notice if customization is disabled
+                        const noCustomizationNotice = document.createElement('p');
+                        noCustomizationNotice.className = 'no-customization-notice';
+                        noCustomizationNotice.textContent = 'No customization available for this item.';
+                        detailsDiv.appendChild(noCustomizationNotice);
                     }
                     
-                    tabContent.appendChild(itemsGrid);
+                    // Append details to item
+                    itemElement.appendChild(detailsDiv);
+                    
+                    // Prevent option buttons from closing accordion when clicked
+                    detailsDiv.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                    });
                 }
                 
-                tabContentContainer.appendChild(tabContent);
-                isFirst = false;
+                return itemElement;
             }
             
             // Tab functionality
@@ -781,13 +1438,14 @@
             // Function to update total price based on base price and selected extras
             function updateTotalPrice(itemElement) {
                 const priceElement = itemElement.querySelector('.item-price');
+                const inlinePriceBadge = itemElement.querySelector('.inline-price-badge');
                 const priceBadge = itemElement.querySelector('.price-badge');
                 const basePrice = parseFloat(priceElement.dataset.basePrice);
                 
                 // Calculate extras total
                 let extrasTotal = 0;
                 
-                // Add selected extras
+                // Add selected extras (ignoring decaf since it's free)
                 itemElement.querySelectorAll('.extra-btn.active').forEach(btn => {
                     extrasTotal += parseFloat(btn.dataset.price);
                 });
@@ -803,7 +1461,13 @@
                 
                 // Update displayed price
                 const totalPrice = basePrice + extrasTotal;
-                priceBadge.textContent = `£${totalPrice.toFixed(2)}`;
+                
+                // Update appropriate price display
+                if (inlinePriceBadge) {
+                    inlinePriceBadge.textContent = `£${totalPrice.toFixed(2)}`;
+                } else if (priceBadge) {
+                    priceBadge.textContent = `£${totalPrice.toFixed(2)}`;
+                }
             }
             
             // Handle image errors
