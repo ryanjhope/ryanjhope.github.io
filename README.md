@@ -251,11 +251,27 @@
             display: inline-block;
         }
         
-        /* Keep 2x2 grid on all screen sizes */
+        /* Responsive grid layout */
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns by default (mobile) */
+            gap: 12px;
+        }
+        
+        /* Medium screens - 3 columns */
+        @media (min-width: 768px) {
+            .menu-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 14px;
+            }
+        }
+        
+        /* Large screens - 4 columns */
+        @media (min-width: 1024px) {
+            .menu-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+            }
         }
         
         /* Menu item specific styles */
@@ -296,6 +312,12 @@
             cursor: pointer;
         }
         
+        /* Make menu item name smaller to fit multiple items per row */
+        .item-header h4 {
+            font-size: 14px;
+            margin: 0;
+        }
+        
         /* Accordion styles */
         .item-details {
             max-height: 0;
@@ -331,7 +353,7 @@
         /* Option button styles */
         .option-btn {
             font-size: 12px;
-            padding: 5px 10px;
+            padding: 5px 8px;
             border-radius: 4px;
             background-color: #f3f4f6;
             border: 1px solid #e5e7eb;
@@ -374,10 +396,29 @@
             font-style: italic;
             grid-column: span 2;
         }
+        
+        /* Adjust empty category span for different screen sizes */
+        @media (min-width: 768px) {
+            .empty-category {
+                grid-column: span 3;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .empty-category {
+                grid-column: span 4;
+            }
+        }
+        
+        /* Description text */
+        .item-details p {
+            font-size: 12px;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
-    <div id="menu-container" class="container mx-auto max-w-4xl bg-white">
+    <div id="menu-container" class="container mx-auto max-w-5xl bg-white">
         <!-- Tab Navigation -->
         <div class="tab-navigation mb-6 flex justify-center overflow-x-auto pb-1 border-b border-gray-200" id="tab-buttons">
             <!-- Tab buttons will be generated here -->
@@ -390,6 +431,9 @@
     </div>
 
     <script>
+        // Global variable to track the currently expanded item
+        let currentlyExpandedItem = null;
+        
         // Generate menu from configuration
         document.addEventListener('DOMContentLoaded', function() {
             const tabButtonsContainer = document.getElementById('tab-buttons');
@@ -553,7 +597,8 @@
                                 extraBtn.dataset.price = extra.price;
                                 extraBtn.textContent = `${extra.name} (+£${extra.price.toFixed(2)})`;
                                 
-                                extraBtn.addEventListener('click', function() {
+                                extraBtn.addEventListener('click', function(e) {
+                                    e.stopPropagation(); // Prevent closing the menu
                                     this.classList.toggle('active');
                                     updateTotalPrice(itemElement);
                                 });
@@ -591,7 +636,9 @@
                                     milkBtn.textContent = `${milk.name} (Free)`;
                                 }
                                 
-                                milkBtn.addEventListener('click', function() {
+                                milkBtn.addEventListener('click', function(e) {
+                                    e.stopPropagation(); // Prevent closing the menu
+                                    
                                     // Deactivate all other milk buttons
                                     milkGrid.querySelectorAll('.milk-btn').forEach(btn => {
                                         btn.classList.remove('active');
@@ -617,12 +664,17 @@
                             
                             // Make image clickable to toggle accordion
                             img.addEventListener('click', function() {
-                                itemElement.classList.toggle('expanded');
+                                toggleAccordion(itemElement);
                             });
                             
                             // Make header clickable to toggle accordion
                             headerDiv.addEventListener('click', function() {
-                                itemElement.classList.toggle('expanded');
+                                toggleAccordion(itemElement);
+                            });
+                            
+                            // Prevent option buttons from closing accordion when clicked
+                            detailsDiv.addEventListener('click', function(e) {
+                                e.stopPropagation();
                             });
                         });
                     }
@@ -637,6 +689,12 @@
             // Tab functionality
             document.querySelectorAll('.tab-btn').forEach(button => {
                 button.addEventListener('click', function() {
+                    // Close any open accordion when switching tabs
+                    if (currentlyExpandedItem) {
+                        currentlyExpandedItem.classList.remove('expanded');
+                        currentlyExpandedItem = null;
+                    }
+                    
                     // Remove active class from all tabs
                     document.querySelectorAll('.tab-btn').forEach(btn => {
                         btn.classList.remove('active');
@@ -665,9 +723,30 @@
                 });
             });
             
+            // Toggle accordion function that closes previously opened accordion
+            function toggleAccordion(itemElement) {
+                // If this item is already expanded, just close it
+                if (itemElement === currentlyExpandedItem) {
+                    itemElement.classList.remove('expanded');
+                    currentlyExpandedItem = null;
+                    return;
+                }
+                
+                // Close currently expanded item (if any)
+                if (currentlyExpandedItem) {
+                    currentlyExpandedItem.classList.remove('expanded');
+                }
+                
+                // Expand the newly clicked item
+                itemElement.classList.add('expanded');
+                currentlyExpandedItem = itemElement;
+            }
+            
             // Size selection functionality
             document.querySelectorAll('.size-btn').forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent closing the menu
+                    
                     // Get the parent options grid
                     const sizeOptions = this.closest('.options-grid');
                     
