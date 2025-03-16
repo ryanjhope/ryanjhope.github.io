@@ -153,6 +153,49 @@
                 }
             }
         };
+        
+        // Available extras for customization
+        const extras = [
+            {
+                id: "extra-shot",
+                name: "Extra Shot",
+                price: 0.50
+            },
+            {
+                id: "whipped-cream",
+                name: "Whipped Cream",
+                price: 0.50
+            },
+            {
+                id: "syrup",
+                name: "Add Syrup",
+                price: 0.50
+            }
+        ];
+        
+        // Available milk options
+        const milkOptions = [
+            {
+                id: "soya",
+                name: "Soya",
+                price: 0.00
+            },
+            {
+                id: "oat",
+                name: "Oat",
+                price: 0.50
+            },
+            {
+                id: "coconut",
+                name: "Coconut",
+                price: 0.50
+            },
+            {
+                id: "almond",
+                name: "Almond",
+                price: 0.50
+            }
+        ];
     </script>
     
     <!-- Inline Tailwind to avoid external dependency issues -->
@@ -198,12 +241,6 @@
         .tab-content.active {
             display: block;
         }
-        .menu-item {
-            transition: transform 0.2s ease-in-out;
-        }
-        .menu-item:hover {
-            transform: translateY(-2px);
-        }
         
         /* Category styles */
         .category-title {
@@ -214,69 +251,128 @@
             display: inline-block;
         }
         
-        /* Menu item image styles */
-        .menu-image {
-            width: 80px !important;
-            height: 80px !important;
-            object-fit: cover !important;
-            border-radius: 8px !important;
-            margin-right: 16px !important;
+        /* Keep 2x2 grid on all screen sizes */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
         }
         
-        /* Size selector styles */
-        .size-options {
+        /* Menu item specific styles */
+        .menu-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            overflow: hidden;
+        }
+        
+        /* Image container - force square aspect ratio */
+        .image-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%; /* This creates a square aspect ratio */
+            overflow: hidden;
+        }
+        
+        /* Tile image styles - position absolute within the container */
+        .item-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        
+        /* Item header styles */
+        .item-header {
+            padding: 10px;
             display: flex;
-            gap: 8px;
-            margin-top: 8px;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
         }
         
-        .size-btn {
+        /* Accordion styles */
+        .item-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 10px;
+        }
+        
+        .menu-item.expanded .item-details {
+            max-height: 800px;
+            padding-bottom: 15px;
+        }
+        
+        /* Size and customization options */
+        .options-section {
+            margin: 15px 0;
+        }
+        
+        .section-title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        /* Button grid for options */
+        .options-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        /* Option button styles */
+        .option-btn {
             font-size: 12px;
-            padding: 4px 8px;
+            padding: 5px 10px;
             border-radius: 4px;
             background-color: #f3f4f6;
+            border: 1px solid #e5e7eb;
             cursor: pointer;
             transition: all 0.2s ease;
-            border: 1px solid #e5e7eb;
         }
         
-        .size-btn.active {
+        .option-btn.active {
             background-color: #f86400;
             color: white;
             border-color: #f86400;
         }
         
-        /* Responsive fallbacks */
-        @media (max-width: 640px) {
-            .menu-flex {
-                flex-direction: column;
-            }
-            .menu-image {
-                width: 100% !important;
-                height: 160px !important;
-                margin-right: 0 !important;
-                margin-bottom: 12px !important;
-                border-radius: 8px !important; /* Keep rounded corners on mobile */
-            }
+        .option-btn:hover {
+            background-color: #f9f9f9;
         }
-
+        
+        .option-btn.active:hover {
+            background-color: #e05a00;
+        }
+        
+        /* Price badge */
+        .price-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            z-index: 10;
+        }
+        
+        /* Empty category style */
         .empty-category {
             padding: 15px;
             color: #666;
             font-style: italic;
-        }
-        
-        .image-container {
-            min-width: 80px;
-            margin-right: 16px;
-        }
-        
-        @media (max-width: 640px) {
-            .image-container {
-                min-width: 100%;
-                margin-right: 0;
-                margin-bottom: 12px;
-            }
+            grid-column: span 2;
         }
     </style>
 </head>
@@ -340,7 +436,7 @@
                     
                     // Add items grid
                     const itemsGrid = document.createElement('div');
-                    itemsGrid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
+                    itemsGrid.className = 'menu-grid';
                     
                     // If no items, show "Coming soon"
                     if (category.items.length === 0) {
@@ -356,31 +452,178 @@
                             
                             // Create item element
                             const itemElement = document.createElement('div');
-                            itemElement.className = 'menu-item p-4 rounded-lg border border-gray-200 bg-white shadow-sm';
+                            itemElement.className = 'menu-item';
+                            itemElement.id = itemId;
                             
-                            // Create item content
-                            const itemHTML = `
-                                <div class="flex menu-flex">
-                                    <div class="image-container">
-                                        <img src="${item.image}" alt="${item.name}" class="menu-image">
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex justify-between items-start">
-                                            <h3 class="text-lg font-semibold text-black" style="font-family: 'Poppins', sans-serif !important;">${item.name}</h3>
-                                            <span class="font-semibold item-price" style="color: #f86400; font-family: 'Poppins', sans-serif !important;">£${item.prices[item.defaultSize].toFixed(2)}</span>
-                                        </div>
-                                        <p class="text-sm text-gray-600 mt-1" style="font-family: 'Poppins', sans-serif !important;">${item.description}</p>
-                                        <div class="size-options mt-3" data-prices='${JSON.stringify(item.prices)}' data-item-id="${itemId}">
-                                            ${item.sizes.map(size => `
-                                                <button class="size-btn ${size === item.defaultSize ? 'active' : ''}" data-size="${size}">${size}</button>
-                                            `).join('')}
-                                        </div>
-                                    </div>
-                                </div>
-                            `;
+                            // Create image container with price badge
+                            const imageContainer = document.createElement('div');
+                            imageContainer.className = 'image-container';
                             
-                            itemElement.innerHTML = itemHTML;
+                            // Create image
+                            const img = document.createElement('img');
+                            img.className = 'item-image';
+                            img.src = item.image;
+                            img.alt = item.name;
+                            
+                            // Create price badge
+                            const priceBadge = document.createElement('div');
+                            priceBadge.className = 'price-badge';
+                            priceBadge.textContent = `£${item.prices[item.defaultSize].toFixed(2)}`;
+                            
+                            imageContainer.appendChild(img);
+                            imageContainer.appendChild(priceBadge);
+                            
+                            // Create header with name
+                            const headerDiv = document.createElement('div');
+                            headerDiv.className = 'item-header';
+                            
+                            // Item name
+                            const itemName = document.createElement('h4');
+                            itemName.className = 'text-md font-semibold';
+                            itemName.textContent = item.name;
+                            
+                            // Item price (hidden in header when using badge)
+                            const priceSpan = document.createElement('span');
+                            priceSpan.className = 'item-price font-semibold';
+                            priceSpan.style.color = '#f86400';
+                            priceSpan.style.display = 'none'; // Hidden but used for calculations
+                            priceSpan.dataset.basePrice = item.prices[item.defaultSize];
+                            priceSpan.dataset.extras = '0.00';
+                            
+                            headerDiv.appendChild(itemName);
+                            headerDiv.appendChild(priceSpan);
+                            
+                            // Create expandable details section
+                            const detailsDiv = document.createElement('div');
+                            detailsDiv.className = 'item-details';
+                            
+                            // Description
+                            const descriptionPara = document.createElement('p');
+                            descriptionPara.className = 'text-sm text-gray-600 mt-2';
+                            descriptionPara.textContent = item.description;
+                            detailsDiv.appendChild(descriptionPara);
+                            
+                            // Size options section
+                            const sizeSection = document.createElement('div');
+                            sizeSection.className = 'options-section';
+                            
+                            // Size heading
+                            const sizeHeading = document.createElement('div');
+                            sizeHeading.className = 'section-title';
+                            sizeHeading.textContent = 'Size:';
+                            sizeSection.appendChild(sizeHeading);
+                            
+                            // Size options
+                            const sizeOptionsDiv = document.createElement('div');
+                            sizeOptionsDiv.className = 'options-grid';
+                            sizeOptionsDiv.dataset.prices = JSON.stringify(item.prices);
+                            sizeOptionsDiv.dataset.itemId = itemId;
+                            
+                            // Add size buttons
+                            item.sizes.forEach(size => {
+                                const sizeBtn = document.createElement('button');
+                                sizeBtn.className = `option-btn size-btn ${size === item.defaultSize ? 'active' : ''}`;
+                                sizeBtn.dataset.size = size;
+                                sizeBtn.textContent = size;
+                                sizeOptionsDiv.appendChild(sizeBtn);
+                            });
+                            
+                            sizeSection.appendChild(sizeOptionsDiv);
+                            detailsDiv.appendChild(sizeSection);
+                            
+                            // Extras section
+                            const extrasSection = document.createElement('div');
+                            extrasSection.className = 'options-section';
+                            
+                            // Extras heading
+                            const extrasHeading = document.createElement('div');
+                            extrasHeading.className = 'section-title';
+                            extrasHeading.textContent = 'Extras:';
+                            extrasSection.appendChild(extrasHeading);
+                            
+                            // Extras options
+                            const extrasGrid = document.createElement('div');
+                            extrasGrid.className = 'options-grid';
+                            
+                            // Add extras as buttons
+                            extras.forEach(extra => {
+                                const extraBtn = document.createElement('button');
+                                extraBtn.className = 'option-btn extra-btn';
+                                extraBtn.dataset.extraId = extra.id;
+                                extraBtn.dataset.price = extra.price;
+                                extraBtn.textContent = `${extra.name} (+£${extra.price.toFixed(2)})`;
+                                
+                                extraBtn.addEventListener('click', function() {
+                                    this.classList.toggle('active');
+                                    updateTotalPrice(itemElement);
+                                });
+                                
+                                extrasGrid.appendChild(extraBtn);
+                            });
+                            
+                            extrasSection.appendChild(extrasGrid);
+                            detailsDiv.appendChild(extrasSection);
+                            
+                            // Alternative milk section
+                            const milkSection = document.createElement('div');
+                            milkSection.className = 'options-section';
+                            
+                            // Milk heading
+                            const milkHeading = document.createElement('div');
+                            milkHeading.className = 'section-title';
+                            milkHeading.textContent = 'Alternative Milk:';
+                            milkSection.appendChild(milkHeading);
+                            
+                            // Milk options
+                            const milkGrid = document.createElement('div');
+                            milkGrid.className = 'options-grid';
+                            
+                            // Add milk options as buttons
+                            milkOptions.forEach(milk => {
+                                const milkBtn = document.createElement('button');
+                                milkBtn.className = 'option-btn milk-btn';
+                                milkBtn.dataset.milkId = milk.id;
+                                milkBtn.dataset.price = milk.price;
+                                
+                                if (milk.price > 0) {
+                                    milkBtn.textContent = `${milk.name} (+£${milk.price.toFixed(2)})`;
+                                } else {
+                                    milkBtn.textContent = `${milk.name} (Free)`;
+                                }
+                                
+                                milkBtn.addEventListener('click', function() {
+                                    // Deactivate all other milk buttons
+                                    milkGrid.querySelectorAll('.milk-btn').forEach(btn => {
+                                        btn.classList.remove('active');
+                                    });
+                                    
+                                    // Activate this button
+                                    this.classList.add('active');
+                                    updateTotalPrice(itemElement);
+                                });
+                                
+                                milkGrid.appendChild(milkBtn);
+                            });
+                            
+                            milkSection.appendChild(milkGrid);
+                            detailsDiv.appendChild(milkSection);
+                            
+                            // Assemble the item
+                            itemElement.appendChild(imageContainer);
+                            itemElement.appendChild(headerDiv);
+                            itemElement.appendChild(detailsDiv);
+                            
                             itemsGrid.appendChild(itemElement);
+                            
+                            // Make image clickable to toggle accordion
+                            img.addEventListener('click', function() {
+                                itemElement.classList.toggle('expanded');
+                            });
+                            
+                            // Make header clickable to toggle accordion
+                            headerDiv.addEventListener('click', function() {
+                                itemElement.classList.toggle('expanded');
+                            });
                         });
                     }
                     
@@ -425,8 +668,8 @@
             // Size selection functionality
             document.querySelectorAll('.size-btn').forEach(button => {
                 button.addEventListener('click', function() {
-                    // Get the parent size-options element
-                    const sizeOptions = this.closest('.size-options');
+                    // Get the parent options grid
+                    const sizeOptions = this.closest('.options-grid');
                     
                     // Remove active class from all size buttons in this group
                     sizeOptions.querySelectorAll('.size-btn').forEach(btn => {
@@ -442,14 +685,50 @@
                     // Get the prices data from the data-prices attribute
                     const pricesData = JSON.parse(sizeOptions.getAttribute('data-prices'));
                     
-                    // Update the displayed price
-                    const priceElement = sizeOptions.closest('.flex-1').querySelector('.item-price');
-                    priceElement.textContent = '£' + pricesData[selectedSize].toFixed(2);
+                    // Get the item element
+                    const itemId = sizeOptions.getAttribute('data-item-id');
+                    const itemElement = document.getElementById(itemId);
+                    
+                    // Update the base price
+                    const priceElement = itemElement.querySelector('.item-price');
+                    const basePrice = pricesData[selectedSize];
+                    priceElement.dataset.basePrice = basePrice;
+                    
+                    // Update the displayed price (base + extras)
+                    updateTotalPrice(itemElement);
                 });
             });
             
+            // Function to update total price based on base price and selected extras
+            function updateTotalPrice(itemElement) {
+                const priceElement = itemElement.querySelector('.item-price');
+                const priceBadge = itemElement.querySelector('.price-badge');
+                const basePrice = parseFloat(priceElement.dataset.basePrice);
+                
+                // Calculate extras total
+                let extrasTotal = 0;
+                
+                // Add selected extras
+                itemElement.querySelectorAll('.extra-btn.active').forEach(btn => {
+                    extrasTotal += parseFloat(btn.dataset.price);
+                });
+                
+                // Add selected milk (if any)
+                const selectedMilk = itemElement.querySelector('.milk-btn.active');
+                if (selectedMilk) {
+                    extrasTotal += parseFloat(selectedMilk.dataset.price);
+                }
+                
+                // Update extras data attribute
+                priceElement.dataset.extras = extrasTotal.toFixed(2);
+                
+                // Update displayed price
+                const totalPrice = basePrice + extrasTotal;
+                priceBadge.textContent = `£${totalPrice.toFixed(2)}`;
+            }
+            
             // Handle image errors
-            document.querySelectorAll('.menu-image').forEach(img => {
+            document.querySelectorAll('.item-image').forEach(img => {
                 img.addEventListener('error', function() {
                     // Hide the image if it fails to load
                     this.style.display = 'none';
