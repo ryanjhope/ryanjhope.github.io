@@ -570,11 +570,11 @@
         /* Category styles */
         .category-title {
             margin-top: 24px;
-            margin-bottom: 12px;
+            margin-bottom: 18px;
             padding-bottom: 5px;
-            border-bottom: 2px solid #f86400;
             display: inline-block;
             text-align: center;
+            font-size: 1.5rem;
         }
         
         /* Responsive grid layout */
@@ -871,7 +871,7 @@
 <body>
     <div id="menu-container" class="container mx-auto max-w-5xl bg-white">
         <!-- Tab Navigation -->
-        <div class="tab-navigation mb-6 flex justify-center overflow-x-auto pb-1 border-b border-gray-200" id="tab-buttons">
+        <div class="tab-navigation mb-6 flex justify-center overflow-x-auto pb-1" id="tab-buttons">
             <!-- Tab buttons will be generated here -->
         </div>
 
@@ -897,7 +897,7 @@
                 
                 // Create tab button
                 const tabButton = document.createElement('button');
-                tabButton.className = `tab-btn flex-shrink-0 px-4 py-2 mr-2 rounded-t-lg ${isFirst ? 'active bg-primary text-white' : 'bg-gray-200 hover:bg-gray-300 text-black'} font-medium`;
+                tabButton.className = `tab-btn flex-shrink-0 px-4 py-2 mr-2 rounded-lg ${isFirst ? 'active bg-primary text-white' : 'bg-gray-200 hover:bg-gray-300 text-black'} font-bold`;
                 tabButton.dataset.tab = tabId;
                 tabButton.textContent = tab.title;
                 tabButton.style.fontFamily = "'Poppins', sans-serif";
@@ -913,7 +913,7 @@
                 
                 // Add tab title
                 const tabTitle = document.createElement('h2');
-                tabTitle.className = 'text-2xl font-bold mb-4 text-black text-center';
+                tabTitle.className = 'text-3xl font-bold mb-6 text-black text-center';
                 tabTitle.style.fontFamily = "'Poppins', sans-serif";
                 tabTitle.textContent = tab.title;
                 tabContent.appendChild(tabTitle);
@@ -924,7 +924,7 @@
                     
                     // Add category title
                     const categoryTitle = document.createElement('h3');
-                    categoryTitle.className = 'text-xl font-semibold text-black category-title text-center mx-auto';
+                    categoryTitle.className = 'text-2xl font-semibold text-black category-title text-center mx-auto';
                     categoryTitle.style.fontFamily = "'Poppins', sans-serif";
                     categoryTitle.textContent = category.title;
                     tabContent.appendChild(categoryTitle);
