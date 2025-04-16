@@ -546,7 +546,9 @@
             padding: 0;
             font-family: 'Poppins', sans-serif !important;
             background-color: white;
-            color: #333333;
+            color: #666666;
+            font-weight: 500;
+            text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
         }
         
         /* Make the menu container fill the embed space */
@@ -604,7 +606,7 @@
         /* Menu item specific styles */
         .menu-item {
             border: none;
-            border-radius: 8px;
+            border-radius: 16px;
             background-color: white;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             transition: all 0.2s ease;
@@ -670,15 +672,16 @@
         
         /* Make menu item name smaller to fit multiple items per row */
         .item-header h4 {
-            font-size: 14px;
+            font-size: 16px;
             margin: 0;
             text-align: center;
+            font-weight: 600;
         }
         
         /* Larger name for items without images */
         .large-name {
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 700;
             margin: 0 0 8px 0;
         }
         
@@ -693,7 +696,6 @@
             font-weight: 600;
             font-size: 12px;
             z-index: 20;
-            text-transform: uppercase;
         }
         
         .badge-new {
@@ -709,7 +711,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.4);
             color: white;
             padding: 3px 8px;
             border-radius: 20px;
@@ -721,7 +723,7 @@
         /* Inline price badge for items without images */
         .inline-price-badge {
             display: inline-block;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.4);
             color: white;
             padding: 3px 8px;
             border-radius: 20px;
@@ -737,7 +739,7 @@
         }
         
         .food-item-name {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             margin: 0;
         }
@@ -897,12 +899,14 @@
                 
                 // Create tab button
                 const tabButton = document.createElement('button');
-                tabButton.className = `tab-btn flex-shrink-0 px-4 py-2 mr-2 rounded-full ${isFirst ? 'active bg-primary text-white' : 'bg-gray-200 hover:bg-gray-300 text-black'} font-bold`;
+                tabButton.className = `tab-btn flex-shrink-0 px-4 py-2 mr-2 rounded-full ${isFirst ? 'active bg-primary text-white' : 'bg-gray-200 hover:bg-gray-300'} font-bold`;
                 tabButton.dataset.tab = tabId;
                 tabButton.textContent = tab.title;
                 tabButton.style.fontFamily = "'Poppins', sans-serif";
                 if (isFirst) {
                     tabButton.style.backgroundColor = '#f86400';
+                } else {
+                    tabButton.style.color = '#666666';
                 }
                 tabButtonsContainer.appendChild(tabButton);
                 
@@ -915,7 +919,8 @@
                 const tabTitle = document.createElement('h2');
                 tabTitle.className = 'text-3xl font-bold mb-6 text-center';
                 tabTitle.style.fontFamily = "'Poppins', sans-serif";
-                tabTitle.style.color = '#333333';
+                tabTitle.style.color = '#666666';
+                tabTitle.style.textShadow = '0 0 1px rgba(248, 100, 0, 0.2)';
                 tabTitle.textContent = tab.title;
                 tabContent.appendChild(tabTitle);
                 
@@ -925,9 +930,10 @@
                     
                     // Add category title
                     const categoryTitle = document.createElement('h3');
-                    categoryTitle.className = 'text-2xl font-semibold category-title text-center mx-auto';
+                    categoryTitle.className = 'text-2xl font-bold category-title text-center mx-auto';
                     categoryTitle.style.fontFamily = "'Poppins', sans-serif";
-                    categoryTitle.style.color = '#333333';
+                    categoryTitle.style.color = '#666666';
+                    categoryTitle.style.textShadow = '0 0 1px rgba(248, 100, 0, 0.15)';
                     categoryTitle.textContent = category.title;
                     tabContent.appendChild(categoryTitle);
                     
@@ -1014,7 +1020,11 @@
                         if (item.badge) {
                             const badge = document.createElement('div');
                             badge.className = `badge badge-${item.badge.toLowerCase()}`;
-                            badge.textContent = item.badge;
+                            
+                            // Convert badge text to title case (first letter capitalized)
+                            const badgeText = item.badge.charAt(0).toUpperCase() + item.badge.slice(1).toLowerCase();
+                            badge.textContent = badgeText;
+                            
                             itemElement.appendChild(badge);
                         }
                         
@@ -1052,7 +1062,11 @@
                         if (item.badge) {
                             const badge = document.createElement('div');
                             badge.className = `badge badge-${item.badge.toLowerCase()}`;
-                            badge.textContent = item.badge;
+                            
+                            // Convert badge text to title case (first letter capitalized)
+                            const badgeText = item.badge.charAt(0).toUpperCase() + item.badge.slice(1).toLowerCase();
+                            badge.textContent = badgeText;
+                            
                             itemElement.appendChild(badge);
                         }
                         
@@ -1086,7 +1100,11 @@
                     if (item.badge) {
                         const badge = document.createElement('div');
                         badge.className = `badge badge-${item.badge.toLowerCase()}`;
-                        badge.textContent = item.badge;
+                        
+                        // Convert badge text to title case (first letter capitalized)
+                        const badgeText = item.badge.charAt(0).toUpperCase() + item.badge.slice(1).toLowerCase();
+                        badge.textContent = badgeText;
+                        
                         itemElement.appendChild(badge);
                     }
                     
@@ -1360,16 +1378,16 @@
                         btn.classList.remove('bg-primary');
                         btn.classList.remove('text-white');
                         btn.classList.add('bg-gray-200');
-                        btn.classList.add('text-black');
                         btn.style.backgroundColor = '';
+                        btn.style.color = '#666666';
                     });
                     
                     // Add active class to clicked tab
                     this.classList.add('active');
                     this.classList.add('text-white');
                     this.classList.remove('bg-gray-200');
-                    this.classList.remove('text-black');
                     this.style.backgroundColor = '#f86400';
+                    this.style.color = 'white';
                     
                     // Hide all tab contents
                     document.querySelectorAll('.tab-content').forEach(content => {
