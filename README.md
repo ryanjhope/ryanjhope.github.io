@@ -546,7 +546,7 @@
             padding: 0;
             font-family: 'Poppins', sans-serif !important;
             background-color: white;
-            color: #666666;
+            color: #555555;
             font-weight: 500;
             text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
         }
@@ -571,8 +571,8 @@
         
         /* Category styles */
         .category-title {
-            margin-top: 24px;
-            margin-bottom: 18px;
+            margin-top: 16px;
+            margin-bottom: 16px;
             padding-bottom: 5px;
             display: inline-block;
             text-align: center;
@@ -609,10 +609,15 @@
             border-radius: 16px;
             background-color: white;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            transition: all 0.2s ease;
+            transition: all 0.3s ease, opacity 0.3s ease;
             overflow: hidden;
             text-align: center;
             position: relative;
+        }
+        
+        /* Fade effect when an item is expanded */
+        .has-expanded-item .menu-item:not(.expanded) {
+            opacity: 0.4;
         }
         
         /* Image container - force square aspect ratio */
@@ -675,7 +680,7 @@
             font-size: 16px;
             margin: 0;
             text-align: center;
-            font-weight: 600;
+            font-weight: 700;
         }
         
         /* Larger name for items without images */
@@ -740,7 +745,7 @@
         
         .food-item-name {
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             margin: 0;
         }
         
@@ -814,10 +819,10 @@
         }
         
         .section-title {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 14px;
             margin-bottom: 8px;
-            color: #333;
+            color: #555555;
             text-align: center;
         }
         
@@ -833,16 +838,23 @@
         .option-btn {
             font-size: 12px;
             padding: 5px 10px;
-            border-radius: 4px;
+            border-radius: 50px; /* Pill shape */
             background-color: #f3f4f6;
             border: 1px solid #e5e7eb;
             cursor: pointer;
             transition: all 0.2s ease;
-            color: #333;
+            color: #555555;
             font-weight: 500;
-            min-width: 60px;
+            min-width: 56px;
             text-align: center;
             display: inline-block;
+        }
+        
+        /* Size button styles - smaller padding for mobile */
+        .size-btn {
+            padding: 5px 8px;
+            min-width: 48px;
+            font-weight: 700; /* Bold text for size buttons */
         }
         
         .option-btn:hover {
@@ -868,12 +880,48 @@
             background-color: #f0f0f0;
             grid-column: 1 / -1;
         }
+        
+        /* Hidden class for customize container */
+        .hidden {
+            display: none;
+        }
+        
+        /* Customize button styling */
+        .customize-btn {
+            display: inline-block;
+            background-color: #f3f4f6;
+            color: #555555;
+            padding: 8px 20px;
+            margin-top: 12px;
+            border-radius: 50px;
+            border: 1px solid #e5e7eb;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .customize-btn:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .customize-btn.active {
+            background-color: #f86400;
+            color: white;
+            border-color: #f86400;
+        }
+        
+        /* Customize container transition */
+        .customize-container {
+            margin-top: 12px;
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body>
     <div id="menu-container" class="container mx-auto max-w-5xl bg-white">
         <!-- Tab Navigation -->
-        <div class="tab-navigation mb-6 flex justify-center overflow-x-auto pb-1" id="tab-buttons">
+        <div class="tab-navigation mb-4 flex justify-center overflow-x-auto pb-1" id="tab-buttons">
             <!-- Tab buttons will be generated here -->
         </div>
 
@@ -906,7 +954,7 @@
                 if (isFirst) {
                     tabButton.style.backgroundColor = '#f86400';
                 } else {
-                    tabButton.style.color = '#666666';
+                    tabButton.style.color = '#555555';
                 }
                 tabButtonsContainer.appendChild(tabButton);
                 
@@ -917,9 +965,9 @@
                 
                 // Add tab title
                 const tabTitle = document.createElement('h2');
-                tabTitle.className = 'text-3xl font-bold mb-6 text-center';
+                tabTitle.className = 'text-3xl font-bold mb-4 text-center';
                 tabTitle.style.fontFamily = "'Poppins', sans-serif";
-                tabTitle.style.color = '#666666';
+                tabTitle.style.color = '#555555';
                 tabTitle.style.textShadow = '0 0 1px rgba(248, 100, 0, 0.2)';
                 tabTitle.textContent = tab.title;
                 tabContent.appendChild(tabTitle);
@@ -932,7 +980,7 @@
                     const categoryTitle = document.createElement('h3');
                     categoryTitle.className = 'text-2xl font-bold category-title text-center mx-auto';
                     categoryTitle.style.fontFamily = "'Poppins', sans-serif";
-                    categoryTitle.style.color = '#666666';
+                    categoryTitle.style.color = '#555555';
                     categoryTitle.style.textShadow = '0 0 1px rgba(248, 100, 0, 0.15)';
                     categoryTitle.textContent = category.title;
                     tabContent.appendChild(categoryTitle);
@@ -1214,7 +1262,7 @@
                         // Size heading
                         const sizeHeading = document.createElement('div');
                         sizeHeading.className = 'section-title text-center';
-                        sizeHeading.textContent = 'Size:';
+                        sizeHeading.textContent = 'Size';
                         sizeSection.appendChild(sizeHeading);
                         
                         // Size options
@@ -1244,6 +1292,10 @@
                     
                     // Only add customization options if not disabled
                     if (!item.disableCustomization) {
+                        // Create a second-tier customization container
+                        const customizeContainer = document.createElement('div');
+                        customizeContainer.className = 'customize-container hidden';
+                        
                         // First determine which extras to use based on item type
                         let itemExtras = extras; // Default
                         let showMilkOptions = true;
@@ -1264,7 +1316,7 @@
                             // Extras heading
                             const extrasHeading = document.createElement('div');
                             extrasHeading.className = 'section-title text-center';
-                            extrasHeading.textContent = 'Extras:';
+                            extrasHeading.textContent = 'Extras';
                             extrasSection.appendChild(extrasHeading);
                             
                             // Extras options
@@ -1277,7 +1329,7 @@
                                 extraBtn.className = 'option-btn extra-btn';
                                 extraBtn.dataset.extraId = extra.id;
                                 extraBtn.dataset.price = extra.price;
-                                extraBtn.textContent = `${extra.name} ${extra.price > 0 ? `(+£${extra.price.toFixed(2)})` : ''}`;
+                                extraBtn.textContent = `${extra.name} ${extra.price > 0 ? `(£${extra.price.toFixed(2)})` : ''}`;
                                 
                                 extraBtn.addEventListener('click', function(e) {
                                     e.stopPropagation(); // Prevent closing the menu
@@ -1289,7 +1341,7 @@
                             });
                             
                             extrasSection.appendChild(extrasGrid);
-                            detailsDiv.appendChild(extrasSection);
+                            customizeContainer.appendChild(extrasSection);
                         }
                         
                         // Only show milk options for items that should have them
@@ -1301,7 +1353,7 @@
                             // Milk heading
                             const milkHeading = document.createElement('div');
                             milkHeading.className = 'section-title text-center';
-                            milkHeading.textContent = 'Alternative Milk:';
+                            milkHeading.textContent = 'Alternative Milk';
                             milkSection.appendChild(milkHeading);
                             
                             // Milk options
@@ -1319,7 +1371,7 @@
                                 milkBtn.dataset.price = milk.price;
                                 
                                 if (milk.price > 0) {
-                                    milkBtn.textContent = `${milk.name} (+£${milk.price.toFixed(2)})`;
+                                    milkBtn.textContent = `${milk.name} (£${milk.price.toFixed(2)})`;
                                 } else {
                                     milkBtn.textContent = `${milk.name} (Free)`;
                                 }
@@ -1341,8 +1393,33 @@
                             });
                             
                             milkSection.appendChild(milkGrid);
-                            detailsDiv.appendChild(milkSection);
+                            customizeContainer.appendChild(milkSection);
                         }
+                        
+                        // Add the customize button
+                        const customizeBtn = document.createElement('button');
+                        customizeBtn.className = 'customize-btn';
+                        customizeBtn.textContent = 'Customize';
+                        
+                        // Add event listener to toggle customize options
+                        customizeBtn.addEventListener('click', function(e) {
+                            e.stopPropagation(); // Prevent closing the menu
+                            
+                            // Toggle customize container visibility
+                            if (customizeContainer.classList.contains('hidden')) {
+                                customizeContainer.classList.remove('hidden');
+                                customizeBtn.textContent = 'Hide options';
+                                customizeBtn.classList.add('active');
+                            } else {
+                                customizeContainer.classList.add('hidden');
+                                customizeBtn.textContent = 'Customize';
+                                customizeBtn.classList.remove('active');
+                            }
+                        });
+                        
+                        // Add customize button and container to details
+                        detailsDiv.appendChild(customizeBtn);
+                        detailsDiv.appendChild(customizeContainer);
                     } else {
                         // Add notice if customization is disabled
                         const noCustomizationNotice = document.createElement('p');
@@ -1379,7 +1456,7 @@
                         btn.classList.remove('text-white');
                         btn.classList.add('bg-gray-200');
                         btn.style.backgroundColor = '';
-                        btn.style.color = '#666666';
+                        btn.style.color = '#555555';
                     });
                     
                     // Add active class to clicked tab
@@ -1402,21 +1479,34 @@
             
             // Toggle accordion function that closes previously opened accordion
             function toggleAccordion(itemElement) {
+                // Find the parent grid container
+                const parentGrid = itemElement.closest('.menu-grid');
+                
                 // If this item is already expanded, just close it
                 if (itemElement === currentlyExpandedItem) {
                     itemElement.classList.remove('expanded');
                     currentlyExpandedItem = null;
+                    // Remove the class that fades other items
+                    parentGrid.classList.remove('has-expanded-item');
                     return;
                 }
                 
                 // Close currently expanded item (if any)
                 if (currentlyExpandedItem) {
                     currentlyExpandedItem.classList.remove('expanded');
+                    // If the currently expanded item is in a different grid, remove the fade class from that grid
+                    const oldParentGrid = currentlyExpandedItem.closest('.menu-grid');
+                    if (oldParentGrid !== parentGrid) {
+                        oldParentGrid.classList.remove('has-expanded-item');
+                    }
                 }
                 
                 // Expand the newly clicked item
                 itemElement.classList.add('expanded');
                 currentlyExpandedItem = itemElement;
+                
+                // Add the class that fades other items
+                parentGrid.classList.add('has-expanded-item');
             }
             
             // Size selection functionality
