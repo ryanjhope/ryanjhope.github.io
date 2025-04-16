@@ -546,7 +546,7 @@
             padding: 0;
             font-family: 'Poppins', sans-serif !important;
             background-color: white;
-            color: black;
+            color: #333333;
         }
         
         /* Make the menu container fill the embed space */
@@ -603,7 +603,7 @@
         
         /* Menu item specific styles */
         .menu-item {
-            border: 1px solid #e5e7eb;
+            border: none;
             border-radius: 8px;
             background-color: white;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -897,7 +897,7 @@
                 
                 // Create tab button
                 const tabButton = document.createElement('button');
-                tabButton.className = `tab-btn flex-shrink-0 px-4 py-2 mr-2 rounded-lg ${isFirst ? 'active bg-primary text-white' : 'bg-gray-200 hover:bg-gray-300 text-black'} font-bold`;
+                tabButton.className = `tab-btn flex-shrink-0 px-4 py-2 mr-2 rounded-full ${isFirst ? 'active bg-primary text-white' : 'bg-gray-200 hover:bg-gray-300 text-black'} font-bold`;
                 tabButton.dataset.tab = tabId;
                 tabButton.textContent = tab.title;
                 tabButton.style.fontFamily = "'Poppins', sans-serif";
@@ -913,8 +913,9 @@
                 
                 // Add tab title
                 const tabTitle = document.createElement('h2');
-                tabTitle.className = 'text-3xl font-bold mb-6 text-black text-center';
+                tabTitle.className = 'text-3xl font-bold mb-6 text-center';
                 tabTitle.style.fontFamily = "'Poppins', sans-serif";
+                tabTitle.style.color = '#333333';
                 tabTitle.textContent = tab.title;
                 tabContent.appendChild(tabTitle);
                 
@@ -924,8 +925,9 @@
                     
                     // Add category title
                     const categoryTitle = document.createElement('h3');
-                    categoryTitle.className = 'text-2xl font-semibold text-black category-title text-center mx-auto';
+                    categoryTitle.className = 'text-2xl font-semibold category-title text-center mx-auto';
                     categoryTitle.style.fontFamily = "'Poppins', sans-serif";
+                    categoryTitle.style.color = '#333333';
                     categoryTitle.textContent = category.title;
                     tabContent.appendChild(categoryTitle);
                     
