@@ -22,9 +22,9 @@
                                 description: "Rich espresso and steamed milk come together in a velvety blend.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.30,
-                                    "16oz": 3.50,
-                                    "20oz": 3.90
+                                    "12oz": 3.50,
+                                    "16oz": 3.70,
+                                    "20oz": 4.00
                                 },
                                 defaultSize: "12oz"
                             },
@@ -34,9 +34,9 @@
                                 description: "Bold espresso, smooth steamed milk, and a layer of velvety foam.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.30,
-                                    "16oz": 3.50,
-                                    "20oz": 3.90
+                                    "12oz": 3.50,
+                                    "16oz": 3.70,
+                                    "20oz": 4.00
                                 },
                                 defaultSize: "12oz"
                             },
@@ -46,9 +46,9 @@
                                 description: "Bold espresso, steamed milk, and chocolate combine in an indulgent coffee.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.45,
-                                    "16oz": 3.65,
-                                    "20oz": 4.05
+                                    "12oz": 3.65,
+                                    "16oz": 3.85,
+                                    "20oz": 4.15
                                 },
                                 defaultSize: "12oz"
                             },
@@ -58,8 +58,8 @@
                                 description: "Stronger coffee and a subtle layer of microfoam.",
                                 sizes: ["8oz", "12oz"],
                                 prices: {
-                                    "8oz": 3.30,
-                                    "12oz": 3.50
+                                    "8oz": 3.50,
+                                    "12oz": 3.70
                                 },
                                 defaultSize: "8oz"
                             },
@@ -69,9 +69,9 @@
                                 description: "A rich, full-bodied coffee made with bold espresso and hot water.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 2.95,
-                                    "16oz": 3.15,
-                                    "20oz": 3.35
+                                    "12oz": 3.15,
+                                    "16oz": 3.35,
+                                    "20oz": 3.45
                                 },
                                 defaultSize: "12oz"
                             },
@@ -81,7 +81,7 @@
                                 description: "A perfect balance of espresso and smooth steamed milk, in a delicate and velvety ratio.",
                                 sizes: ["6oz"],
                                 prices: {
-                                    "6oz": 3.30
+                                    "6oz": 3.50
                                 },
                                 defaultSize: "6oz"
                             },
@@ -91,8 +91,8 @@
                                 description: "Pure espresso, served in a small cup.",
                                 sizes: ["Single", "Double"],
                                 prices: {
-                                    "Single": 2.30,
-                                    "Double": 2.50
+                                    "Single": 2.50,
+                                    "Double": 2.70
                                 },
                                 defaultSize: "Single",
                                 disableCustomization: true
@@ -192,9 +192,9 @@
                                 description: "Rich chocolate and honeycomb flavouring, topped with real Crunchie.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.90,
-                                    "16oz": 4.10,
-                                    "20oz": 4.50
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
                                 },
                                 defaultSize: "12oz"
                             },
@@ -204,9 +204,9 @@
                                 description: "Decadent hot chocolate blended with crushed Oreo cookies and topped with whipped cream.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.90,
-                                    "16oz": 4.10,
-                                    "20oz": 4.50
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
                                 },
                                 defaultSize: "12oz"
                             },
@@ -216,9 +216,9 @@
                                 description: "Creamy hot chocolate with Kinder Bueno pieces, creating a rich hazelnut and chocolate experience.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.90,
-                                    "16oz": 4.10,
-                                    "20oz": 4.50
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
                                 },
                                 defaultSize: "12oz"
                             },
@@ -228,9 +228,9 @@
                                 description: "Indulgent hot chocolate with Snickers pieces, peanuts, and caramel for the ultimate treat.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.90,
-                                    "16oz": 4.10,
-                                    "20oz": 4.50
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
                                 },
                                 defaultSize: "12oz"
                             },
@@ -240,9 +240,9 @@
                                 description: "Unique pink ruby chocolate with a naturally fruity and smooth flavor profile.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.90,
-                                    "16oz": 4.10,
-                                    "20oz": 4.50
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
                                 },
                                 defaultSize: "12oz"
                             },
@@ -252,9 +252,9 @@
                                 description: "Smooth and creamy white chocolate drink with a sweet, vanilla finish.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.90,
-                                    "16oz": 4.10,
-                                    "20oz": 4.50
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
                                 },
                                 defaultSize: "12oz"
                             },
@@ -264,9 +264,9 @@
                                 description: "Rich chocolate drink with cherry flavor and whipped cream, inspired by the classic cake.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.90,
-                                    "16oz": 4.10,
-                                    "20oz": 4.50
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
                                 },
                                 defaultSize: "12oz"
                             },
@@ -276,9 +276,9 @@
                                 description: "Perfect balance of sweet caramel and sea salt in a rich chocolate base.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.90,
-                                    "16oz": 4.10,
-                                    "20oz": 4.50
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
                                 },
                                 defaultSize: "12oz"
                             }
@@ -288,74 +288,50 @@
                         title: "Tea",
                         items: [
                             {
-                                name: "English Breakfast Tea",
+                                name: "Breakfast Tea",
                                 image: null, // No image provided
                                 description: "A traditional blend of black teas with a full-bodied, robust flavor.",
-                                sizes: ["16oz"], // Standard size only
+                                sizes: ["Cup"], // Standard size only
                                 prices: {
-                                    "16oz": 2.60
+                                    "Cup": 2.50
                                 },
-                                defaultSize: "16oz",
+                                defaultSize: "Cup",
                                 itemType: "tea", // Custom item type for tea-specific options
                                 singleSize: true // Flag to indicate this has only one size
+                            },
+                            {
+                                name: "Decaf Tea",
+                                image: null,
+                                description: "Decaffeinated black tea blend with full flavor without the caffeine.",
+                                sizes: ["Cup"],
+                                prices: {
+                                    "Cup": 2.50
+                                },
+                                defaultSize: "Cup",
+                                itemType: "herbal-tea",
+                                singleSize: true
                             },
                             {
                                 name: "Earl Grey",
                                 image: null,
                                 description: "Black tea infused with bergamot oil, giving it a distinctive citrus flavor.",
-                                sizes: ["16oz"],
+                                sizes: ["Cup"],
                                 prices: {
-                                    "16oz": 2.60
+                                    "Cup": 2.50
                                 },
-                                defaultSize: "16oz",
+                                defaultSize: "Cup",
                                 itemType: "herbal-tea",
                                 singleSize: true
                             },
                             {
-                                name: "Green Tea",
+                                name: "Herbal Teas",
                                 image: null,
-                                description: "Light, refreshing tea with a smooth, delicate flavor.",
-                                sizes: ["16oz"],
+                                description: "Ask for our range of herbal tea options including peppermint, chamomile, and fruit teas.",
+                                sizes: ["Cup"],
                                 prices: {
-                                    "16oz": 2.60
+                                    "Cup": 2.50
                                 },
-                                defaultSize: "16oz",
-                                itemType: "herbal-tea",
-                                singleSize: true
-                            },
-                            {
-                                name: "Peppermint Tea",
-                                image: null,
-                                description: "Refreshing and cool herbal tea with a clean, minty flavor.",
-                                sizes: ["16oz"],
-                                prices: {
-                                    "16oz": 2.60
-                                },
-                                defaultSize: "16oz",
-                                itemType: "herbal-tea",
-                                singleSize: true
-                            },
-                            {
-                                name: "Lemon & Ginger Tea",
-                                image: null,
-                                description: "Warming herbal infusion of ginger and lemon, soothing and invigorating.",
-                                sizes: ["16oz"],
-                                prices: {
-                                    "16oz": 2.60
-                                },
-                                defaultSize: "16oz",
-                                itemType: "herbal-tea",
-                                singleSize: true
-                            },
-                            {
-                                name: "Blackberry & Raspberry Tea",
-                                image: null,
-                                description: "Sweet and fruity infusion with bright berry flavors.",
-                                sizes: ["16oz"],
-                                prices: {
-                                    "16oz": 2.60
-                                },
-                                defaultSize: "16oz",
+                                defaultSize: "Cup",
                                 itemType: "herbal-tea",
                                 singleSize: true
                             }
@@ -376,9 +352,9 @@
                                 description: "Creamy and milky iced coffee.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.45,
-                                    "16oz": 3.60,
-                                    "20oz": 4.05
+                                    "12oz": 3.65,
+                                    "16oz": 3.80,
+                                    "20oz": 4.15
                                 },
                                 defaultSize: "16oz"
                             },
@@ -388,9 +364,9 @@
                                 description: "Creamy and frothy iced coffee.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.45,
-                                    "16oz": 3.60,
-                                    "20oz": 4.05
+                                    "12oz": 3.65,
+                                    "16oz": 3.80,
+                                    "20oz": 4.15
                                 },
                                 defaultSize: "16oz"
                             },
@@ -400,9 +376,9 @@
                                 description: "Refreshing coffee served over ice.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.10,
-                                    "16oz": 3.30,
-                                    "20oz": 3.50
+                                    "12oz": 3.30,
+                                    "16oz": 3.50,
+                                    "20oz": 3.60
                                 },
                                 defaultSize: "16oz"
                             },
@@ -412,9 +388,9 @@
                                 description: "Chocolatey and creamy iced coffee.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.60,
-                                    "16oz": 3.80,
-                                    "20oz": 4.20
+                                    "12oz": 3.80,
+                                    "16oz": 4.00,
+                                    "20oz": 4.30
                                 },
                                 defaultSize: "16oz"
                             },
@@ -424,9 +400,9 @@
                                 description: "Blended ice coffee with a sweet caramel flavouring.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.25,
-                                    "20oz": 4.70
+                                    "12oz": 4.30,
+                                    "16oz": 4.45,
+                                    "20oz": 4.80
                                 },
                                 defaultSize: "16oz"
                             },
@@ -436,9 +412,9 @@
                                 description: "Blended ice coffee with an indulgent vanilla flavouring.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.25,
-                                    "20oz": 4.70
+                                    "12oz": 4.30,
+                                    "16oz": 4.45,
+                                    "20oz": 4.80
                                 },
                                 defaultSize: "16oz"
                             },
@@ -448,8 +424,8 @@
                                 description: "Iced Latte made with creamy and rich pistachio butter.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.10,
-                                    "20oz": 4.25
+                                    "16oz": 4.30,
+                                    "20oz": 4.45
                                 },
                                 defaultSize: "16oz"
                             },
@@ -459,15 +435,54 @@
                                 description: "Iced Latte made with smooth caramelized biscuit flavor.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.10,
-                                    "20oz": 4.25
+                                    "16oz": 4.30,
+                                    "20oz": 4.35
                                 },
                                 defaultSize: "16oz"
                             },
+
+                        ]
+                    },
+                    "matcha": {
+                        title: "Matcha",
+                        items: [
                             {
                                 name: "Strawberry Iced Matcha",
                                 image: "https://u.cubeupload.com/ryanjhope/strawIcedMatcha.png",
                                 description: "Refreshing iced matcha beautifully layered with sweet strawberry.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.40,
+                                    "20oz": 4.55
+                                },
+                                defaultSize: "16oz"
+                            },
+                            {
+                                name: "Blueberry Iced Matcha",
+                                image: null,
+                                description: "Refreshing iced matcha with sweet blueberry flavoring and vibrant color.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.40,
+                                    "20oz": 4.55
+                                },
+                                defaultSize: "16oz"
+                            },
+                            {
+                                name: "Vanilla Iced Matcha",
+                                image: null,
+                                description: "Smooth iced matcha enhanced with creamy vanilla for a perfectly balanced flavor.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.40,
+                                    "20oz": 4.55
+                                },
+                                defaultSize: "16oz"
+                            },
+                            {
+                                name: "Plain Iced Matcha",
+                                image: null,
+                                description: "Pure and traditional iced matcha with earthy green tea flavor and natural sweetness.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
                                     "16oz": 4.40,
@@ -556,8 +571,8 @@
                                 description: "A sweet pineapple infused lemonade.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.00,
-                                    "20oz": 4.15
+                                    "16oz": 4.20,
+                                    "20oz": 4.35
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -566,6 +581,30 @@
                                 name: "Rhubarb Lemonade",
                                 image: "https://u.cubeupload.com/ryanjhope/rhubarb.png",
                                 description: "A sweet and tangy rhubarb lemonade.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.00,
+                                    "20oz": 4.15
+                                },
+                                defaultSize: "16oz",
+                                disableCustomization: true
+                            },
+                            {
+                                name: "Violet Lemonade",
+                                image: null,
+                                description: "A floral and refreshing violet-flavored lemonade.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.00,
+                                    "20oz": 4.15
+                                },
+                                defaultSize: "16oz",
+                                disableCustomization: true
+                            },
+                            {
+                                name: "Strawberry Lemonade",
+                                image: null,
+                                description: "A sweet strawberry-infused lemonade.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
                                     "16oz": 4.00,
@@ -867,6 +906,83 @@
                             }
                         ]
                     },
+                    "protein": {
+                        title: "Protein",
+                        items: [
+                            {
+                                name: "Oreo Protein Shake",
+                                image: null,
+                                description: "High-protein shake with Oreo cookie flavor and real cookie pieces.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.80,
+                                    "20oz": 4.95
+                                },
+                                defaultSize: "16oz",
+                                itemType: "shake"
+                            },
+                            {
+                                name: "Snickers Protein Shake",
+                                image: null,
+                                description: "Rich protein shake with Snickers flavor, peanuts, and caramel.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.80,
+                                    "20oz": 4.95
+                                },
+                                defaultSize: "16oz",
+                                itemType: "shake"
+                            },
+                            {
+                                name: "Cookie Dough Protein Shake",
+                                image: null,
+                                description: "Creamy protein shake with sweet cookie dough flavor.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.80,
+                                    "20oz": 4.95
+                                },
+                                defaultSize: "16oz",
+                                itemType: "shake"
+                            },
+                            {
+                                name: "Salted Caramel Protein Shake",
+                                image: null,
+                                description: "Smooth protein shake with salted caramel flavor and a hint of sea salt.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.80,
+                                    "20oz": 4.95
+                                },
+                                defaultSize: "16oz",
+                                itemType: "shake"
+                            },
+                            {
+                                name: "Matcha Vanilla Protein Shake",
+                                image: null,
+                                description: "Healthy protein shake with earthy matcha and sweet vanilla flavors.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.80,
+                                    "20oz": 4.95
+                                },
+                                defaultSize: "16oz",
+                                itemType: "shake"
+                            },
+                            {
+                                name: "Kinder Bueno Protein Shake",
+                                image: null,
+                                description: "Indulgent protein shake with Kinder Bueno hazelnut and chocolate flavors.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.80,
+                                    "20oz": 4.95
+                                },
+                                defaultSize: "16oz",
+                                itemType: "shake"
+                            }
+                        ]
+                    },
                     "smoothies": {
                         title: "Smoothies",
                         items: [
@@ -897,7 +1013,7 @@
                             {
                                 name: "Reviving Green",
                                 image: "https://u.cubeupload.com/ryanjhope/greenSmoothie.png",
-                                description: "A healthy blend of mango, broccoli and spinach.",
+                                description: "A healthy blend of broccoli, spinach, avocado, and ginger.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
                                     "16oz": 4.15,
@@ -907,9 +1023,9 @@
                                 disableCustomization: true
                             },
                             {
-                                name: "Melon Heaven",
-                                image: "https://u.cubeupload.com/ryanjhope/strawberryBanana.png",
-                                description: "Watermelon, Honeydew and Cantaloupe melon in a refreshing blend.",
+                                name: "Strawberry & Banana",
+                                image: null,
+                                description: "Classic combination of sweet strawberries and creamy banana in a smooth blend.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
                                     "16oz": 4.15,
@@ -1035,42 +1151,49 @@
                                 name: "Ham & Cheese Toastie",
                                 image: "https://tb-static.uber.com/prod/image-proc/processed_images/3f2ab241ff4876626d22488bb6366c97/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
                                 description: "Savory ham and melted cheese grilled to golden perfection.",
-                                price: 3.70,
+                                price: 3.80,
                                 foodItem: true
                             },
                             {
                                 name: "Cheese & Onion Toastie",
                                 image: null,
                                 description: "Melted cheese and caramelized onions in golden, crispy bread.",
-                                price: 3.70,
+                                price: 3.80,
                                 foodItem: true
                             },
                             {
                                 name: "Cheese & Tomato Toastie",
                                 image: null,
                                 description: "Classic combination of melted cheese and fresh tomato slices.",
-                                price: 3.70,
+                                price: 3.80,
+                                foodItem: true
+                            },
+                            {
+                                name: "Tuna Melt Toastie",
+                                image: null,
+                                description: "Flaked tuna with melted cheese in toasted bread.",
+                                price: 3.80,
                                 foodItem: true
                             },
                             {
                                 name: "BBQ Chicken Panini",
                                 image: "https://u.cubeupload.com/ryanjhope/bbqchickenPanini.png",
                                 description: "Tender chicken with smoky BBQ sauce in a toasted panini.",
-                                price: 4.50,
+                                price: 4.60,
                                 foodItem: true
                             },
                             {
                                 name: "Sweet Chilli Chicken Panini",
                                 image: null,
                                 description: "Juicy chicken with sweet chilli sauce in a toasted panini.",
-                                price: 4.50,
+                                price: 4.60,
                                 foodItem: true
                             },
                             {
                                 name: "Ham & Cheese Panini",
                                 image: null,
                                 description: "Classic combination of ham and cheese in a toasted panini.",
-                                price: 4.50,
+                                price: 4.60,
                                 foodItem: true
                             },
                             {
@@ -1091,7 +1214,14 @@
                                 name: "Halloumi & Pesto Panini",
                                 image: "https://u.cubeupload.com/ryanjhope/pestohalloumiPanini.png",
                                 description: "Halloumi cheese with pesto in a toasted panini.",
-                                price: 4.50,
+                                price: 4.60,
+                                foodItem: true
+                            },
+                            {
+                                name: "Sausage, Bacon, Egg Panini",
+                                image: null,
+                                description: "Hearty breakfast panini with sausage, bacon, and egg.",
+                                price: 4.60,
                                 foodItem: true
                             }
                         ]
@@ -2433,6 +2563,34 @@
                             sizeBtn.className = `option-btn size-btn ${size === item.defaultSize ? 'active' : ''}`;
                             sizeBtn.dataset.size = size;
                             sizeBtn.textContent = size;
+                            
+                            // Add event listener for size selection
+                            sizeBtn.addEventListener('click', function(e) {
+                                e.stopPropagation(); // Prevent closing the menu
+                                
+                                // Remove active class from all size buttons in this group
+                                sizeOptionsDiv.querySelectorAll('.size-btn').forEach(btn => {
+                                    btn.classList.remove('active');
+                                });
+                                
+                                // Add active class to clicked button
+                                this.classList.add('active');
+                                
+                                // Get the selected size
+                                const selectedSize = this.getAttribute('data-size');
+                                
+                                // Get the prices data from the data-prices attribute
+                                const pricesData = JSON.parse(sizeOptionsDiv.getAttribute('data-prices'));
+                                
+                                // Update the base price
+                                const priceElement = itemElement.querySelector('.item-price');
+                                const basePrice = pricesData[selectedSize];
+                                priceElement.dataset.basePrice = basePrice;
+                                
+                                // Update the displayed price (base + extras)
+                                updateTotalPrice(itemElement);
+                            });
+                            
                             sizeOptionsDiv.appendChild(sizeBtn);
                         });
                         
@@ -2864,41 +3022,7 @@
                 parentGrid.classList.add('has-expanded-item');
             }
             
-            // Size selection functionality
-            document.querySelectorAll('.size-btn').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Prevent closing the menu
-                    
-                    // Get the parent options grid
-                    const sizeOptions = this.closest('.options-grid');
-                    
-                    // Remove active class from all size buttons in this group
-                    sizeOptions.querySelectorAll('.size-btn').forEach(btn => {
-                        btn.classList.remove('active');
-                    });
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Get the selected size
-                    const selectedSize = this.getAttribute('data-size');
-                    
-                    // Get the prices data from the data-prices attribute
-                    const pricesData = JSON.parse(sizeOptions.getAttribute('data-prices'));
-                    
-                    // Get the item element
-                    const itemId = sizeOptions.getAttribute('data-item-id');
-                    const itemElement = document.getElementById(itemId);
-                    
-                    // Update the base price
-                    const priceElement = itemElement.querySelector('.item-price');
-                    const basePrice = pricesData[selectedSize];
-                    priceElement.dataset.basePrice = basePrice;
-                    
-                    // Update the displayed price (base + extras)
-                    updateTotalPrice(itemElement);
-                });
-            });
+
             
             // Function to update total price based on base price and selected extras
             function updateTotalPrice(itemElement) {
