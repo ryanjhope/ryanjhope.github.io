@@ -7,6 +7,11 @@
     
     <!-- MENU CONFIGURATION - EDIT ITEMS HERE -->
     <script>
+        // UI Configuration - Toggle features here
+        const uiConfig = {
+            showSizesInListView: false, // Set to true to re-enable "Available in:" text in list view
+        };
+        
         // Menu data structure - edit this to update the menu
         const menuData = {
             // Hot Drinks Tab
@@ -324,9 +329,57 @@
                                 singleSize: true
                             },
                             {
-                                name: "Herbal Teas",
+                                name: "Chamomile",
                                 image: null,
-                                description: "Ask for our range of herbal tea options including peppermint, chamomile, and fruit teas.",
+                                description: "Gentle and soothing herbal tea with a delicate floral flavor and calming properties.",
+                                sizes: ["Cup"],
+                                prices: {
+                                    "Cup": 2.50
+                                },
+                                defaultSize: "Cup",
+                                itemType: "herbal-tea",
+                                singleSize: true
+                            },
+                            {
+                                name: "Blackberry & Raspberry",
+                                image: null,
+                                description: "Fruity herbal blend with sweet berry flavors and natural tartness.",
+                                sizes: ["Cup"],
+                                prices: {
+                                    "Cup": 2.50
+                                },
+                                defaultSize: "Cup",
+                                itemType: "herbal-tea",
+                                singleSize: true
+                            },
+                            {
+                                name: "Lemon & Ginger",
+                                image: null,
+                                description: "Invigorating herbal tea with zesty lemon and warming ginger spices.",
+                                sizes: ["Cup"],
+                                prices: {
+                                    "Cup": 2.50
+                                },
+                                defaultSize: "Cup",
+                                itemType: "herbal-tea",
+                                singleSize: true
+                            },
+                            {
+                                name: "Peppermint",
+                                image: null,
+                                description: "Refreshing herbal tea with cool mint leaves for a naturally invigorating experience.",
+                                sizes: ["Cup"],
+                                prices: {
+                                    "Cup": 2.50
+                                },
+                                defaultSize: "Cup",
+                                itemType: "herbal-tea",
+                                singleSize: true
+                            },
+                            {
+                                name: "Green Tea",
+                                image: null,
+                                description: "Light and delicate green tea with subtle grassy notes and natural antioxidants.",
                                 sizes: ["Cup"],
                                 prices: {
                                     "Cup": 2.50
@@ -1561,6 +1614,11 @@
             text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
         }
         
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        
         /* Make the menu container fill the embed space */
         #menu-container {
             width: 100%;
@@ -1625,6 +1683,15 @@
             color: white;
             box-shadow: 0 2px 4px rgba(248, 100, 0, 0.3);
         }
+        
+        /* Separator line inside view toggle pill */
+        .view-toggle-separator {
+            width: 1px;
+            height: 24px;
+            background-color: #d1d5db;
+            margin: 0 4px;
+            align-self: center;
+        }
 
 
 
@@ -1665,7 +1732,7 @@
         /* List view item styles */
         .menu-item.list-view {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             padding: 12px;
             border-radius: 12px;
             background-color: white;
@@ -1678,20 +1745,46 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
-        /* List view image */
+        /* List view main row */
+        .list-view-main-row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        
+        /* List view expansion styling */
+        .menu-item.list-view.expanded {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* List view item details */
+        .menu-item.list-view .item-details {
+            padding: 0 12px;
+            margin-top: 12px;
+            text-align: left;
+        }
+        
+        /* Center the customise button in list view */
+        .menu-item.list-view .item-details .customise-btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* List view image - 1.2x larger (72px instead of 60px) */
         .list-view-image {
-            width: 60px;
-            height: 60px;
+            width: 72px;
+            height: 72px;
             border-radius: 8px;
             object-fit: cover;
             margin-right: 12px;
             flex-shrink: 0;
         }
         
-        /* Invisible placeholder for list view alignment */
+        /* Invisible placeholder for list view alignment - updated to match new image size */
         .list-view-image-placeholder {
-            width: 60px;
-            height: 60px;
+            width: 72px;
+            height: 72px;
             margin-right: 12px;
             flex-shrink: 0;
             /* Completely invisible but maintains space */
@@ -1707,7 +1800,8 @@
             font-size: 16px;
             font-weight: 700;
             margin: 0 0 4px 0;
-            color: #374151;
+            color: #555555;
+            text-align: left !important; /* Override the global h4 centering rule */
         }
         
         .list-view-description {
@@ -1723,11 +1817,14 @@
             margin: 0;
         }
         
-        /* List view price */
+        /* List view price - styled as grey pill like grid view */
         .list-view-price {
-            font-size: 16px;
-            font-weight: 700;
-            color: #f86400;
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 3px 8px;
+            border-radius: 20px;
             margin-left: 12px;
             flex-shrink: 0;
         }
@@ -1749,8 +1846,7 @@
         .list-view .item-header,
         .list-view .price-badge,
         .list-view .inline-price-badge,
-        .list-view .food-item-header,
-        .list-view .item-details {
+        .list-view .food-item-header {
             display: none;
         }
         
@@ -1934,8 +2030,8 @@
             text-align: center;
         }
         
-        /* Notice for non-customizable items */
-        .no-customization-notice {
+        /* Notice for non-customisable items */
+        .no-customisation-notice {
             font-size: 12px;
             color: #666;
             font-style: italic;
@@ -2037,8 +2133,8 @@
             display: none;
         }
         
-        /* Customize button styling */
-        .customize-btn {
+        /* Customise button styling */
+        .customise-btn {
             display: inline-block;
             background-color: #f3f4f6;
             color: #555555;
@@ -2052,18 +2148,18 @@
             transition: all 0.2s ease;
         }
         
-        .customize-btn:hover {
+        .customise-btn:hover {
             background-color: #e5e7eb;
         }
         
-        .customize-btn.active {
+        .customise-btn.active {
             background-color: #f86400;
             color: white;
             border-color: #f86400;
         }
         
-        /* Customize container transition */
-        .customize-container {
+        /* Customise container transition */
+        .customise-container {
             margin-top: 12px;
             transition: all 0.3s ease;
         }
@@ -2131,6 +2227,12 @@
                         <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/>
                     </svg>
                 </button>
+                <div class="view-toggle-separator"></div>
+                <a href="https://drive.google.com/uc?export=download&id=1ol1VANPWMhrYLMoG_lmLvm_Ri28cu2Aw" target="_blank" class="view-toggle-btn" title="Download PDF Menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                    </svg>
+                </a>
             </div>
         </div>
 
@@ -2210,13 +2312,15 @@
                 for (const categoryId in tab.categories) {
                     const category = tab.categories[categoryId];
                     
-                    // Add category title
+                    // Add category title with unique ID for deep linking
                     const categoryTitle = document.createElement('h3');
                     categoryTitle.className = 'text-3xl font-bold category-title text-center mx-auto';
                     categoryTitle.style.fontFamily = "'Poppins', sans-serif";
                     categoryTitle.style.color = '#555555';
                     categoryTitle.style.textShadow = '0 0 1px rgba(248, 100, 0, 0.2)';
                     categoryTitle.textContent = category.title;
+                    // Create unique ID: tab-category (e.g., "hot-drinks-coffee", "food-pastries")
+                    categoryTitle.id = `${tabId}-${categoryId}`;
                     tabContent.appendChild(categoryTitle);
                     
                     // Add items container (grid or list)
@@ -2604,11 +2708,11 @@
                         detailsDiv.appendChild(sizeInfo);
                     }
                     
-                    // Only add customization options if not disabled
+                    // Only add customisation options if not disabled
                     if (!item.disableCustomization) {
-                        // Create a second-tier customization container
-                        const customizeContainer = document.createElement('div');
-                        customizeContainer.className = 'customize-container hidden';
+                        // Create a second-tier customisation container
+                        const customiseContainer = document.createElement('div');
+                        customiseContainer.className = 'customise-container hidden';
                         
                         // First determine which extras to use based on item type
                         let itemExtras = extras; // Default
@@ -2667,7 +2771,7 @@
                             });
                             
                             extrasSection.appendChild(extrasGrid);
-                            customizeContainer.appendChild(extrasSection);
+                            customiseContainer.appendChild(extrasSection);
                         }
                         
                         // Only show milk options for items that should have them
@@ -2719,39 +2823,39 @@
                             });
                             
                             milkSection.appendChild(milkGrid);
-                            customizeContainer.appendChild(milkSection);
+                            customiseContainer.appendChild(milkSection);
                         }
                         
-                        // Add the customize button
-                        const customizeBtn = document.createElement('button');
-                        customizeBtn.className = 'customize-btn';
-                        customizeBtn.textContent = 'Customize';
+                        // Add the customise button
+                        const customiseBtn = document.createElement('button');
+                        customiseBtn.className = 'customise-btn';
+                        customiseBtn.textContent = 'Customise';
                         
-                        // Add event listener to toggle customize options
-                        customizeBtn.addEventListener('click', function(e) {
+                        // Add event listener to toggle customise options
+                        customiseBtn.addEventListener('click', function(e) {
                             e.stopPropagation(); // Prevent closing the menu
                             
-                            // Toggle customize container visibility
-                            if (customizeContainer.classList.contains('hidden')) {
-                                customizeContainer.classList.remove('hidden');
-                                customizeBtn.textContent = 'Hide options';
-                                customizeBtn.classList.add('active');
+                            // Toggle customise container visibility
+                            if (customiseContainer.classList.contains('hidden')) {
+                                customiseContainer.classList.remove('hidden');
+                                customiseBtn.textContent = 'Hide options';
+                                customiseBtn.classList.add('active');
                             } else {
-                                customizeContainer.classList.add('hidden');
-                                customizeBtn.textContent = 'Customize';
-                                customizeBtn.classList.remove('active');
+                                customiseContainer.classList.add('hidden');
+                                customiseBtn.textContent = 'Customise';
+                                customiseBtn.classList.remove('active');
                             }
                         });
                         
-                        // Add customize button and container to details
-                        detailsDiv.appendChild(customizeBtn);
-                        detailsDiv.appendChild(customizeContainer);
+                        // Add customise button and container to details
+                        detailsDiv.appendChild(customiseBtn);
+                        detailsDiv.appendChild(customiseContainer);
                     } else {
-                        // Add notice if customization is disabled
-                        const noCustomizationNotice = document.createElement('p');
-                        noCustomizationNotice.className = 'no-customization-notice';
-                        noCustomizationNotice.textContent = 'No customization available for this item.';
-                        detailsDiv.appendChild(noCustomizationNotice);
+                        // Add notice if customisation is disabled
+                        const noCustomisationNotice = document.createElement('p');
+                        noCustomisationNotice.className = 'no-customisation-notice';
+                        noCustomisationNotice.textContent = 'No customisation available for this item.';
+                        detailsDiv.appendChild(noCustomisationNotice);
                     }
                     
                     // Append details to item
@@ -2768,18 +2872,22 @@
             
             // Function to create list view item - invisible placeholder for missing images to maintain alignment
             function createListViewItem(item, itemElement) {
+                // Create main row container
+                const mainRow = document.createElement('div');
+                mainRow.className = 'list-view-main-row';
+                
                 // Create image or invisible placeholder for alignment
                 if (item.image) {
                     const img = document.createElement('img');
                     img.className = 'list-view-image';
                     img.src = item.image;
                     img.alt = item.name;
-                    itemElement.appendChild(img);
+                    mainRow.appendChild(img);
                 } else {
                     // Create invisible placeholder to maintain alignment
                     const placeholder = document.createElement('div');
                     placeholder.className = 'list-view-image-placeholder';
-                    itemElement.appendChild(placeholder);
+                    mainRow.appendChild(placeholder);
                 }
                 
                 // Create content area
@@ -2800,15 +2908,15 @@
                     content.appendChild(description);
                 }
                 
-                // Sizes (for drinks)
-                if (item.sizes && !item.foodItem) {
+                // Sizes (for drinks) - conditionally shown based on uiConfig
+                if (item.sizes && !item.foodItem && uiConfig.showSizesInListView) {
                     const sizes = document.createElement('p');
                     sizes.className = 'list-view-sizes';
                     sizes.textContent = `Available in: ${item.sizes.join(', ')}`;
                     content.appendChild(sizes);
                 }
                 
-                itemElement.appendChild(content);
+                mainRow.appendChild(content);
                 
                 // Price
                 const price = document.createElement('div');
@@ -2818,7 +2926,10 @@
                 } else {
                     price.textContent = `£${item.prices[item.defaultSize].toFixed(2)}`;
                 }
-                itemElement.appendChild(price);
+                mainRow.appendChild(price);
+                
+                // Add the main row to the item element
+                itemElement.appendChild(mainRow);
                 
                 // Add badge if needed
                 if (item.badge) {
@@ -2827,6 +2938,248 @@
                     badge.textContent = item.badge;
                     itemElement.style.position = 'relative';
                     itemElement.appendChild(badge);
+                }
+                
+                // For drinks (not food items), add click functionality and details
+                if (!item.foodItem) {
+                    // Add hidden price span for calculations
+                    const priceSpan = document.createElement('span');
+                    priceSpan.className = 'item-price font-semibold';
+                    priceSpan.style.display = 'none'; // Hidden but used for calculations
+                    priceSpan.dataset.basePrice = item.prices[item.defaultSize];
+                    priceSpan.dataset.extras = '0.00';
+                    itemElement.appendChild(priceSpan);
+                    
+                    // Create expandable details section (same as grid view)
+                    const detailsDiv = document.createElement('div');
+                    detailsDiv.className = 'item-details text-center';
+                    
+                    // Size options section - only if item doesn't have singleSize flag
+                    if (!item.singleSize) {
+                        const sizeSection = document.createElement('div');
+                        sizeSection.className = 'options-section text-center';
+                        
+                        // Size heading
+                        const sizeHeading = document.createElement('div');
+                        sizeHeading.className = 'section-title text-center';
+                        sizeHeading.textContent = 'Size';
+                        sizeSection.appendChild(sizeHeading);
+                        
+                        // Size options
+                        const sizeOptionsDiv = document.createElement('div');
+                        sizeOptionsDiv.className = 'options-grid';
+                        sizeOptionsDiv.dataset.prices = JSON.stringify(item.prices);
+                        sizeOptionsDiv.dataset.itemId = itemElement.id;
+                        
+                        // Add size buttons
+                        item.sizes.forEach(size => {
+                            const sizeBtn = document.createElement('button');
+                            sizeBtn.className = `option-btn size-btn ${size === item.defaultSize ? 'active' : ''}`;
+                            sizeBtn.dataset.size = size;
+                            sizeBtn.textContent = size;
+                            
+                            // Add event listener for size selection
+                            sizeBtn.addEventListener('click', function(e) {
+                                e.stopPropagation(); // Prevent closing the menu
+                                
+                                // Remove active class from all size buttons in this group
+                                sizeOptionsDiv.querySelectorAll('.size-btn').forEach(btn => {
+                                    btn.classList.remove('active');
+                                });
+                                
+                                // Add active class to clicked button
+                                this.classList.add('active');
+                                
+                                // Get the selected size
+                                const selectedSize = this.getAttribute('data-size');
+                                
+                                // Get the prices data from the data-prices attribute
+                                const pricesData = JSON.parse(sizeOptionsDiv.getAttribute('data-prices'));
+                                
+                                // Update the base price
+                                const priceElement = itemElement.querySelector('.item-price');
+                                const basePrice = pricesData[selectedSize];
+                                priceElement.dataset.basePrice = basePrice;
+                                
+                                // Update the displayed price (base + extras) - update list view price
+                                updateTotalPriceListView(itemElement);
+                            });
+                            
+                            sizeOptionsDiv.appendChild(sizeBtn);
+                        });
+                        
+                        sizeSection.appendChild(sizeOptionsDiv);
+                        detailsDiv.appendChild(sizeSection);
+                    } else {
+                        // For single size items like tea, show size info text instead
+                        const sizeInfo = document.createElement('p');
+                        sizeInfo.className = 'size-info';
+                        sizeInfo.textContent = `Standard ${item.defaultSize} size`;
+                        detailsDiv.appendChild(sizeInfo);
+                    }
+                    
+                    // Only add customisation options if not disabled
+                    if (!item.disableCustomization) {
+                        // Create a second-tier customisation container
+                        const customiseContainer = document.createElement('div');
+                        customiseContainer.className = 'customise-container hidden';
+                        
+                        // First determine which extras to use based on item type
+                        let itemExtras = extras; // Default
+                        let showMilkOptions = true;
+                        
+                        if (item.itemType === 'tea') {
+                            itemExtras = teaExtras;
+                            // For regular tea, use tea milk options
+                        } else if (item.itemType === 'herbal-tea') {
+                            itemExtras = herbalTeaExtras;
+                            showMilkOptions = false; // No milk options for herbal tea
+                        } else if (item.itemType === 'bubble-tea') {
+                            itemExtras = bubbleTeaExtras;
+                            showMilkOptions = false; // No milk options for bubble tea
+                        } else if (item.itemType === 'speciality-frappe') {
+                            itemExtras = specialityFrappeExtras;
+                            showMilkOptions = false; // No milk options for speciality frappé
+                        } else if (item.itemType === 'shake') {
+                            itemExtras = shakeExtras;
+                            showMilkOptions = false; // No milk options for shakes
+                        } else if (item.itemType === 'bubble-tea-frappe') {
+                            itemExtras = bubbleTeaFrappeExtras;
+                            showMilkOptions = false; // No milk options for bubble tea frappé
+                        }
+                        
+                        // Only show extras section if there are extras to show
+                        if (itemExtras.length > 0) {
+                            const extrasSection = document.createElement('div');
+                            extrasSection.className = 'options-section text-center';
+                            
+                            // Extras heading
+                            const extrasHeading = document.createElement('div');
+                            extrasHeading.className = 'section-title text-center';
+                            extrasHeading.textContent = 'Extras';
+                            extrasSection.appendChild(extrasHeading);
+                            
+                            // Extras options
+                            const extrasGrid = document.createElement('div');
+                            extrasGrid.className = 'options-grid';
+                            
+                            // Add extras as buttons
+                            itemExtras.forEach(extra => {
+                                const extraBtn = document.createElement('button');
+                                extraBtn.className = 'option-btn extra-btn';
+                                extraBtn.dataset.extraId = extra.id;
+                                extraBtn.dataset.price = extra.price;
+                                extraBtn.textContent = `${extra.name} ${extra.price > 0 ? `(£${extra.price.toFixed(2)})` : ''}`;
+                                
+                                extraBtn.addEventListener('click', function(e) {
+                                    e.stopPropagation(); // Prevent closing the menu
+                                    this.classList.toggle('active');
+                                    updateTotalPriceListView(itemElement);
+                                });
+                                
+                                extrasGrid.appendChild(extraBtn);
+                            });
+                            
+                            extrasSection.appendChild(extrasGrid);
+                            customiseContainer.appendChild(extrasSection);
+                        }
+                        
+                        // Only show milk options for items that should have them
+                        if (showMilkOptions) {
+                            // Alternative milk section - use tea-specific milk options if item type is tea
+                            const milkSection = document.createElement('div');
+                            milkSection.className = 'options-section text-center';
+                            
+                            // Milk heading
+                            const milkHeading = document.createElement('div');
+                            milkHeading.className = 'section-title text-center';
+                            milkHeading.textContent = 'Alternative Milk';
+                            milkSection.appendChild(milkHeading);
+                            
+                            // Milk options
+                            const milkGrid = document.createElement('div');
+                            milkGrid.className = 'options-grid';
+                            
+                            // Determine which milk options to use based on item type
+                            const itemMilkOptions = item.itemType === 'tea' ? teaMilkOptions : milkOptions;
+                            
+                            // Add milk options as buttons
+                            itemMilkOptions.forEach(milk => {
+                                const milkBtn = document.createElement('button');
+                                milkBtn.className = 'option-btn milk-btn';
+                                milkBtn.dataset.milkId = milk.id;
+                                milkBtn.dataset.price = milk.price;
+                                
+                                if (milk.price > 0) {
+                                    milkBtn.textContent = `${milk.name} (£${milk.price.toFixed(2)})`;
+                                } else {
+                                    milkBtn.textContent = `${milk.name} (Free)`;
+                                }
+                                
+                                milkBtn.addEventListener('click', function(e) {
+                                    e.stopPropagation(); // Prevent closing the menu
+                                    
+                                    // Deactivate all other milk buttons
+                                    milkGrid.querySelectorAll('.milk-btn').forEach(btn => {
+                                        btn.classList.remove('active');
+                                    });
+                                    
+                                    // Activate this button
+                                    this.classList.add('active');
+                                    updateTotalPriceListView(itemElement);
+                                });
+                                
+                                milkGrid.appendChild(milkBtn);
+                            });
+                            
+                            milkSection.appendChild(milkGrid);
+                            customiseContainer.appendChild(milkSection);
+                        }
+                        
+                        // Add the customise button
+                        const customiseBtn = document.createElement('button');
+                        customiseBtn.className = 'customise-btn';
+                        customiseBtn.textContent = 'Customise';
+                        
+                        // Add event listener to toggle customise options
+                        customiseBtn.addEventListener('click', function(e) {
+                            e.stopPropagation(); // Prevent closing the menu
+                            
+                            // Toggle customise container visibility
+                            if (customiseContainer.classList.contains('hidden')) {
+                                customiseContainer.classList.remove('hidden');
+                                customiseBtn.textContent = 'Hide options';
+                                customiseBtn.classList.add('active');
+                            } else {
+                                customiseContainer.classList.add('hidden');
+                                customiseBtn.textContent = 'Customise';
+                                customiseBtn.classList.remove('active');
+                            }
+                        });
+                        
+                        // Add customise button and container to details
+                        detailsDiv.appendChild(customiseBtn);
+                        detailsDiv.appendChild(customiseContainer);
+                    } else {
+                        // Add notice if customisation is disabled
+                        const noCustomisationNotice = document.createElement('p');
+                        noCustomisationNotice.className = 'no-customisation-notice';
+                        noCustomisationNotice.textContent = 'No customisation available for this item.';
+                        detailsDiv.appendChild(noCustomisationNotice);
+                    }
+                    
+                    // Append details to item
+                    itemElement.appendChild(detailsDiv);
+                    
+                    // Prevent option buttons from closing accordion when clicked
+                    detailsDiv.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                    });
+                    
+                    // Make main row clickable for drinks
+                    mainRow.addEventListener('click', function() {
+                        toggleAccordion(itemElement);
+                    });
                 }
                 
                 return itemElement;
@@ -3056,6 +3409,38 @@
                     inlinePriceBadge.textContent = `£${totalPrice.toFixed(2)}`;
                 } else if (priceBadge) {
                     priceBadge.textContent = `£${totalPrice.toFixed(2)}`;
+                }
+            }
+            
+            // Function to update total price for list view items
+            function updateTotalPriceListView(itemElement) {
+                const priceElement = itemElement.querySelector('.item-price');
+                const listViewPrice = itemElement.querySelector('.list-view-price');
+                const basePrice = parseFloat(priceElement.dataset.basePrice);
+                
+                // Calculate extras total
+                let extrasTotal = 0;
+                
+                // Add selected extras (ignoring decaf since it's free)
+                itemElement.querySelectorAll('.extra-btn.active').forEach(btn => {
+                    extrasTotal += parseFloat(btn.dataset.price);
+                });
+                
+                // Add selected milk (if any)
+                const selectedMilk = itemElement.querySelector('.milk-btn.active');
+                if (selectedMilk) {
+                    extrasTotal += parseFloat(selectedMilk.dataset.price);
+                }
+                
+                // Update extras data attribute
+                priceElement.dataset.extras = extrasTotal.toFixed(2);
+                
+                // Update displayed price
+                const totalPrice = basePrice + extrasTotal;
+                
+                // Update list view price display
+                if (listViewPrice) {
+                    listViewPrice.textContent = `£${totalPrice.toFixed(2)}`;
                 }
             }
             
