@@ -2258,6 +2258,22 @@
             const tabButtonsContainer = document.getElementById('tab-buttons');
             const tabContentContainer = document.getElementById('tab-content');
             
+            // Check for URL fragment and prepare for auto-tab switching
+            const urlHash = window.location.hash;
+            let targetTabId = null;
+            
+            if (urlHash) {
+                // Extract tab ID from hash (e.g., "#cold-drinks-matcha" -> "cold-drinks")
+                const hashParts = urlHash.substring(1).split('-');
+                if (hashParts.length >= 2) {
+                    // Try different combinations to find valid tab ID
+                    const possibleTabId = hashParts.slice(0, 2).join('-'); // e.g., "cold-drinks"
+                    if (menuData[possibleTabId]) {
+                        targetTabId = possibleTabId;
+                    }
+                }
+            }
+            
             // Generate tab buttons
             const mainTabButtonsContainer = document.getElementById('main-tab-buttons');
             const collectionsTabButtonContainer = document.getElementById('collections-tab-button');
@@ -2403,6 +2419,32 @@
             // if (hasCollections) {
             //     collectionsTabSection.style.display = 'block';
             // }
+            
+            // Auto-tab switching: If there's a URL fragment that matches a different tab, switch to it
+            if (targetTabId && targetTabId !== 'hot-drinks') {
+                // Find the button for the target tab and activate it
+                const targetTabButton = document.querySelector(`[data-tab="${targetTabId}"]`);
+                if (targetTabButton) {
+                    // Simulate clicking the tab
+                    targetTabButton.click();
+                    
+                    // After tab switch, scroll to the section (with delay to ensure content is rendered)
+                    setTimeout(() => {
+                        const targetElement = document.querySelector(urlHash);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }, 100);
+                }
+            } else if (urlHash) {
+                // If we're already on the right tab (or it's hot-drinks by default), just scroll
+                setTimeout(() => {
+                    const targetElement = document.querySelector(urlHash);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 100);
+            }
             
             // Set up view toggle buttons
             document.getElementById('list-view-btn').addEventListener('click', function() {
