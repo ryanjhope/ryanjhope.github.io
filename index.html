@@ -23,7 +23,7 @@
                         items: [
                             {
                                 name: "Latte",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/9fbf6fd11c863fb571814ffec7756f03/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/1.png",
                                 description: "Rich espresso and steamed milk come together in a velvety blend.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
@@ -31,11 +31,14 @@
                                     "16oz": 3.70,
                                     "20oz": 4.00
                                 },
-                                defaultSize: "12oz"
+                                defaultSize: "12oz",
+                                allergens: [
+                                    { type: "dairy", ingredients: "Milk, Cream" }
+                                ]
                             },
                             {
                                 name: "Cappuccino",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/571316e02dd2dee87b9473a8326292dc/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/3.png",
                                 description: "Bold espresso, smooth steamed milk, and a layer of velvety foam.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
@@ -43,7 +46,10 @@
                                     "16oz": 3.70,
                                     "20oz": 4.00
                                 },
-                                defaultSize: "12oz"
+                                defaultSize: "12oz",
+                                allergens: [
+                                    { type: "dairy", ingredients: "Milk, Cream" }
+                                ]
                             },
                             {
                                 name: "Mocha",
@@ -55,7 +61,11 @@
                                     "16oz": 3.85,
                                     "20oz": 4.15
                                 },
-                                defaultSize: "12oz"
+                                defaultSize: "12oz",
+                                allergens: [
+                                    { type: "dairy", ingredients: "Milk, Cream" },
+                                    { type: "soy", ingredients: "Soy Lecithin (in chocolate sauce)" }
+                                ]
                             },
                             {
                                 name: "Flat White",
@@ -110,7 +120,7 @@
                         items: [
                             {
                                 name: "Matcha Latte",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/af107c3b5621fdc5ff25d27212f0c0bb/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/2.png",
                                 description: "Subtle, grassy flavor of green tea combined with smooth steamed milk.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
@@ -121,19 +131,18 @@
                             },
                             {
                                 name: "Pistachio Cream Latte",
-                                image: "https://u.cubeupload.com/ryanjhope/CopyofpistachioIced.png",
+                                image: "https://u.cubeupload.com/ryanjhope/14.png",
                                 description: "Latte made with creamy pistachio butter, topped with sauce and real pistachio crumbs.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
                                     "16oz": 4.40,
                                     "20oz": 4.60
                                 },
-                                defaultSize: "16oz",
-                                badge: "NEW" // Added badge
+                                defaultSize: "16oz"
                             },
                             {
                                 name: "Gingerbread Latte",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/10.png",
                                 description: "Warm spiced latte with aromatic gingerbread flavoring and a hint of molasses sweetness.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
@@ -144,7 +153,7 @@
                             },
                             {
                                 name: "Pumpkin Spice Latte",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/9.png",
                                 description: "Seasonal blend of espresso with pumpkin and warm autumn spices in creamy steamed milk.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
@@ -155,7 +164,7 @@
                             },
                             {
                                 name: "Lotus Biscoff Latte",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/16.png",
                                 description: "Rich espresso combined with smooth caramelized biscuit flavor and velvety steamed milk.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
@@ -166,7 +175,7 @@
                             },
                             {
                                 name: "Butterscotch Latte",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/15.png",
                                 description: "Indulgent latte with rich butterscotch syrup and smooth steamed milk for a sweet finish.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
@@ -185,6 +194,28 @@
                                     "20oz": 4.60
                                 },
                                 defaultSize: "16oz"
+                            },
+                            {
+                                name: "Toffee Nut Latte",
+                                image: "https://u.cubeupload.com/ryanjhope/12.png",
+                                description: "Smooth espresso with sweet toffee nut syrup and steamed milk.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.40,
+                                    "20oz": 4.60
+                                },
+                                defaultSize: "16oz"
+                            },
+                            {
+                                name: "White Chocolate Hazelnut Mocha",
+                                image: "https://u.cubeupload.com/ryanjhope/13.png",
+                                description: "Rich espresso with creamy white chocolate and toasted hazelnut flavour.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.40,
+                                    "20oz": 4.60
+                                },
+                                defaultSize: "16oz"
                             }
                         ]
                     },
@@ -192,8 +223,44 @@
                         title: "Hot Chocolate",
                         items: [
                             {
+                                name: "Hot Chocolate",
+                                image: "https://u.cubeupload.com/ryanjhope/20.png",
+                                description: "Classic creamy hot chocolate made with rich cocoa and steamed milk.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 3.50,
+                                    "16oz": 3.70,
+                                    "20oz": 4.00
+                                },
+                                defaultSize: "12oz"
+                            },
+                            {
+                                name: "Honeycomb Hot Chocolate",
+                                image: "https://u.cubeupload.com/ryanjhope/22.png",
+                                description: "Rich hot chocolate with sweet honeycomb flavouring and whipped cream.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
+                                },
+                                defaultSize: "12oz"
+                            },
+                            {
+                                name: "Orange Hot Chocolate",
+                                image: "https://u.cubeupload.com/ryanjhope/20.png",
+                                description: "Classic hot chocolate with a zesty orange twist.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
+                                },
+                                defaultSize: "12oz"
+                            },
+                            {
                                 name: "Crunchie Hot Chocolate",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/dcf9ea138be6a31aef3c03cd64bd25b9/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/19.png",
                                 description: "Rich chocolate and honeycomb flavouring, topped with real Crunchie.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
@@ -205,7 +272,7 @@
                             },
                             {
                                 name: "Oreo Hot Chocolate",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/17.png",
                                 description: "Decadent hot chocolate blended with crushed Oreo cookies and topped with whipped cream.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
@@ -217,7 +284,7 @@
                             },
                             {
                                 name: "Kinder Bueno Hot Chocolate",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/21.png",
                                 description: "Creamy hot chocolate with Kinder Bueno pieces, creating a rich hazelnut and chocolate experience.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
@@ -229,7 +296,7 @@
                             },
                             {
                                 name: "Snickers Hot Chocolate",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/18.png",
                                 description: "Indulgent hot chocolate with Snickers pieces, peanuts, and caramel for the ultimate treat.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
@@ -265,7 +332,7 @@
                             },
                             {
                                 name: "Black Forest Hot Chocolate",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/24.png",
                                 description: "Rich chocolate drink with cherry flavor and whipped cream, inspired by the classic cake.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
@@ -277,8 +344,44 @@
                             },
                             {
                                 name: "Salted Caramel Hot Chocolate",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/23.png",
                                 description: "Perfect balance of sweet caramel and sea salt in a rich chocolate base.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
+                                },
+                                defaultSize: "12oz"
+                            },
+                            {
+                                name: "Toasted Marshmallow Hot Chocolate",
+                                image: "https://u.cubeupload.com/ryanjhope/25.png",
+                                description: "Rich hot chocolate topped with fluffy toasted marshmallows.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
+                                },
+                                defaultSize: "12oz"
+                            },
+                            {
+                                name: "Biscoff Hot Chocolate",
+                                image: "https://u.cubeupload.com/ryanjhope/26.png",
+                                description: "Creamy hot chocolate with caramelized Biscoff cookie flavour.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 4.10,
+                                    "16oz": 4.30,
+                                    "20oz": 4.60
+                                },
+                                defaultSize: "12oz"
+                            },
+                            {
+                                name: "Pistachio Hot Chocolate",
+                                image: "https://u.cubeupload.com/ryanjhope/27.png",
+                                description: "Creamy hot chocolate with rich pistachio flavour and crushed nuts.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
                                     "12oz": 4.10,
@@ -294,7 +397,7 @@
                         items: [
                             {
                                 name: "Breakfast Tea",
-                                image: null, // No image provided
+                                image: "https://u.cubeupload.com/ryanjhope/5.png",
                                 description: "A traditional blend of black teas with a full-bodied, robust flavor.",
                                 sizes: ["Cup"], // Standard size only
                                 prices: {
@@ -306,7 +409,7 @@
                             },
                             {
                                 name: "Decaf Tea",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/5.png",
                                 description: "Decaffeinated black tea blend with full flavor without the caffeine.",
                                 sizes: ["Cup"],
                                 prices: {
@@ -318,7 +421,7 @@
                             },
                             {
                                 name: "Earl Grey",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/5.png",
                                 description: "Black tea infused with bergamot oil, giving it a distinctive citrus flavor.",
                                 sizes: ["Cup"],
                                 prices: {
@@ -342,7 +445,7 @@
                             },
                             {
                                 name: "Blackberry & Raspberry",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/6.png",
                                 description: "Fruity herbal blend with sweet berry flavors and natural tartness.",
                                 sizes: ["Cup"],
                                 prices: {
@@ -354,7 +457,7 @@
                             },
                             {
                                 name: "Lemon & Ginger",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/4.png",
                                 description: "Invigorating herbal tea with zesty lemon and warming ginger spices.",
                                 sizes: ["Cup"],
                                 prices: {
@@ -366,7 +469,7 @@
                             },
                             {
                                 name: "Peppermint",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/7.png",
                                 description: "Refreshing herbal tea with cool mint leaves for a naturally invigorating experience.",
                                 sizes: ["Cup"],
                                 prices: {
@@ -1115,7 +1218,12 @@
                                 image: "https://tb-static.uber.com/prod/image-proc/processed_images/fb76fa210734e7d46d4708377ed7d354/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
                                 description: "Sweet, flaky pastry swirled with aromatic cinnamon and sugar.",
                                 price: 2.45,
-                                foodItem: true
+                                foodItem: true,
+                                allergens: [
+                                    { type: "gluten", ingredients: "Wheat Flour" },
+                                    { type: "dairy", ingredients: "Butter, Milk" },
+                                    { type: "eggs", ingredients: "Egg Wash" }
+                                ]
                             },
                             {
                                 name: "Chocolate Twist",
@@ -1679,9 +1787,9 @@
         }
         
         .view-toggle-btn.active {
-            background-color: #f86400;
+            background-color: #8D312D;
             color: white;
-            box-shadow: 0 2px 4px rgba(248, 100, 0, 0.3);
+            box-shadow: 0 2px 4px rgba(141, 49, 45, 0.3);
         }
         
         /* Separator line inside view toggle pill */
@@ -1770,12 +1878,18 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        /* Center the allergens button in list view */
+        .menu-item.list-view .item-details .allergens-btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
         
         /* List view image - 1.2x larger (72px instead of 60px) */
         .list-view-image {
             width: 72px;
             height: 72px;
-            border-radius: 8px;
             object-fit: cover;
             margin-right: 12px;
             flex-shrink: 0;
@@ -1855,7 +1969,6 @@
             border: none;
             border-radius: 16px;
             background-color: white;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             transition: all 0.3s ease, opacity 0.3s ease;
             overflow: hidden;
             text-align: center;
@@ -2147,15 +2260,120 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-        
+
         .customise-btn:hover {
             background-color: #e5e7eb;
         }
-        
+
         .customise-btn.active {
             background-color: #f86400;
             color: white;
             border-color: #f86400;
+        }
+
+        /* Allergens button styling */
+        .allergens-btn {
+            display: inline-block;
+            background-color: #f3f4f6;
+            color: #555555;
+            padding: 8px 20px;
+            margin-top: 12px;
+            margin-left: 8px;
+            border: 1px solid #e5e7eb;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .allergens-btn:hover {
+            background-color: #e5e7eb;
+        }
+
+        .allergens-btn.active {
+            background-color: #8b5cf6;
+            color: white;
+            border-color: #8b5cf6;
+        }
+
+        /* Allergens container */
+        .allergens-container {
+            margin-top: 12px;
+            padding: 16px;
+            background-color: #f9fafb;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .allergens-title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: #374151;
+        }
+
+        .allergen-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            padding: 8px;
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .allergen-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 10px;
+            white-space: nowrap;
+            min-width: 80px;
+            justify-content: center;
+        }
+
+        .allergen-ingredients {
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* Allergen color coding */
+        .allergen-dairy {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .allergen-gluten {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .allergen-nuts {
+            background-color: #fce7f3;
+            color: #9f1239;
+        }
+
+        .allergen-soy {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .allergen-eggs {
+            background-color: #ffe4e6;
+            color: #9f1239;
+        }
+
+        /* Button container for alignment */
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
         }
         
         /* Customise container transition */
@@ -2297,11 +2515,11 @@
                 tabButton.textContent = tab.title;
                 tabButton.style.fontFamily = "'Poppins', sans-serif";
                 if (isActiveTab) {
-                    tabButton.style.backgroundColor = '#f86400';
+                    tabButton.style.backgroundColor = '#8D312D';
                 } else {
                     tabButton.style.color = '#555555';
                 }
-                
+
                 if (isCollectionsTab) {
                     collectionsTabButtonContainer.appendChild(tabButton);
                     hasCollections = true;
@@ -2876,7 +3094,7 @@
                         // Add event listener to toggle customise options
                         customiseBtn.addEventListener('click', function(e) {
                             e.stopPropagation(); // Prevent closing the menu
-                            
+
                             // Toggle customise container visibility
                             if (customiseContainer.classList.contains('hidden')) {
                                 customiseContainer.classList.remove('hidden');
@@ -2888,7 +3106,7 @@
                                 customiseBtn.classList.remove('active');
                             }
                         });
-                        
+
                         // Add customise button and container to details
                         detailsDiv.appendChild(customiseBtn);
                         detailsDiv.appendChild(customiseContainer);
@@ -2899,7 +3117,63 @@
                         noCustomisationNotice.textContent = 'No customisation available for this item.';
                         detailsDiv.appendChild(noCustomisationNotice);
                     }
-                    
+
+                    // Add allergens button and container if allergens are present
+                    if (item.allergens && item.allergens.length > 0) {
+                        // Create allergens container
+                        const allergensContainer = document.createElement('div');
+                        allergensContainer.className = 'allergens-container hidden';
+
+                        // Add title
+                        const allergensTitle = document.createElement('div');
+                        allergensTitle.className = 'allergens-title';
+                        allergensTitle.textContent = 'Allergen Information';
+                        allergensContainer.appendChild(allergensTitle);
+
+                        // Add allergen items
+                        item.allergens.forEach(allergen => {
+                            const allergenItem = document.createElement('div');
+                            allergenItem.className = 'allergen-item';
+
+                            const allergenBadge = document.createElement('span');
+                            allergenBadge.className = `allergen-badge allergen-${allergen.type}`;
+                            allergenBadge.textContent = allergen.type.charAt(0).toUpperCase() + allergen.type.slice(1);
+
+                            const allergenIngredients = document.createElement('span');
+                            allergenIngredients.className = 'allergen-ingredients';
+                            allergenIngredients.textContent = allergen.ingredients;
+
+                            allergenItem.appendChild(allergenBadge);
+                            allergenItem.appendChild(allergenIngredients);
+                            allergensContainer.appendChild(allergenItem);
+                        });
+
+                        // Create allergens button
+                        const allergensBtn = document.createElement('button');
+                        allergensBtn.className = 'allergens-btn';
+                        allergensBtn.textContent = 'Allergens';
+
+                        // Add event listener to toggle allergens container
+                        allergensBtn.addEventListener('click', function(e) {
+                            e.stopPropagation(); // Prevent closing the menu
+
+                            // Toggle allergens container visibility
+                            if (allergensContainer.classList.contains('hidden')) {
+                                allergensContainer.classList.remove('hidden');
+                                allergensBtn.textContent = 'Hide allergens';
+                                allergensBtn.classList.add('active');
+                            } else {
+                                allergensContainer.classList.add('hidden');
+                                allergensBtn.textContent = 'Allergens';
+                                allergensBtn.classList.remove('active');
+                            }
+                        });
+
+                        // Add allergens button and container to details
+                        detailsDiv.appendChild(allergensBtn);
+                        detailsDiv.appendChild(allergensContainer);
+                    }
+
                     // Append details to item
                     itemElement.appendChild(detailsDiv);
                     
@@ -2907,8 +3181,67 @@
                     detailsDiv.addEventListener('click', function(e) {
                         e.stopPropagation();
                     });
+                } else {
+                    // Create expandable details section for food items (allergen information)
+                    const detailsDiv = document.createElement('div');
+                    detailsDiv.className = 'item-details text-center';
+
+                    // Description
+                    const descriptionPara = document.createElement('p');
+                    descriptionPara.className = 'text-sm text-gray-600 mt-2 text-center';
+                    descriptionPara.textContent = item.description;
+                    detailsDiv.appendChild(descriptionPara);
+
+                    // Add allergens section if allergens are present
+                    if (item.allergens && item.allergens.length > 0) {
+                        const allergensSection = document.createElement('div');
+                        allergensSection.className = 'options-section text-center';
+                        allergensSection.style.marginTop = '16px';
+
+                        // Allergens heading
+                        const allergensHeading = document.createElement('div');
+                        allergensHeading.className = 'section-title text-center';
+                        allergensHeading.textContent = 'Allergen Information';
+                        allergensSection.appendChild(allergensHeading);
+
+                        // Allergens list
+                        const allergensList = document.createElement('div');
+                        allergensList.className = 'allergens-list';
+                        allergensList.style.display = 'flex';
+                        allergensList.style.flexDirection = 'column';
+                        allergensList.style.gap = '8px';
+                        allergensList.style.marginTop = '12px';
+
+                        item.allergens.forEach(allergen => {
+                            const allergenItem = document.createElement('div');
+                            allergenItem.className = 'allergen-item';
+
+                            const allergenBadge = document.createElement('span');
+                            allergenBadge.className = `allergen-badge allergen-${allergen.type}`;
+                            allergenBadge.textContent = allergen.type.charAt(0).toUpperCase() + allergen.type.slice(1);
+
+                            const allergenIngredients = document.createElement('span');
+                            allergenIngredients.className = 'allergen-ingredients';
+                            allergenIngredients.textContent = allergen.ingredients;
+
+                            allergenItem.appendChild(allergenBadge);
+                            allergenItem.appendChild(allergenIngredients);
+                            allergensList.appendChild(allergenItem);
+                        });
+
+                        allergensSection.appendChild(allergensList);
+                        detailsDiv.appendChild(allergensSection);
+                    }
+
+                    // Append details to item
+                    itemElement.appendChild(detailsDiv);
+
+                    // Prevent option buttons from closing accordion when clicked
+                    detailsDiv.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                    });
                 }
-                
+
                 return itemElement;
             }
             
@@ -3186,7 +3519,7 @@
                         // Add event listener to toggle customise options
                         customiseBtn.addEventListener('click', function(e) {
                             e.stopPropagation(); // Prevent closing the menu
-                            
+
                             // Toggle customise container visibility
                             if (customiseContainer.classList.contains('hidden')) {
                                 customiseContainer.classList.remove('hidden');
@@ -3198,7 +3531,7 @@
                                 customiseBtn.classList.remove('active');
                             }
                         });
-                        
+
                         // Add customise button and container to details
                         detailsDiv.appendChild(customiseBtn);
                         detailsDiv.appendChild(customiseContainer);
@@ -3209,7 +3542,63 @@
                         noCustomisationNotice.textContent = 'No customisation available for this item.';
                         detailsDiv.appendChild(noCustomisationNotice);
                     }
-                    
+
+                    // Add allergens button and container if allergens are present
+                    if (item.allergens && item.allergens.length > 0) {
+                        // Create allergens container
+                        const allergensContainer = document.createElement('div');
+                        allergensContainer.className = 'allergens-container hidden';
+
+                        // Add title
+                        const allergensTitle = document.createElement('div');
+                        allergensTitle.className = 'allergens-title';
+                        allergensTitle.textContent = 'Allergen Information';
+                        allergensContainer.appendChild(allergensTitle);
+
+                        // Add allergen items
+                        item.allergens.forEach(allergen => {
+                            const allergenItem = document.createElement('div');
+                            allergenItem.className = 'allergen-item';
+
+                            const allergenBadge = document.createElement('span');
+                            allergenBadge.className = `allergen-badge allergen-${allergen.type}`;
+                            allergenBadge.textContent = allergen.type.charAt(0).toUpperCase() + allergen.type.slice(1);
+
+                            const allergenIngredients = document.createElement('span');
+                            allergenIngredients.className = 'allergen-ingredients';
+                            allergenIngredients.textContent = allergen.ingredients;
+
+                            allergenItem.appendChild(allergenBadge);
+                            allergenItem.appendChild(allergenIngredients);
+                            allergensContainer.appendChild(allergenItem);
+                        });
+
+                        // Create allergens button
+                        const allergensBtn = document.createElement('button');
+                        allergensBtn.className = 'allergens-btn';
+                        allergensBtn.textContent = 'Allergens';
+
+                        // Add event listener to toggle allergens container
+                        allergensBtn.addEventListener('click', function(e) {
+                            e.stopPropagation(); // Prevent closing the menu
+
+                            // Toggle allergens container visibility
+                            if (allergensContainer.classList.contains('hidden')) {
+                                allergensContainer.classList.remove('hidden');
+                                allergensBtn.textContent = 'Hide allergens';
+                                allergensBtn.classList.add('active');
+                            } else {
+                                allergensContainer.classList.add('hidden');
+                                allergensBtn.textContent = 'Allergens';
+                                allergensBtn.classList.remove('active');
+                            }
+                        });
+
+                        // Add allergens button and container to details
+                        detailsDiv.appendChild(allergensBtn);
+                        detailsDiv.appendChild(allergensContainer);
+                    }
+
                     // Append details to item
                     itemElement.appendChild(detailsDiv);
                     
@@ -3217,16 +3606,82 @@
                     detailsDiv.addEventListener('click', function(e) {
                         e.stopPropagation();
                     });
-                    
+
                     // Make main row clickable for drinks
                     mainRow.addEventListener('click', function() {
                         toggleAccordion(itemElement);
                     });
+                } else {
+                    // Create expandable details section for food items (allergen information)
+                    const detailsDiv = document.createElement('div');
+                    detailsDiv.className = 'item-details text-left';
+                    detailsDiv.style.padding = '0 12px';
+                    detailsDiv.style.marginTop = '12px';
+
+                    // Description
+                    const descriptionPara = document.createElement('p');
+                    descriptionPara.className = 'text-sm text-gray-600 mt-2';
+                    descriptionPara.textContent = item.description;
+                    detailsDiv.appendChild(descriptionPara);
+
+                    // Add allergens section if allergens are present
+                    if (item.allergens && item.allergens.length > 0) {
+                        const allergensSection = document.createElement('div');
+                        allergensSection.className = 'options-section';
+                        allergensSection.style.marginTop = '16px';
+
+                        // Allergens heading
+                        const allergensHeading = document.createElement('div');
+                        allergensHeading.className = 'section-title';
+                        allergensHeading.textContent = 'Allergen Information';
+                        allergensSection.appendChild(allergensHeading);
+
+                        // Allergens list
+                        const allergensList = document.createElement('div');
+                        allergensList.className = 'allergens-list';
+                        allergensList.style.display = 'flex';
+                        allergensList.style.flexDirection = 'column';
+                        allergensList.style.gap = '8px';
+                        allergensList.style.marginTop = '12px';
+
+                        item.allergens.forEach(allergen => {
+                            const allergenItem = document.createElement('div');
+                            allergenItem.className = 'allergen-item';
+
+                            const allergenBadge = document.createElement('span');
+                            allergenBadge.className = `allergen-badge allergen-${allergen.type}`;
+                            allergenBadge.textContent = allergen.type.charAt(0).toUpperCase() + allergen.type.slice(1);
+
+                            const allergenIngredients = document.createElement('span');
+                            allergenIngredients.className = 'allergen-ingredients';
+                            allergenIngredients.textContent = allergen.ingredients;
+
+                            allergenItem.appendChild(allergenBadge);
+                            allergenItem.appendChild(allergenIngredients);
+                            allergensList.appendChild(allergenItem);
+                        });
+
+                        allergensSection.appendChild(allergensList);
+                        detailsDiv.appendChild(allergensSection);
+                    }
+
+                    // Append details to item
+                    itemElement.appendChild(detailsDiv);
+
+                    // Prevent option buttons from closing accordion when clicked
+                    detailsDiv.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                    });
+
+                    // Make main row clickable for food items
+                    mainRow.addEventListener('click', function() {
+                        toggleAccordion(itemElement);
+                    });
                 }
-                
+
                 return itemElement;
             }
-            
+
             // Function to refresh the entire menu display
             function refreshMenuDisplay() {
                 // Clear all tab content
@@ -3371,7 +3826,7 @@
                     this.classList.add('active');
                     this.classList.add('text-white');
                     this.classList.remove('bg-gray-200');
-                    this.style.backgroundColor = '#f86400';
+                    this.style.backgroundColor = '#8D312D';
                     this.style.color = 'white';
                     
                     // Hide all tab contents
