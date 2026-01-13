@@ -53,7 +53,7 @@
                             },
                             {
                                 name: "Mocha",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/ca9f7b7a803ccd75f6e857079a84c2e8/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/Canyoualsomakethelat.png",
                                 description: "Bold espresso, steamed milk, and chocolate combine in an indulgent coffee.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
@@ -130,6 +130,17 @@
                                 defaultSize: "16oz"
                             },
                             {
+                                name: "Chai Latte",
+                                image: "https://u.cubeupload.com/ryanjhope/canyouturnthisintoac.png",
+                                description: "Aromatic blend of traditional chai spices with steamed milk for a warming, comforting drink.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.40,
+                                    "20oz": 4.60
+                                },
+                                defaultSize: "16oz"
+                            },
+                            {
                                 name: "Pistachio Cream Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/14.png",
                                 description: "Latte made with creamy pistachio butter, topped with sauce and real pistachio crumbs.",
@@ -177,17 +188,6 @@
                                 name: "Butterscotch Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/15.png",
                                 description: "Indulgent latte with rich butterscotch syrup and smooth steamed milk for a sweet finish.",
-                                sizes: ["16oz", "20oz"],
-                                prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.60
-                                },
-                                defaultSize: "16oz"
-                            },
-                            {
-                                name: "Chai Latte",
-                                image: null,
-                                description: "Aromatic blend of traditional chai spices with steamed milk for a warming, comforting drink.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
                                     "16oz": 4.40,
@@ -308,7 +308,7 @@
                             },
                             {
                                 name: "Ruby Hot Chocolate",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/CopyofLatte3.png",
                                 description: "Unique pink ruby chocolate with a naturally fruity and smooth flavor profile.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
@@ -320,7 +320,7 @@
                             },
                             {
                                 name: "White Hot Chocolate",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/CopyofLatte2.png",
                                 description: "Smooth and creamy white chocolate drink with a sweet, vanilla finish.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
@@ -433,7 +433,7 @@
                             },
                             {
                                 name: "Chamomile",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/4.png",
                                 description: "Gentle and soothing herbal tea with a delicate floral flavor and calming properties.",
                                 sizes: ["Cup"],
                                 prices: {
@@ -481,7 +481,7 @@
                             },
                             {
                                 name: "Green Tea",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/7.png",
                                 description: "Light and delicate green tea with subtle grassy notes and natural antioxidants.",
                                 sizes: ["Cup"],
                                 prices: {
@@ -1215,7 +1215,7 @@
                         items: [
                             {
                                 name: "Cinnamon Swirl",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/fb76fa210734e7d46d4708377ed7d354/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/b70cf806a9d0ae424c3b.png",
                                 description: "Sweet, flaky pastry swirled with aromatic cinnamon and sugar.",
                                 price: 2.45,
                                 foodItem: true,
@@ -1227,82 +1227,103 @@
                             },
                             {
                                 name: "Chocolate Twist",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/54e41537c0958d8a12b0c9f3f0607056/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/eda2.png",
                                 description: "Buttery pastry twisted with rich Belgian chocolate.",
                                 price: 2.50,
                                 foodItem: true
                             },
                             {
                                 name: "Butter Croissant",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/158df3c8bd7a25888f15dcb1bbf1f13b/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/58f691da9eaef86b0b51.jpeg",
                                 description: "Classic French pastry, light and flaky with rich butter layers.",
                                 price: 2.20,
                                 foodItem: true
                             },
                             {
                                 name: "Pain Aux Raisin",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/2c02391621e0537b4d36ef08d3ed9b3c/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/aab5175b61b9f776beee.png",
                                 description: "Traditional French pastry filled with custard and sweet raisins.",
                                 price: 2.45,
                                 foodItem: true
                             },
                             {
                                 name: "Apple Crown",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/e030340445b6f053a977cca165f3dfc4/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/b6e1.png",
                                 description: "Golden pastry crown filled with spiced apple and custard.",
                                 price: 2.80,
                                 foodItem: true
                             },
                             {
                                 name: "Pistachio Croissant",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/6c48b522cc34eddbf58dfe7fb3c4b8a5/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/f83Foracoffeeshopmenuus.png",
                                 description: "Flaky croissant filled with creamy pistachio cream and crushed nuts.",
                                 price: 3.45,
-                                foodItem: true,
-                                badge: "POPULAR" // Added badge
+                                foodItem: true
                             },
                             {
                                 name: "Almond Croissant",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/55bfb2ff9fed75b5a7d7e171d0686804/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/a823.png",
                                 description: "Buttery croissant filled with sweet almond cream and sliced almonds.",
                                 price: 2.40,
                                 foodItem: true
                             },
                             {
+                                name: "Ham & Cheese Croissant",
+                                image: "https://u.cubeupload.com/ryanjhope/c7010.png",
+                                description: "Flaky buttery croissant filled with ham and melted cheese.",
+                                price: 3.20,
+                                foodItem: true
+                            },
+                            {
+                                name: "Cheese & Tomato Croissant",
+                                image: "https://u.cubeupload.com/ryanjhope/cc511.png",
+                                description: "Golden croissant filled with melted cheese and fresh tomato.",
+                                price: 2.95,
+                                foodItem: true
+                            },
+                            {
+                                name: "Cheese Croissant",
+                                image: "https://u.cubeupload.com/ryanjhope/8c412.png",
+                                description: "Classic buttery croissant with melted cheese.",
+                                price: 2.75,
+                                foodItem: true
+                            },
+                            {
                                 name: "Large Fruit Scone",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/9f842cf2cd1e7f56511fe585a3a6b3bf/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/2b4906fbccfe69af7ac4.png",
                                 description: "Traditional British scone studded with juicy mixed fruit.",
                                 price: 2.50,
                                 foodItem: true
                             },
                             {
                                 name: "Toasted Tea Cake",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/307b37e61ae9f702391b615925d89c9b/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/27d9a39a10b8e29971d8.png",
                                 description: "Soft, spiced bun with currants, toasted and served warm.",
                                 price: 2.50,
                                 foodItem: true
                             },
                             {
-                                name: "Cornish Pasty",
-                                image: "https://u.cubeupload.com/ryanjhope/cornishPasty.png",
-                                description: "Traditional savory pastry filled with seasoned beef and vegetables.",
-                                price: 3.25,
-                                foodItem: true
-                            },
-                            {
-                                name: "Potato Roll",
-                                image: "https://u.cubeupload.com/ryanjhope/potatoRoll.png",
+                                name: "Double Potato Roll",
+                                image: "https://u.cubeupload.com/ryanjhope/a024.png",
                                 description: "Hearty roll filled with seasoned mashed potato and herbs.",
                                 price: 2.75,
+                                foodItem: true,
+                                badge: "VEGAN"
+                            },
+                            {
+                                name: "Maple & Pecan Lattice",
+                                image: "https://u.cubeupload.com/ryanjhope/7705.png",
+                                description: "Flaky lattice pastry with sweet maple syrup and crunchy pecan pieces.",
+                                price: 2.80,
                                 foodItem: true
                             },
                             {
-                                name: "Sage & Onion Roll",
-                                image: "https://u.cubeupload.com/ryanjhope/sageonionRoll.png",
-                                description: "Savory roll filled with aromatic sage and caramelized onion stuffing.",
-                                price: 2.75,
+                                name: "Sausage Roll",
+                                image: "https://u.cubeupload.com/ryanjhope/ccfef3058a03f1ce6536.png",
+                                description: "Golden flaky pastry filled with seasoned pork sausage meat.",
+                                price: 2.50,
                                 foodItem: true
-                            }
+                            },
                         ]
                     },
                     "toasties": {
@@ -1310,56 +1331,56 @@
                         items: [
                             {
                                 name: "Ham & Cheese Toastie",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/3f2ab241ff4876626d22488bb6366c97/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/ef7Foracoffeeshopmenuus.png",
                                 description: "Savory ham and melted cheese grilled to golden perfection.",
                                 price: 3.80,
                                 foodItem: true
                             },
                             {
                                 name: "Cheese & Onion Toastie",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/1e2Foracoffeeshopmenuus.png",
                                 description: "Melted cheese and caramelized onions in golden, crispy bread.",
                                 price: 3.80,
                                 foodItem: true
                             },
                             {
                                 name: "Cheese & Tomato Toastie",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/4c4Foracoffeeshopmenuus.png",
                                 description: "Classic combination of melted cheese and fresh tomato slices.",
                                 price: 3.80,
                                 foodItem: true
                             },
                             {
                                 name: "Tuna Melt Toastie",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/8f5Foracoffeeshopmenuus.png",
                                 description: "Flaked tuna with melted cheese in toasted bread.",
                                 price: 3.80,
                                 foodItem: true
                             },
                             {
                                 name: "BBQ Chicken Panini",
-                                image: "https://u.cubeupload.com/ryanjhope/bbqchickenPanini.png",
+                                image: "https://u.cubeupload.com/ryanjhope/daForacoffeeshopmenuus.png",
                                 description: "Tender chicken with smoky BBQ sauce in a toasted panini.",
                                 price: 4.60,
                                 foodItem: true
                             },
                             {
                                 name: "Sweet Chilli Chicken Panini",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/2fbForacoffeeshopmenuus.png",
                                 description: "Juicy chicken with sweet chilli sauce in a toasted panini.",
                                 price: 4.60,
                                 foodItem: true
                             },
                             {
                                 name: "Ham & Cheese Panini",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/68cForacoffeeshopmenuus.png",
                                 description: "Classic combination of ham and cheese in a toasted panini.",
                                 price: 4.60,
                                 foodItem: true
                             },
                             {
                                 name: "Ham & Cheese Croque",
-                                image: "https://u.cubeupload.com/ryanjhope/hamCheeseCroque.png",
+                                image: "https://u.cubeupload.com/ryanjhope/a3c9a81de5072935216f.png",
                                 description: "French-style grilled sandwich with ham, cheese, and creamy sauce.",
                                 price: 4.50,
                                 foodItem: true
@@ -1373,15 +1394,22 @@
                             },
                             {
                                 name: "Halloumi & Pesto Panini",
-                                image: "https://u.cubeupload.com/ryanjhope/pestohalloumiPanini.png",
+                                image: "https://u.cubeupload.com/ryanjhope/4f10d60be5a489a46425.png",
                                 description: "Halloumi cheese with pesto in a toasted panini.",
                                 price: 4.60,
                                 foodItem: true
                             },
                             {
                                 name: "Sausage, Bacon, Egg Panini",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/e2bForacoffeeshopmenuus.png",
                                 description: "Hearty breakfast panini with sausage, bacon, and egg.",
+                                price: 4.60,
+                                foodItem: true
+                            },
+                            {
+                                name: "Tuna Sweetcorn Panini",
+                                image: "https://u.cubeupload.com/ryanjhope/f5b8.png",
+                                description: "Flaked tuna and sweetcorn in a toasted panini.",
                                 price: 4.60,
                                 foodItem: true
                             }
@@ -1392,7 +1420,7 @@
                         items: [
                             {
                                 name: "Ham Salad Sandwich",
-                                image: "https://u.cubeupload.com/ryanjhope/hamsaladSandwich.png",
+                                image: "https://u.cubeupload.com/ryanjhope/3c87.png",
                                 description: "Sliced ham with fresh lettuce, tomato, and cucumber in soft bread.",
                                 price: 3.95,
                                 foodItem: true
@@ -1425,57 +1453,43 @@
                         items: [
                             {
                                 name: "Honeycomb Tiffin",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/2fda9f7d2e3f4a111a9fc4295d0d35a1/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/a889c28d5e366155cc97.png",
                                 description: "Rich chocolate tiffin with crunchy honeycomb pieces and biscuits.",
                                 price: 2.60,
                                 foodItem: true
                             },
                             {
                                 name: "Apple Slice",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/d1de5478b0e171640d594dbf19381255/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/5c9c4ac9dcca6ff56bd9.png",
                                 description: "Moist cake slice with tender apples and warm cinnamon spices.",
                                 price: 2.60,
                                 foodItem: true
                             },
                             {
                                 name: "Apricot Slice",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/dd850ad4d007baf753597ad302fcb851/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/6ed21ac508f24ce9d78c.png",
                                 description: "Sweet and tangy cake slice with juicy apricot pieces.",
                                 price: 2.60,
                                 foodItem: true
                             },
                             {
-                                name: "Tiramisu Slice",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/c1ccbbc0851e35cce954540722bcbcc4/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
-                                description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone.",
-                                price: 2.60,
-                                foodItem: true
-                            },
-                            {
                                 name: "Oreo Muffin",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/e5765c394d426af12b5b32428ab2e748/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/ed2e992bf176f0cf44d3.png",
                                 description: "Fluffy vanilla muffin studded with crushed Oreo cookies.",
                                 price: 2.60,
                                 foodItem: true
                             },
                             {
                                 name: "Chocolate Muffin",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/e3c835a249d1dd0aa8d3e6ddf2aac756/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/77345a600312d8650205.png",
                                 description: "Rich double chocolate muffin with chocolate chips.",
                                 price: 2.60,
                                 foodItem: true
                             },
                             {
                                 name: "Blueberry Muffin",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/f5e690e36716ab783ddee68fce7ed57f/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/5bd42bf39b89d8eeaa28.png",
                                 description: "Classic muffin bursting with fresh, juicy blueberries.",
-                                price: 2.60,
-                                foodItem: true
-                            },
-                            {
-                                name: "Lemon Drizzle",
-                                image: "https://u.cubeupload.com/ryanjhope/lemonDrizzle.png",
-                                description: "Zesty lemon sponge cake with a sweet lemon drizzle glaze.",
                                 price: 2.60,
                                 foodItem: true
                             },
@@ -1484,22 +1498,38 @@
                                 image: null,
                                 description: "Moist spiced cake with carrots, walnuts, and cream cheese frosting.",
                                 price: 2.85,
-                                foodItem: true
+                                foodItem: true,
+                                badge: "GF"
                             },
                             {
                                 name: "Victoria Sponge Cake",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/ad95387af4d7e1806564.png",
                                 description: "Classic British sponge cake with jam and fresh cream filling.",
                                 price: 2.75,
+                                foodItem: true,
+                                badge: "GF"
+                            },
+                            {
+                                name: "Lemon Cheesecake",
+                                image: null,
+                                description: "Creamy cheesecake with a zesty lemon topping on a buttery biscuit base.",
+                                price: 2.95,
                                 foodItem: true
                             },
                             {
-                                name: "Strawberry Tart",
-                                image: null,
-                                description: "Crisp pastry tart filled with vanilla custard and fresh strawberries.",
-                                price: 2.95,
+                                name: "Rocky Road",
+                                image: "https://u.cubeupload.com/ryanjhope/a2a0ad6d5beb556e855b.png",
+                                description: "Chunky chocolate treat with marshmallows, biscuits, and chewy fruit pieces.",
+                                price: 2.60,
                                 foodItem: true
-                            }
+                            },
+                            {
+                                name: "Red Velvet",
+                                image: "https://u.cubeupload.com/ryanjhope/e52aa9636ae10c395800.png",
+                                description: "Moist red velvet cake with cream cheese frosting and a hint of cocoa.",
+                                price: 2.85,
+                                foodItem: true
+                            },
                         ]
                     }
                 }
@@ -1539,10 +1569,9 @@
                             },
                             {
                                 name: "Pistachio Croissant",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/6c48b522cc34eddbf58dfe7fb3c4b8a5/bc9c318a9c96996e2d990faf2b0c65f6.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/f83Foracoffeeshopmenuus.png",
                                 price: 3.45,
                                 foodItem: true,
-                                badge: "POPULAR",
                                 collection: true
                             }
                         ]
@@ -1787,11 +1816,11 @@
         }
         
         .view-toggle-btn.active {
-            background-color: #8D312D;
+            background-color: #FF6600;
             color: white;
-            box-shadow: 0 2px 4px rgba(141, 49, 45, 0.3);
+            box-shadow: 0 2px 4px rgba(255, 102, 0, 0.3);
         }
-        
+
         /* Separator line inside view toggle pill */
         .view-toggle-separator {
             width: 1px;
@@ -2070,7 +2099,15 @@
         .badge-popular {
             background-color: #FF9800; /* Orange */
         }
-        
+
+        .badge-vegan {
+            background-color: #2E7D32; /* Dark Green */
+        }
+
+        .badge-gf {
+            background-color: #7B1FA2; /* Purple */
+        }
+
         /* Price badge */
         .price-badge {
             position: absolute;
@@ -2445,12 +2482,14 @@
                         <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/>
                     </svg>
                 </button>
+                <!-- Temporarily hidden download button
                 <div class="view-toggle-separator"></div>
                 <a href="https://drive.google.com/uc?export=download&id=1ol1VANPWMhrYLMoG_lmLvm_Ri28cu2Aw" target="_blank" class="view-toggle-btn" title="Download PDF Menu">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
                     </svg>
                 </a>
+                -->
             </div>
         </div>
 
@@ -2515,7 +2554,7 @@
                 tabButton.textContent = tab.title;
                 tabButton.style.fontFamily = "'Poppins', sans-serif";
                 if (isActiveTab) {
-                    tabButton.style.backgroundColor = '#8D312D';
+                    tabButton.style.backgroundColor = '#FF6600';
                 } else {
                     tabButton.style.color = '#555555';
                 }
@@ -3826,9 +3865,9 @@
                     this.classList.add('active');
                     this.classList.add('text-white');
                     this.classList.remove('bg-gray-200');
-                    this.style.backgroundColor = '#8D312D';
+                    this.style.backgroundColor = '#FF6600';
                     this.style.color = 'white';
-                    
+
                     // Hide all tab contents
                     document.querySelectorAll('.tab-content').forEach(content => {
                         content.classList.remove('active');
