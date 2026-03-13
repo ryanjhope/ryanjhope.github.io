@@ -27,9 +27,9 @@
                                 description: "Rich espresso and steamed milk come together in a velvety blend.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.50,
-                                    "16oz": 3.70,
-                                    "20oz": 4.00
+                                    "12oz": 3.60,
+                                    "16oz": 3.80,
+                                    "20oz": 4.10
                                 },
                                 defaultSize: "12oz",
                                 allergens: [
@@ -42,9 +42,9 @@
                                 description: "Bold espresso, smooth steamed milk, and a layer of velvety foam.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.50,
-                                    "16oz": 3.70,
-                                    "20oz": 4.00
+                                    "12oz": 3.60,
+                                    "16oz": 3.80,
+                                    "20oz": 4.10
                                 },
                                 defaultSize: "12oz",
                                 allergens: [
@@ -57,9 +57,9 @@
                                 description: "Bold espresso, steamed milk, and chocolate combine in an indulgent coffee.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.65,
-                                    "16oz": 3.85,
-                                    "20oz": 4.15
+                                    "12oz": 3.75,
+                                    "16oz": 3.95,
+                                    "20oz": 4.25
                                 },
                                 defaultSize: "12oz",
                                 allergens: [
@@ -73,8 +73,8 @@
                                 description: "Stronger coffee and a subtle layer of microfoam.",
                                 sizes: ["8oz", "12oz"],
                                 prices: {
-                                    "8oz": 3.50,
-                                    "12oz": 3.70
+                                    "8oz": 3.60,
+                                    "12oz": 3.80
                                 },
                                 defaultSize: "8oz"
                             },
@@ -84,9 +84,9 @@
                                 description: "A rich, full-bodied coffee made with bold espresso and hot water.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.15,
-                                    "16oz": 3.35,
-                                    "20oz": 3.45
+                                    "12oz": 3.25,
+                                    "16oz": 3.45,
+                                    "20oz": 3.55
                                 },
                                 defaultSize: "12oz"
                             },
@@ -96,7 +96,7 @@
                                 description: "A perfect balance of espresso and smooth steamed milk, in a delicate and velvety ratio.",
                                 sizes: ["6oz"],
                                 prices: {
-                                    "6oz": 3.50
+                                    "6oz": 3.60
                                 },
                                 defaultSize: "6oz"
                             },
@@ -106,13 +106,23 @@
                                 description: "Pure espresso, served in a small cup.",
                                 sizes: ["Single", "Double"],
                                 prices: {
-                                    "Single": 2.50,
-                                    "Double": 2.70
+                                    "Single": 2.30,
+                                    "Double": 2.60
                                 },
                                 defaultSize: "Single",
                                 disableCustomization: true
+                            },
+                            {
+                                name: "Macchiato",
+                                image: null,
+                                description: "Espresso with a dash of frothy milk foam.",
+                                sizes: ["Single", "Double"],
+                                prices: {
+                                    "Single": 2.65,
+                                    "Double": 2.85
+                                },
+                                defaultSize: "Single"
                             }
-                            // Add more coffee items here
                         ]
                     },
                     "specialty-coffee": {
@@ -122,100 +132,109 @@
                                 name: "Matcha Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/2.png",
                                 description: "Subtle, grassy flavor of green tea combined with smooth steamed milk.",
-                                sizes: ["16oz", "20oz"],
+                                sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.60
+                                    "12oz": 4.30,
+                                    "16oz": 4.50,
+                                    "20oz": 4.70
                                 },
-                                defaultSize: "16oz"
+                                defaultSize: "12oz"
                             },
                             {
                                 name: "Chai Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/canyouturnthisintoac.png",
                                 description: "Aromatic blend of traditional chai spices with steamed milk for a warming, comforting drink.",
-                                sizes: ["16oz", "20oz"],
+                                sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
+                                    "12oz": 4.20,
                                     "16oz": 4.40,
                                     "20oz": 4.60
                                 },
-                                defaultSize: "16oz"
+                                defaultSize: "12oz"
                             },
                             {
                                 name: "Pistachio Cream Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/14.png",
                                 description: "Latte made with creamy pistachio butter, topped with sauce and real pistachio crumbs.",
-                                sizes: ["16oz", "20oz"],
+                                sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.60
+                                    "12oz": 4.50,
+                                    "16oz": 4.70,
+                                    "20oz": 4.90
                                 },
-                                defaultSize: "16oz"
+                                defaultSize: "12oz"
                             },
                             {
                                 name: "Gingerbread Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/10.png",
                                 description: "Warm spiced latte with aromatic gingerbread flavoring and a hint of molasses sweetness.",
-                                sizes: ["16oz", "20oz"],
+                                sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.60
+                                    "12oz": 4.50,
+                                    "16oz": 4.70,
+                                    "20oz": 4.90
                                 },
-                                defaultSize: "16oz"
+                                defaultSize: "12oz"
                             },
                             {
                                 name: "Pumpkin Spice Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/9.png",
                                 description: "Seasonal blend of espresso with pumpkin and warm autumn spices in creamy steamed milk.",
-                                sizes: ["16oz", "20oz"],
+                                sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.60
+                                    "12oz": 4.50,
+                                    "16oz": 4.70,
+                                    "20oz": 4.90
                                 },
-                                defaultSize: "16oz"
+                                defaultSize: "12oz"
                             },
                             {
                                 name: "Lotus Biscoff Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/16.png",
                                 description: "Rich espresso combined with smooth caramelized biscuit flavor and velvety steamed milk.",
-                                sizes: ["16oz", "20oz"],
+                                sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.60
+                                    "12oz": 4.50,
+                                    "16oz": 4.70,
+                                    "20oz": 4.90
                                 },
-                                defaultSize: "16oz"
+                                defaultSize: "12oz"
                             },
                             {
                                 name: "Butterscotch Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/15.png",
                                 description: "Indulgent latte with rich butterscotch syrup and smooth steamed milk for a sweet finish.",
-                                sizes: ["16oz", "20oz"],
+                                sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.60
+                                    "12oz": 4.50,
+                                    "16oz": 4.70,
+                                    "20oz": 4.90
                                 },
-                                defaultSize: "16oz"
+                                defaultSize: "12oz"
                             },
                             {
                                 name: "Toffee Nut Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/12.png",
                                 description: "Smooth espresso with sweet toffee nut syrup and steamed milk.",
-                                sizes: ["16oz", "20oz"],
+                                sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.60
+                                    "12oz": 4.50,
+                                    "16oz": 4.70,
+                                    "20oz": 4.90
                                 },
-                                defaultSize: "16oz"
+                                defaultSize: "12oz"
                             },
                             {
                                 name: "White Chocolate Hazelnut Mocha",
                                 image: "https://u.cubeupload.com/ryanjhope/13.png",
                                 description: "Rich espresso with creamy white chocolate and toasted hazelnut flavour.",
-                                sizes: ["16oz", "20oz"],
+                                sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.60
+                                    "12oz": 4.50,
+                                    "16oz": 4.70,
+                                    "20oz": 4.90
                                 },
-                                defaultSize: "16oz"
+                                defaultSize: "12oz"
                             }
                         ]
                     },
@@ -223,14 +242,14 @@
                         title: "Hot Chocolate",
                         items: [
                             {
-                                name: "Hot Chocolate",
+                                name: "Deluxe Hot Chocolate",
                                 image: "https://u.cubeupload.com/ryanjhope/20.png",
                                 description: "Classic creamy hot chocolate made with rich cocoa and steamed milk.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.50,
-                                    "16oz": 3.70,
-                                    "20oz": 4.00
+                                    "12oz": 3.70,
+                                    "16oz": 3.90,
+                                    "20oz": 4.20
                                 },
                                 defaultSize: "12oz"
                             },
@@ -240,9 +259,9 @@
                                 description: "Rich hot chocolate with sweet honeycomb flavouring and whipped cream.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -252,9 +271,9 @@
                                 description: "Classic hot chocolate with a zesty orange twist.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -264,9 +283,9 @@
                                 description: "Rich chocolate and honeycomb flavouring, topped with real Crunchie.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -276,9 +295,9 @@
                                 description: "Decadent hot chocolate blended with crushed Oreo cookies and topped with whipped cream.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -288,9 +307,9 @@
                                 description: "Creamy hot chocolate with Kinder Bueno pieces, creating a rich hazelnut and chocolate experience.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -300,9 +319,9 @@
                                 description: "Indulgent hot chocolate with Snickers pieces, peanuts, and caramel for the ultimate treat.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -312,9 +331,9 @@
                                 description: "Unique pink ruby chocolate with a naturally fruity and smooth flavor profile.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -324,9 +343,9 @@
                                 description: "Smooth and creamy white chocolate drink with a sweet, vanilla finish.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -336,9 +355,9 @@
                                 description: "Rich chocolate drink with cherry flavor and whipped cream, inspired by the classic cake.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -348,9 +367,9 @@
                                 description: "Perfect balance of sweet caramel and sea salt in a rich chocolate base.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -360,9 +379,9 @@
                                 description: "Rich hot chocolate topped with fluffy toasted marshmallows.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -372,9 +391,9 @@
                                 description: "Creamy hot chocolate with caramelized Biscoff cookie flavour.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -384,9 +403,9 @@
                                 description: "Creamy hot chocolate with rich pistachio flavour and crushed nuts.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.10,
-                                    "16oz": 4.30,
-                                    "20oz": 4.60
+                                    "12oz": 4.20,
+                                    "16oz": 4.40,
+                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             }
@@ -508,9 +527,9 @@
                                 description: "Creamy and milky iced coffee.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.65,
-                                    "16oz": 3.80,
-                                    "20oz": 4.15
+                                    "12oz": 3.75,
+                                    "16oz": 3.90,
+                                    "20oz": 4.25
                                 },
                                 defaultSize: "16oz"
                             },
@@ -520,9 +539,9 @@
                                 description: "Creamy and frothy iced coffee.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.65,
-                                    "16oz": 3.80,
-                                    "20oz": 4.15
+                                    "12oz": 3.75,
+                                    "16oz": 3.90,
+                                    "20oz": 4.25
                                 },
                                 defaultSize: "16oz"
                             },
@@ -532,9 +551,9 @@
                                 description: "Refreshing coffee served over ice.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.30,
-                                    "16oz": 3.50,
-                                    "20oz": 3.60
+                                    "12oz": 3.40,
+                                    "16oz": 3.60,
+                                    "20oz": 3.70
                                 },
                                 defaultSize: "16oz"
                             },
@@ -544,9 +563,9 @@
                                 description: "Chocolatey and creamy iced coffee.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.80,
-                                    "16oz": 4.00,
-                                    "20oz": 4.30
+                                    "12oz": 3.90,
+                                    "16oz": 4.10,
+                                    "20oz": 4.20
                                 },
                                 defaultSize: "16oz"
                             },
@@ -556,8 +575,8 @@
                                 description: "Blended ice coffee with a sweet caramel flavouring.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.30,
-                                    "16oz": 4.45,
+                                    "12oz": 4.20,
+                                    "16oz": 4.35,
                                     "20oz": 4.80
                                 },
                                 defaultSize: "16oz"
@@ -568,9 +587,33 @@
                                 description: "Blended ice coffee with an indulgent vanilla flavouring.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 4.30,
-                                    "16oz": 4.45,
+                                    "12oz": 4.20,
+                                    "16oz": 4.35,
                                     "20oz": 4.80
+                                },
+                                defaultSize: "16oz"
+                            },
+                            {
+                                name: "Mocha Frappé",
+                                image: null,
+                                description: "Blended ice coffee with rich chocolate and espresso.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 4.20,
+                                    "16oz": 4.35,
+                                    "20oz": 4.80
+                                },
+                                defaultSize: "16oz"
+                            },
+                            {
+                                name: "Espresso Frappé",
+                                image: null,
+                                description: "Intense blended coffee with a double shot of espresso.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 3.65,
+                                    "16oz": 3.85,
+                                    "20oz": 4.30
                                 },
                                 defaultSize: "16oz"
                             },
@@ -580,8 +623,8 @@
                                 description: "Iced Latte made with creamy and rich pistachio butter.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.30,
-                                    "20oz": 4.45
+                                    "16oz": 4.40,
+                                    "20oz": 4.55
                                 },
                                 defaultSize: "16oz"
                             },
@@ -591,12 +634,35 @@
                                 description: "Iced Latte made with smooth caramelized biscuit flavor.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.30,
-                                    "20oz": 4.35
+                                    "16oz": 4.40,
+                                    "20oz": 4.55
                                 },
                                 defaultSize: "16oz"
                             },
-
+                            {
+                                name: "Iced Chai Latte",
+                                image: null,
+                                description: "Aromatic chai spices with cold milk over ice for a refreshing twist.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 4.30,
+                                    "16oz": 4.50,
+                                    "20oz": 4.70
+                                },
+                                defaultSize: "12oz"
+                            },
+                            {
+                                name: "Iced Matcha Latte",
+                                image: null,
+                                description: "Smooth matcha green tea served cold over ice with fresh milk.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 4.40,
+                                    "16oz": 4.60,
+                                    "20oz": 4.80
+                                },
+                                defaultSize: "12oz"
+                            }
                         ]
                     },
                     "matcha": {
@@ -657,9 +723,9 @@
                                 description: "Tangy and sweet blue raspberry flavoured slush.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.85,
-                                    "16oz": 4.00,
-                                    "20oz": 4.15
+                                    "12oz": 4.10,
+                                    "16oz": 4.10,
+                                    "20oz": 4.25
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -670,9 +736,9 @@
                                 description: "Refreshing watermelon flavoured slush.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.85,
-                                    "16oz": 4.00,
-                                    "20oz": 4.15
+                                    "12oz": 4.10,
+                                    "16oz": 4.10,
+                                    "20oz": 4.25
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -683,9 +749,9 @@
                                 description: "Refreshing, sweet and tangy dragonfruit slush.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.85,
-                                    "16oz": 4.00,
-                                    "20oz": 4.15
+                                    "12oz": 4.10,
+                                    "16oz": 4.10,
+                                    "20oz": 4.25
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -696,9 +762,9 @@
                                 description: "A refreshing frozen berry blend.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.85,
-                                    "16oz": 4.00,
-                                    "20oz": 4.15
+                                    "12oz": 4.25,
+                                    "16oz": 4.25,
+                                    "20oz": 4.40
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -709,9 +775,9 @@
                                 description: "A tropical frozen mango treat.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
-                                    "12oz": 3.85,
-                                    "16oz": 4.00,
-                                    "20oz": 4.15
+                                    "12oz": 4.25,
+                                    "16oz": 4.25,
+                                    "20oz": 4.40
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -727,8 +793,8 @@
                                 description: "A sweet pineapple infused lemonade.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.20,
-                                    "20oz": 4.35
+                                    "16oz": 4.30,
+                                    "20oz": 4.45
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -739,8 +805,8 @@
                                 description: "A sweet and tangy rhubarb lemonade.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.00,
-                                    "20oz": 4.15
+                                    "16oz": 4.10,
+                                    "20oz": 4.25
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -751,8 +817,8 @@
                                 description: "A floral and refreshing violet-flavored lemonade.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.00,
-                                    "20oz": 4.15
+                                    "16oz": 4.10,
+                                    "20oz": 4.25
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -763,8 +829,8 @@
                                 description: "A sweet strawberry-infused lemonade.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.00,
-                                    "20oz": 4.15
+                                    "16oz": 4.10,
+                                    "20oz": 4.25
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -792,8 +858,8 @@
                                 description: "Refreshing mango juice over strawberry popping bubbles.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.55
+                                    "16oz": 4.50,
+                                    "20oz": 4.65
                                 },
                                 defaultSize: "16oz",
                                 itemType: "bubble-tea"
@@ -804,8 +870,8 @@
                                 description: "A juicy mix of strawberry and raspberry mixed with strawberry popping bubbles.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.55
+                                    "16oz": 4.50,
+                                    "20oz": 4.65
                                 },
                                 defaultSize: "16oz",
                                 itemType: "bubble-tea"
@@ -816,8 +882,8 @@
                                 description: "A refreshing peach juice paired with mango popping bubbles.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.55
+                                    "16oz": 4.50,
+                                    "20oz": 4.65
                                 },
                                 defaultSize: "16oz",
                                 itemType: "bubble-tea"
@@ -828,8 +894,8 @@
                                 description: "A sweet and tangy kiwi juice poured over mango popping bubbles.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.55
+                                    "16oz": 4.50,
+                                    "20oz": 4.65
                                 },
                                 defaultSize: "16oz",
                                 itemType: "bubble-tea"
@@ -840,8 +906,8 @@
                                 description: "A bittersweet dragonfruit juice mixed with mango popping bubbles.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.40,
-                                    "20oz": 4.55
+                                    "16oz": 4.50,
+                                    "20oz": 4.65
                                 },
                                 defaultSize: "16oz",
                                 itemType: "bubble-tea"
@@ -852,8 +918,32 @@
                                 description: "A blended mango frappé with mango bubbles and whipped cream.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
+                                },
+                                defaultSize: "16oz",
+                                itemType: "bubble-tea-frappe"
+                            },
+                            {
+                                name: "Kiwi Bubble Frappé",
+                                image: null,
+                                description: "A blended kiwi frappé with kiwi bubbles and whipped cream.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
+                                },
+                                defaultSize: "16oz",
+                                itemType: "bubble-tea-frappe"
+                            },
+                            {
+                                name: "Berry Bubble Frappé",
+                                image: null,
+                                description: "A blended berry frappé with mixed berry bubbles and whipped cream.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "bubble-tea-frappe"
@@ -869,8 +959,8 @@
                                 description: "Indulgent blended coffee with crushed Oreo cookies and whipped cream.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "speciality-frappe"
@@ -881,8 +971,8 @@
                                 description: "Rich blended coffee with creamy Kinder Bueno pieces and whipped cream.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "speciality-frappe"
@@ -893,8 +983,8 @@
                                 description: "Decadent blended coffee with honeycomb Crunchie pieces and whipped cream.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "speciality-frappe"
@@ -905,8 +995,8 @@
                                 description: "Irresistible blended coffee with crispy KitKat pieces and whipped cream.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "speciality-frappe"
@@ -917,8 +1007,8 @@
                                 description: "Indulgent blended coffee with Snickers pieces, peanuts, and caramel, topped with whipped cream.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "speciality-frappe"
@@ -929,8 +1019,8 @@
                                 description: "Festive blended coffee with sweet birthday cake flavor, colorful sprinkles, and whipped cream.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "speciality-frappe"
@@ -941,8 +1031,8 @@
                                 description: "Refreshing blended coffee swirled with tangy raspberry sauce and topped with whipped cream and freeze-dried raspberries.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "speciality-frappe"
@@ -953,8 +1043,8 @@
                                 description: "Luxurious blended coffee with rich pistachio flavor, topped with whipped cream and crushed pistachios.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "speciality-frappe"
@@ -965,8 +1055,8 @@
                                 description: "Smooth blended coffee with caramelized Biscoff cookie flavor, topped with whipped cream and cookie crumbs.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "speciality-frappe"
@@ -977,8 +1067,68 @@
                                 description: "Elegant blended coffee with earthy matcha green tea and sweet vanilla, topped with whipped cream.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
+                                },
+                                defaultSize: "16oz",
+                                itemType: "speciality-frappe"
+                            },
+                            {
+                                name: "Twix Frappé",
+                                image: null,
+                                description: "Blended coffee with Twix caramel and biscuit flavour, topped with whipped cream.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
+                                },
+                                defaultSize: "16oz",
+                                itemType: "speciality-frappe"
+                            },
+                            {
+                                name: "Mini Egg Frappé",
+                                image: null,
+                                description: "Seasonal blended coffee with Mini Egg chocolate pieces and whipped cream.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
+                                },
+                                defaultSize: "16oz",
+                                itemType: "speciality-frappe"
+                            },
+                            {
+                                name: "Nutella Frappé",
+                                image: null,
+                                description: "Rich blended coffee with creamy Nutella hazelnut chocolate spread.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
+                                },
+                                defaultSize: "16oz",
+                                itemType: "speciality-frappe"
+                            },
+                            {
+                                name: "Bubblegum Frappé",
+                                image: null,
+                                description: "Fun and colourful blended coffee with sweet bubblegum flavour.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
+                                },
+                                defaultSize: "16oz",
+                                itemType: "speciality-frappe"
+                            },
+                            {
+                                name: "Malteser Frappé",
+                                image: null,
+                                description: "Blended coffee with malty Malteser flavour and chocolate pieces.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "speciality-frappe"
@@ -994,8 +1144,8 @@
                                 description: "Rich and creamy caramel-flavored milkshake.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.10,
-                                    "20oz": 4.25
+                                    "16oz": 4.20,
+                                    "20oz": 4.35
                                 },
                                 defaultSize: "16oz",
                                 itemType: "shake"
@@ -1006,8 +1156,8 @@
                                 description: "Refreshing mint and rich chocolate in a creamy milkshake.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.10,
-                                    "20oz": 4.25
+                                    "16oz": 4.20,
+                                    "20oz": 4.35
                                 },
                                 defaultSize: "16oz",
                                 itemType: "shake"
@@ -1018,8 +1168,8 @@
                                 description: "Sweet and fruity strawberry-flavored milkshake.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.10,
-                                    "20oz": 4.25
+                                    "16oz": 4.20,
+                                    "20oz": 4.35
                                 },
                                 defaultSize: "16oz",
                                 itemType: "shake"
@@ -1030,8 +1180,8 @@
                                 description: "Classic rich and indulgent chocolate milkshake.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.10,
-                                    "20oz": 4.25
+                                    "16oz": 4.20,
+                                    "20oz": 4.35
                                 },
                                 defaultSize: "16oz",
                                 itemType: "shake"
@@ -1054,8 +1204,32 @@
                                 description: "Smooth and classic vanilla-flavored milkshake.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.10,
-                                    "20oz": 4.25
+                                    "16oz": 4.20,
+                                    "20oz": 4.35
+                                },
+                                defaultSize: "16oz",
+                                itemType: "shake"
+                            },
+                            {
+                                name: "Salted Caramel Shake",
+                                image: null,
+                                description: "Creamy milkshake with rich salted caramel flavour.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.20,
+                                    "20oz": 4.35
+                                },
+                                defaultSize: "16oz",
+                                itemType: "shake"
+                            },
+                            {
+                                name: "Banana Shake",
+                                image: null,
+                                description: "Classic banana-flavored milkshake made with fresh banana.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.20,
+                                    "20oz": 4.35
                                 },
                                 defaultSize: "16oz",
                                 itemType: "shake"
@@ -1071,8 +1245,8 @@
                                 description: "High-protein shake with Oreo cookie flavor and real cookie pieces.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "shake"
@@ -1083,8 +1257,8 @@
                                 description: "Rich protein shake with Snickers flavor, peanuts, and caramel.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "shake"
@@ -1107,8 +1281,8 @@
                                 description: "Smooth protein shake with salted caramel flavor and a hint of sea salt.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "shake"
@@ -1119,8 +1293,8 @@
                                 description: "Healthy protein shake with earthy matcha and sweet vanilla flavors.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "shake"
@@ -1131,8 +1305,32 @@
                                 description: "Indulgent protein shake with Kinder Bueno hazelnut and chocolate flavors.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.80,
-                                    "20oz": 4.95
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
+                                },
+                                defaultSize: "16oz",
+                                itemType: "shake"
+                            },
+                            {
+                                name: "Vanilla Protein Shake",
+                                image: null,
+                                description: "Classic vanilla-flavored protein shake for a smooth and light boost.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
+                                },
+                                defaultSize: "16oz",
+                                itemType: "shake"
+                            },
+                            {
+                                name: "Twix Protein Shake",
+                                image: null,
+                                description: "Protein shake with Twix caramel and biscuit flavour.",
+                                sizes: ["16oz", "20oz"],
+                                prices: {
+                                    "16oz": 4.95,
+                                    "20oz": 5.10
                                 },
                                 defaultSize: "16oz",
                                 itemType: "shake"
@@ -1148,8 +1346,8 @@
                                 description: "Pineapple, mango and passionfruit in a sweet and refreshing blend.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.15,
-                                    "20oz": 4.30
+                                    "16oz": 4.25,
+                                    "20oz": 4.40
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -1160,8 +1358,8 @@
                                 description: "Strawberry, blueberry and raspberry come together in a perfect blend.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.15,
-                                    "20oz": 4.30
+                                    "16oz": 4.25,
+                                    "20oz": 4.40
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -1172,8 +1370,8 @@
                                 description: "A healthy blend of broccoli, spinach, avocado, and ginger.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.15,
-                                    "20oz": 4.30
+                                    "16oz": 4.25,
+                                    "20oz": 4.40
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -1184,8 +1382,8 @@
                                 description: "Classic combination of sweet strawberries and creamy banana in a smooth blend.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.15,
-                                    "20oz": 4.30
+                                    "16oz": 4.25,
+                                    "20oz": 4.40
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -1196,8 +1394,8 @@
                                 description: "Blueberry, banana and strawberry come together in a sweet and tangy mix.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.15,
-                                    "20oz": 4.30
+                                    "16oz": 4.25,
+                                    "20oz": 4.40
                                 },
                                 defaultSize: "16oz",
                                 disableCustomization: true
@@ -1217,7 +1415,7 @@
                                 name: "Cinnamon Swirl",
                                 image: "https://u.cubeupload.com/ryanjhope/b70cf806a9d0ae424c3b.png",
                                 description: "Sweet, flaky pastry swirled with aromatic cinnamon and sugar.",
-                                price: 2.45,
+                                price: 2.65,
                                 foodItem: true,
                                 allergens: [
                                     { type: "gluten", ingredients: "Wheat Flour" },
@@ -1229,77 +1427,84 @@
                                 name: "Chocolate Twist",
                                 image: "https://u.cubeupload.com/ryanjhope/eda2.png",
                                 description: "Buttery pastry twisted with rich Belgian chocolate.",
-                                price: 2.50,
+                                price: 2.70,
                                 foodItem: true
                             },
                             {
                                 name: "Butter Croissant",
                                 image: "https://u.cubeupload.com/ryanjhope/58f691da9eaef86b0b51.jpeg",
                                 description: "Classic French pastry, light and flaky with rich butter layers.",
-                                price: 2.20,
+                                price: 2.40,
                                 foodItem: true
                             },
                             {
                                 name: "Pain Aux Raisin",
                                 image: "https://u.cubeupload.com/ryanjhope/aab5175b61b9f776beee.png",
                                 description: "Traditional French pastry filled with custard and sweet raisins.",
-                                price: 2.45,
+                                price: 2.65,
                                 foodItem: true
                             },
                             {
                                 name: "Apple Crown",
                                 image: "https://u.cubeupload.com/ryanjhope/b6e1.png",
                                 description: "Golden pastry crown filled with spiced apple and custard.",
-                                price: 2.80,
+                                price: 2.95,
                                 foodItem: true
                             },
                             {
                                 name: "Pistachio Croissant",
                                 image: "https://u.cubeupload.com/ryanjhope/f83Foracoffeeshopmenuus.png",
                                 description: "Flaky croissant filled with creamy pistachio cream and crushed nuts.",
-                                price: 3.45,
+                                price: 3.65,
                                 foodItem: true
                             },
                             {
                                 name: "Almond Croissant",
                                 image: "https://u.cubeupload.com/ryanjhope/a823.png",
                                 description: "Buttery croissant filled with sweet almond cream and sliced almonds.",
-                                price: 2.40,
+                                price: 2.60,
                                 foodItem: true
                             },
                             {
                                 name: "Ham & Cheese Croissant",
                                 image: "https://u.cubeupload.com/ryanjhope/c7010.png",
                                 description: "Flaky buttery croissant filled with ham and melted cheese.",
-                                price: 3.20,
+                                price: 3.80,
                                 foodItem: true
                             },
                             {
                                 name: "Cheese & Tomato Croissant",
                                 image: "https://u.cubeupload.com/ryanjhope/cc511.png",
                                 description: "Golden croissant filled with melted cheese and fresh tomato.",
-                                price: 2.95,
+                                price: 3.55,
                                 foodItem: true
                             },
                             {
                                 name: "Cheese Croissant",
                                 image: "https://u.cubeupload.com/ryanjhope/8c412.png",
                                 description: "Classic buttery croissant with melted cheese.",
-                                price: 2.75,
+                                price: 3.20,
                                 foodItem: true
                             },
                             {
-                                name: "Large Fruit Scone",
+                                name: "Chocolate Croissant",
+                                image: null,
+                                description: "Buttery croissant filled with rich dark chocolate.",
+                                price: 2.80,
+                                foodItem: true
+                            },
+                            {
+                                name: "Large Fruit Scone (Jam and Butter/Cream)",
                                 image: "https://u.cubeupload.com/ryanjhope/2b4906fbccfe69af7ac4.png",
                                 description: "Traditional British scone studded with juicy mixed fruit.",
-                                price: 2.50,
+                                price: 3.50,
                                 foodItem: true
                             },
                             {
-                                name: "Toasted Tea Cake",
+                                name: "Toasted Tea Cake (Jam and Butter)",
                                 image: "https://u.cubeupload.com/ryanjhope/27d9a39a10b8e29971d8.png",
                                 description: "Soft, spiced bun with currants, toasted and served warm.",
-                                price: 2.50,
+                                price: 3.05,
                                 foodItem: true
                             },
                             {
@@ -1318,10 +1523,10 @@
                                 foodItem: true
                             },
                             {
-                                name: "Sausage Roll",
+                                name: "Jumbo Sausage Roll",
                                 image: "https://u.cubeupload.com/ryanjhope/ccfef3058a03f1ce6536.png",
                                 description: "Golden flaky pastry filled with seasoned pork sausage meat.",
-                                price: 2.50,
+                                price: 2.80,
                                 foodItem: true
                             },
                         ]
@@ -1333,84 +1538,84 @@
                                 name: "Ham & Cheese Toastie",
                                 image: "https://u.cubeupload.com/ryanjhope/ef7Foracoffeeshopmenuus.png",
                                 description: "Savory ham and melted cheese grilled to golden perfection.",
-                                price: 3.80,
+                                price: 3.90,
                                 foodItem: true
                             },
                             {
                                 name: "Cheese & Onion Toastie",
                                 image: "https://u.cubeupload.com/ryanjhope/1e2Foracoffeeshopmenuus.png",
                                 description: "Melted cheese and caramelized onions in golden, crispy bread.",
-                                price: 3.80,
+                                price: 3.90,
                                 foodItem: true
                             },
                             {
                                 name: "Cheese & Tomato Toastie",
                                 image: "https://u.cubeupload.com/ryanjhope/4c4Foracoffeeshopmenuus.png",
                                 description: "Classic combination of melted cheese and fresh tomato slices.",
-                                price: 3.80,
+                                price: 3.90,
                                 foodItem: true
                             },
                             {
                                 name: "Tuna Melt Toastie",
                                 image: "https://u.cubeupload.com/ryanjhope/8f5Foracoffeeshopmenuus.png",
                                 description: "Flaked tuna with melted cheese in toasted bread.",
-                                price: 3.80,
+                                price: 3.90,
                                 foodItem: true
                             },
                             {
                                 name: "BBQ Chicken Panini",
                                 image: "https://u.cubeupload.com/ryanjhope/daForacoffeeshopmenuus.png",
                                 description: "Tender chicken with smoky BBQ sauce in a toasted panini.",
-                                price: 4.60,
+                                price: 4.80,
                                 foodItem: true
                             },
                             {
                                 name: "Sweet Chilli Chicken Panini",
                                 image: "https://u.cubeupload.com/ryanjhope/2fbForacoffeeshopmenuus.png",
                                 description: "Juicy chicken with sweet chilli sauce in a toasted panini.",
-                                price: 4.60,
+                                price: 4.80,
                                 foodItem: true
                             },
                             {
                                 name: "Ham & Cheese Panini",
                                 image: "https://u.cubeupload.com/ryanjhope/68cForacoffeeshopmenuus.png",
                                 description: "Classic combination of ham and cheese in a toasted panini.",
-                                price: 4.60,
+                                price: 4.80,
                                 foodItem: true
                             },
                             {
                                 name: "Ham & Cheese Croque",
                                 image: "https://u.cubeupload.com/ryanjhope/a3c9a81de5072935216f.png",
                                 description: "French-style grilled sandwich with ham, cheese, and creamy sauce.",
-                                price: 4.50,
+                                price: 4.60,
                                 foodItem: true
                             },
                             {
                                 name: "Mushroom Croque",
                                 image: null,
                                 description: "Savory grilled sandwich with mushrooms, cheese, and creamy sauce.",
-                                price: 4.50,
+                                price: 4.60,
                                 foodItem: true
                             },
                             {
                                 name: "Halloumi & Pesto Panini",
                                 image: "https://u.cubeupload.com/ryanjhope/4f10d60be5a489a46425.png",
                                 description: "Halloumi cheese with pesto in a toasted panini.",
-                                price: 4.60,
+                                price: 4.80,
                                 foodItem: true
                             },
                             {
                                 name: "Sausage, Bacon, Egg Panini",
                                 image: "https://u.cubeupload.com/ryanjhope/e2bForacoffeeshopmenuus.png",
                                 description: "Hearty breakfast panini with sausage, bacon, and egg.",
-                                price: 4.60,
+                                price: 4.80,
                                 foodItem: true
                             },
                             {
                                 name: "Tuna Sweetcorn Panini",
                                 image: "https://u.cubeupload.com/ryanjhope/f5b8.png",
                                 description: "Flaked tuna and sweetcorn in a toasted panini.",
-                                price: 4.60,
+                                price: 4.80,
                                 foodItem: true
                             }
                         ]
@@ -1422,7 +1627,7 @@
                                 name: "Ham Salad Sandwich",
                                 image: "https://u.cubeupload.com/ryanjhope/3c87.png",
                                 description: "Sliced ham with fresh lettuce, tomato, and cucumber in soft bread.",
-                                price: 3.95,
+                                price: 3.75,
                                 foodItem: true
                             },
                             {
@@ -1436,14 +1641,49 @@
                                 name: "Tuna Sweetcorn Sandwich",
                                 image: null,
                                 description: "Flaked tuna mixed with sweetcorn and mayonnaise in fresh bread.",
-                                price: 3.95,
+                                price: 3.90,
                                 foodItem: true
                             },
                             {
                                 name: "Tomato & Cheese Sandwich",
                                 image: null,
                                 description: "Fresh sliced tomatoes with mature cheddar cheese in soft bread.",
-                                price: 3.65,
+                                price: 3.75,
+                                foodItem: true
+                            },
+                            {
+                                name: "Chicken Salad Wrap",
+                                image: null,
+                                description: "Grilled chicken with fresh salad in a soft tortilla wrap.",
+                                price: 3.90,
+                                foodItem: true
+                            },
+                            {
+                                name: "Sausage Bap",
+                                image: null,
+                                description: "Juicy sausage in a soft bread roll.",
+                                price: 3.90,
+                                foodItem: true
+                            },
+                            {
+                                name: "Bacon Bap",
+                                image: null,
+                                description: "Crispy bacon in a soft bread roll.",
+                                price: 3.90,
+                                foodItem: true
+                            },
+                            {
+                                name: "Sausage & Bacon Bap",
+                                image: null,
+                                description: "Sausage and crispy bacon together in a soft bread roll.",
+                                price: 4.40,
+                                foodItem: true
+                            },
+                            {
+                                name: "Kids Pack",
+                                image: null,
+                                description: "A selection of kid-friendly snacks and a drink.",
+                                price: 4.70,
                                 foodItem: true
                             }
                         ]
@@ -1455,79 +1695,79 @@
                                 name: "Honeycomb Tiffin",
                                 image: "https://u.cubeupload.com/ryanjhope/a889c28d5e366155cc97.png",
                                 description: "Rich chocolate tiffin with crunchy honeycomb pieces and biscuits.",
-                                price: 2.60,
+                                price: 2.80,
                                 foodItem: true
                             },
                             {
                                 name: "Apple Slice",
                                 image: "https://u.cubeupload.com/ryanjhope/5c9c4ac9dcca6ff56bd9.png",
                                 description: "Moist cake slice with tender apples and warm cinnamon spices.",
-                                price: 2.60,
+                                price: 2.80,
                                 foodItem: true
                             },
                             {
                                 name: "Apricot Slice",
                                 image: "https://u.cubeupload.com/ryanjhope/6ed21ac508f24ce9d78c.png",
                                 description: "Sweet and tangy cake slice with juicy apricot pieces.",
-                                price: 2.60,
+                                price: 2.80,
                                 foodItem: true
                             },
                             {
                                 name: "Oreo Muffin",
                                 image: "https://u.cubeupload.com/ryanjhope/ed2e992bf176f0cf44d3.png",
                                 description: "Fluffy vanilla muffin studded with crushed Oreo cookies.",
-                                price: 2.60,
+                                price: 2.80,
                                 foodItem: true
                             },
                             {
                                 name: "Chocolate Muffin",
                                 image: "https://u.cubeupload.com/ryanjhope/77345a600312d8650205.png",
                                 description: "Rich double chocolate muffin with chocolate chips.",
-                                price: 2.60,
+                                price: 2.80,
                                 foodItem: true
                             },
                             {
                                 name: "Blueberry Muffin",
                                 image: "https://u.cubeupload.com/ryanjhope/5bd42bf39b89d8eeaa28.png",
                                 description: "Classic muffin bursting with fresh, juicy blueberries.",
-                                price: 2.60,
+                                price: 2.80,
                                 foodItem: true
                             },
                             {
                                 name: "Carrot Cake",
                                 image: null,
                                 description: "Moist spiced cake with carrots, walnuts, and cream cheese frosting.",
-                                price: 2.85,
+                                price: 3.80,
                                 foodItem: true,
                                 badge: "GF"
                             },
                             {
-                                name: "Victoria Sponge Cake",
+                                name: "Victoria Sponge",
                                 image: "https://u.cubeupload.com/ryanjhope/ad95387af4d7e1806564.png",
                                 description: "Classic British sponge cake with jam and fresh cream filling.",
-                                price: 2.75,
+                                price: 3.80,
                                 foodItem: true,
                                 badge: "GF"
                             },
                             {
-                                name: "Lemon Cheesecake",
+                                name: "Luxury Cheesecake",
                                 image: null,
                                 description: "Creamy cheesecake with a zesty lemon topping on a buttery biscuit base.",
-                                price: 2.95,
+                                price: 3.80,
                                 foodItem: true
                             },
                             {
                                 name: "Rocky Road",
                                 image: "https://u.cubeupload.com/ryanjhope/a2a0ad6d5beb556e855b.png",
                                 description: "Chunky chocolate treat with marshmallows, biscuits, and chewy fruit pieces.",
-                                price: 2.60,
+                                price: 2.80,
                                 foodItem: true
                             },
                             {
                                 name: "Red Velvet",
                                 image: "https://u.cubeupload.com/ryanjhope/e52aa9636ae10c395800.png",
                                 description: "Moist red velvet cake with cream cheese frosting and a hint of cocoa.",
-                                price: 2.85,
+                                price: 2.80,
                                 foodItem: true
                             },
                         ]
@@ -1548,8 +1788,8 @@
                                 description: "Iced Latte made with creamy and rich pistachio butter.",
                                 sizes: ["16oz", "20oz"],
                                 prices: {
-                                    "16oz": 4.10,
-                                    "20oz": 4.25
+                                    "16oz": 4.40,
+                                    "20oz": 4.55
                                 },
                                 defaultSize: "16oz",
                                 collection: true
@@ -1570,7 +1810,7 @@
                             {
                                 name: "Pistachio Croissant",
                                 image: "https://u.cubeupload.com/ryanjhope/f83Foracoffeeshopmenuus.png",
-                                price: 3.45,
+                                price: 3.65,
                                 foodItem: true,
                                 collection: true
                             }
@@ -1782,6 +2022,7 @@
             display: inline-block;
             text-align: center;
             font-size: 1.5rem;
+            color: #393939;
         }
         
         /* View toggle controls */
@@ -1943,7 +2184,7 @@
             font-size: 16px;
             font-weight: 700;
             margin: 0 0 4px 0;
-            color: #555555;
+            color: #393939;
             text-align: left !important; /* Override the global h4 centering rule */
         }
         
@@ -1965,7 +2206,7 @@
             font-size: 14px;
             font-weight: 600;
             color: white;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.55);
             padding: 3px 8px;
             border-radius: 20px;
             margin-left: 12px;
@@ -2070,15 +2311,32 @@
             margin: 0;
             text-align: center;
             font-weight: 700;
+            color: #393939;
         }
-        
+
         /* Larger name for items without images */
         .large-name {
             font-size: 18px;
             font-weight: 700;
             margin: 0 0 8px 0;
+            color: #393939;
         }
         
+        /* Tea items display images at 90% size */
+        .menu-item[data-category="tea"] .item-image {
+            width: 90%;
+            height: 90%;
+            top: 5%;
+            left: 5%;
+            object-fit: contain;
+        }
+
+        .menu-item[data-category="tea"] .list-view-image {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+        }
+
         /* Badge styling */
         .badge {
             position: absolute;
@@ -2113,7 +2371,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.55);
             color: white;
             padding: 3px 8px;
             border-radius: 20px;
@@ -2121,11 +2379,11 @@
             font-size: 14px;
             z-index: 10;
         }
-        
+
         /* Inline price badge for items without images */
         .inline-price-badge {
             display: inline-block;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.55);
             color: white;
             padding: 3px 8px;
             border-radius: 20px;
@@ -2144,6 +2402,7 @@
             font-size: 16px;
             font-weight: 700;
             margin: 0;
+            color: #393939;
         }
         
         /* Empty category style */
@@ -2556,7 +2815,7 @@
                 if (isActiveTab) {
                     tabButton.style.backgroundColor = '#FF6600';
                 } else {
-                    tabButton.style.color = '#555555';
+                    tabButton.style.color = '#393939';
                 }
 
                 if (isCollectionsTab) {
@@ -2589,7 +2848,7 @@
                     const categoryTitle = document.createElement('h3');
                     categoryTitle.className = 'text-3xl font-bold category-title text-center mx-auto';
                     categoryTitle.style.fontFamily = "'Poppins', sans-serif";
-                    categoryTitle.style.color = '#555555';
+                    categoryTitle.style.color = '#393939';
                     categoryTitle.style.textShadow = '0 0 1px rgba(248, 100, 0, 0.2)';
                     categoryTitle.textContent = category.title;
                     // Create unique ID: tab-category (e.g., "hot-drinks-coffee", "food-pastries")
@@ -2728,6 +2987,7 @@
                 const itemElement = document.createElement('div');
                 itemElement.className = currentView === 'grid' ? 'menu-item' : 'menu-item list-view';
                 itemElement.id = itemId;
+                itemElement.dataset.category = categoryId;
                 
                 // Handle list view layout
                 if (currentView === 'list') {
@@ -3764,7 +4024,7 @@
                         const categoryTitle = document.createElement('h3');
                         categoryTitle.className = 'text-3xl font-bold category-title text-center mx-auto';
                         categoryTitle.style.fontFamily = "'Poppins', sans-serif";
-                        categoryTitle.style.color = '#555555';
+                        categoryTitle.style.color = '#393939';
                         categoryTitle.style.textShadow = '0 0 1px rgba(248, 100, 0, 0.2)';
                         categoryTitle.textContent = category.title;
                         tabContent.appendChild(categoryTitle);
