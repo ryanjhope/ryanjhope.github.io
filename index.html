@@ -1981,7 +1981,8 @@
         /* Essential styles that don't rely on Tailwind */
         html, body {
             width: 100%;
-            height: 100%;
+            min-height: 100%;
+            height: auto;
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif !important;
@@ -1989,19 +1990,21 @@
             color: #555555;
             font-weight: 500;
             text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+            overflow: visible;
         }
-        
+
         /* Smooth scrolling for anchor links */
         html {
             scroll-behavior: smooth;
         }
-        
-        /* Make the menu container fill the embed space */
+
+        /* Let the menu container expand to its full natural height */
         #menu-container {
             width: 100%;
-            height: 100%;
-            overflow-y: auto;
-            padding: 10px;
+            height: auto;
+            min-height: 100vh;
+            overflow: visible;
+            padding: 10px 10px 300px 10px;
             box-sizing: border-box;
             text-align: center;
         }
@@ -2322,21 +2325,6 @@
             color: #393939;
         }
         
-        /* Tea items display images at 90% size */
-        .menu-item[data-category="tea"] .item-image {
-            width: 90%;
-            height: 90%;
-            top: 5%;
-            left: 5%;
-            object-fit: contain;
-        }
-
-        .menu-item[data-category="tea"] .list-view-image {
-            width: 90%;
-            height: 90%;
-            object-fit: contain;
-        }
-
         /* Badge styling */
         .badge {
             position: absolute;
@@ -4118,7 +4106,7 @@
                         btn.classList.remove('text-white');
                         btn.classList.add('bg-gray-200');
                         btn.style.backgroundColor = '';
-                        btn.style.color = '#555555';
+                        btn.style.color = '#393939';
                     });
                     
                     // Add active class to clicked tab
