@@ -68,75 +68,14 @@
                                 ]
                             },
                             {
-                                name: "Flat White",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/29819ed1bdbe2d9be8ade166412a0e89/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
-                                description: "Stronger coffee and a subtle layer of microfoam.",
-                                sizes: ["8oz", "12oz"],
-                                prices: {
-                                    "8oz": 3.60,
-                                    "12oz": 3.80
-                                },
-                                defaultSize: "8oz"
-                            },
-                            {
                                 name: "Americano",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/36658a40f506d50b79ffeaa8ca605da8/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/DrinkPictures3.png",
                                 description: "A rich, full-bodied coffee made with bold espresso and hot water.",
                                 sizes: ["12oz", "16oz", "20oz"],
                                 prices: {
                                     "12oz": 3.25,
                                     "16oz": 3.45,
                                     "20oz": 3.55
-                                },
-                                defaultSize: "12oz"
-                            },
-                            {
-                                name: "Cortado",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/d81e83ef548b0118e1ee0d2bb788dcc9/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
-                                description: "A perfect balance of espresso and smooth steamed milk, in a delicate and velvety ratio.",
-                                sizes: ["6oz"],
-                                prices: {
-                                    "6oz": 3.60
-                                },
-                                defaultSize: "6oz"
-                            },
-                            {
-                                name: "Espresso",
-                                image: "https://u.cubeupload.com/ryanjhope/espresso.png",
-                                description: "Pure espresso, served in a small cup.",
-                                sizes: ["Single", "Double"],
-                                prices: {
-                                    "Single": 2.30,
-                                    "Double": 2.60
-                                },
-                                defaultSize: "Single",
-                                disableCustomization: true
-                            },
-                            {
-                                name: "Macchiato",
-                                image: null,
-                                description: "Espresso with a dash of frothy milk foam.",
-                                sizes: ["Single", "Double"],
-                                prices: {
-                                    "Single": 2.65,
-                                    "Double": 2.85
-                                },
-                                defaultSize: "Single"
-                            }
-                        ]
-                    },
-                    "specialty-coffee": {
-                        title: "Specialty Coffee",
-                        items: [
-                            {
-                                name: "Matcha Latte",
-                                image: "https://u.cubeupload.com/ryanjhope/2.png",
-                                description: "Subtle, grassy flavor of green tea combined with smooth steamed milk.",
-                                sizes: ["12oz", "16oz", "20oz"],
-                                prices: {
-                                    "12oz": 4.30,
-                                    "16oz": 4.50,
-                                    "20oz": 4.70
                                 },
                                 defaultSize: "12oz"
                             },
@@ -152,6 +91,67 @@
                                 },
                                 defaultSize: "12oz"
                             },
+                            {
+                                name: "Matcha Latte",
+                                image: "https://u.cubeupload.com/ryanjhope/2.png",
+                                description: "Subtle, grassy flavor of green tea combined with smooth steamed milk.",
+                                sizes: ["12oz", "16oz", "20oz"],
+                                prices: {
+                                    "12oz": 4.30,
+                                    "16oz": 4.50,
+                                    "20oz": 4.70
+                                },
+                                defaultSize: "12oz"
+                            },
+                            {
+                                name: "Flat White",
+                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/29819ed1bdbe2d9be8ade166412a0e89/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                description: "Stronger coffee and a subtle layer of microfoam.",
+                                sizes: ["8oz", "12oz"],
+                                prices: {
+                                    "8oz": 3.60,
+                                    "12oz": 3.80
+                                },
+                                defaultSize: "8oz"
+                            },
+                            {
+                                name: "Cortado",
+                                image: "https://u.cubeupload.com/ryanjhope/DrinkPictures4.png",
+                                description: "A perfect balance of espresso and smooth steamed milk, in a delicate and velvety ratio.",
+                                sizes: ["6oz"],
+                                prices: {
+                                    "6oz": 3.60
+                                },
+                                defaultSize: "6oz"
+                            },
+                            {
+                                name: "Macchiato",
+                                image: "https://u.cubeupload.com/ryanjhope/348canyoufixthemugsoita.png",
+                                description: "Espresso with a dash of frothy milk foam.",
+                                sizes: ["Single", "Double"],
+                                prices: {
+                                    "Single": 2.65,
+                                    "Double": 2.85
+                                },
+                                defaultSize: "Single"
+                            },
+                            {
+                                name: "Espresso",
+                                image: "https://u.cubeupload.com/ryanjhope/canyoufixthemugsoita.png",
+                                description: "Pure espresso, served in a small cup.",
+                                sizes: ["Single", "Double"],
+                                prices: {
+                                    "Single": 2.30,
+                                    "Double": 2.60
+                                },
+                                defaultSize: "Single",
+                                disableCustomization: true
+                            }
+                        ]
+                    },
+                    "specialty-coffee": {
+                        title: "Specialty Coffee",
+                        items: [
                             {
                                 name: "Pistachio Cream Latte",
                                 image: "https://u.cubeupload.com/ryanjhope/14.png",
@@ -1424,6 +1424,13 @@
                                 ]
                             },
                             {
+                                name: "Cinnamon Bun",
+                                image: "https://u.cubeupload.com/ryanjhope/15aPlacetheiteminaprofe.png",
+                                description: "Soft, sticky bun swirled with cinnamon and topped with cream cheese icing.",
+                                price: 2.95,
+                                foodItem: true
+                            },
+                            {
                                 name: "Chocolate Twist",
                                 image: "https://u.cubeupload.com/ryanjhope/eda2.png",
                                 description: "Buttery pastry twisted with rich Belgian chocolate.",
@@ -1459,6 +1466,13 @@
                                 foodItem: true
                             },
                             {
+                                name: "Pistachio Donut",
+                                image: "https://u.cubeupload.com/ryanjhope/d1Placetheiteminaprofe.png",
+                                description: "Soft ring donut topped with pistachio cream and crushed pistachio pieces.",
+                                price: 3.50,
+                                foodItem: true
+                            },
+                            {
                                 name: "Almond Croissant",
                                 image: "https://u.cubeupload.com/ryanjhope/a823.png",
                                 description: "Buttery croissant filled with sweet almond cream and sliced almonds.",
@@ -1491,7 +1505,8 @@
                                 image: null,
                                 description: "Buttery croissant filled with rich dark chocolate.",
                                 price: 2.80,
-                                foodItem: true
+                                foodItem: true,
+                                hidden: true
                             },
                             {
                                 name: "Large Fruit Scone (Jam and Butter/Cream)",
@@ -1520,7 +1535,8 @@
                                 image: "https://u.cubeupload.com/ryanjhope/7705.png",
                                 description: "Flaky lattice pastry with sweet maple syrup and crunchy pecan pieces.",
                                 price: 2.80,
-                                foodItem: true
+                                foodItem: true,
+                                hidden: true
                             },
                             {
                                 name: "Jumbo Sausage Roll",
@@ -1632,21 +1648,21 @@
                             },
                             {
                                 name: "Egg Mayo Sandwich",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/FoodItems7.png",
                                 description: "Creamy egg mayonnaise with fresh cress in soft white bread.",
                                 price: 3.75,
                                 foodItem: true
                             },
                             {
                                 name: "Tuna Sweetcorn Sandwich",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/FoodItems6.png",
                                 description: "Flaked tuna mixed with sweetcorn and mayonnaise in fresh bread.",
                                 price: 3.90,
                                 foodItem: true
                             },
                             {
                                 name: "Tomato & Cheese Sandwich",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/FoodItems5.png",
                                 description: "Fresh sliced tomatoes with mature cheddar cheese in soft bread.",
                                 price: 3.75,
                                 foodItem: true
@@ -1735,7 +1751,7 @@
                             },
                             {
                                 name: "Carrot Cake",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/Placetheiteminaprofe.png",
                                 description: "Moist spiced cake with carrots, walnuts, and cream cheese frosting.",
                                 price: 3.80,
                                 foodItem: true,
@@ -1750,9 +1766,9 @@
                                 badge: "GF"
                             },
                             {
-                                name: "Luxury Cheesecake",
-                                image: null,
-                                description: "Creamy cheesecake with a zesty lemon topping on a buttery biscuit base.",
+                                name: "Biscoff Cheesecake",
+                                image: "https://u.cubeupload.com/ryanjhope/a5Placetheiteminaprofe.png",
+                                description: "Creamy cheesecake on a Biscoff biscuit base, topped with caramelized cookie crumbs.",
                                 price: 3.80,
                                 foodItem: true
                             },
@@ -1770,6 +1786,20 @@
                                 price: 2.80,
                                 foodItem: true
                             },
+                            {
+                                name: "Pistachio Cake",
+                                image: "https://u.cubeupload.com/ryanjhope/8ccPlacetheiteminaprofe.png",
+                                description: "Rich and aromatic pistachio flavoured cake with a creamy topping.",
+                                price: 3.90,
+                                foodItem: true
+                            },
+                            {
+                                name: "Caramel Shortcake Slice",
+                                image: "https://u.cubeupload.com/ryanjhope/e47Placetheiteminaprofe.png",
+                                description: "Buttery shortbread base with a layer of caramel and chocolate topping.",
+                                price: 2.80,
+                                foodItem: true
+                            }
                         ]
                     }
                 }
@@ -2858,6 +2888,7 @@
                         
                         // Generate all items inside the collection background
                         category.items.forEach((item, index) => {
+                            if (item.hidden) return;
                             const itemId = `${categoryId}-collection-${index}`;
                             const itemElement = createMenuItem(item, itemId, categoryId);
                             innerGrid.appendChild(itemElement);
@@ -2875,11 +2906,12 @@
                         emptyMessage.textContent = 'Coming soon!';
                         itemsContainer.appendChild(emptyMessage);
                     } else {
-                        // Split items into those with images and those without
+                        // Split items into those with images and those without (skip hidden items)
                         const itemsWithImages = [];
                         const itemsWithoutImages = [];
-                        
+
                         category.items.forEach(item => {
+                            if (item.hidden) return;
                             if (item.image) {
                                 itemsWithImages.push(item);
                             } else {
@@ -4031,16 +4063,17 @@
                             innerContainer.className = currentView === 'grid' ? 'menu-grid' : 'menu-list';
                             
                             category.items.forEach((item, index) => {
+                                if (item.hidden) return;
                                 const itemId = `${categoryId}-collection-${index}`;
                                 const itemElement = createMenuItem(item, itemId, categoryId);
                                 innerContainer.appendChild(itemElement);
                             });
-                            
+
                             collectionBackground.appendChild(innerContainer);
                             tabContent.appendChild(collectionBackground);
                             continue;
                         }
-                        
+
                         // Regular category processing
                         if (category.items.length === 0) {
                             const emptyMessage = document.createElement('p');
@@ -4048,11 +4081,12 @@
                             emptyMessage.textContent = 'Coming soon!';
                             itemsContainer.appendChild(emptyMessage);
                         } else {
-                            // Split items into those with images and those without
+                            // Split items into those with images and those without (skip hidden items)
                             const itemsWithImages = [];
                             const itemsWithoutImages = [];
-                            
+
                             category.items.forEach(item => {
+                                if (item.hidden) return;
                                 if (item.image) {
                                     itemsWithImages.push(item);
                                 } else {
