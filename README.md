@@ -105,7 +105,7 @@
                             },
                             {
                                 name: "Flat White",
-                                image: "https://tb-static.uber.com/prod/image-proc/processed_images/29819ed1bdbe2d9be8ade166412a0e89/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/DrinkPictures5.png",
                                 description: "Stronger coffee and a subtle layer of microfoam.",
                                 sizes: ["8oz", "12oz"],
                                 prices: {
@@ -1439,7 +1439,7 @@
                             },
                             {
                                 name: "Butter Croissant",
-                                image: "https://u.cubeupload.com/ryanjhope/58f691da9eaef86b0b51.jpeg",
+                                image: "https://u.cubeupload.com/ryanjhope/FoodItems24.png",
                                 description: "Classic French pastry, light and flaky with rich butter layers.",
                                 price: 2.40,
                                 foodItem: true
@@ -1608,7 +1608,7 @@
                             },
                             {
                                 name: "Mushroom Croque",
-                                image: null,
+                                image: "https://u.cubeupload.com/ryanjhope/975Placetheiteminaprofe.png",
                                 description: "Savory grilled sandwich with mushrooms, cheese, and creamy sauce.",
                                 price: 4.60,
                                 foodItem: true
@@ -2034,7 +2034,7 @@
             height: auto;
             min-height: 100vh;
             overflow: visible;
-            padding: 10px 10px 300px 10px;
+            padding: 10px 10px 2000px 10px;
             box-sizing: border-box;
             text-align: center;
         }
@@ -2749,12 +2749,12 @@
         <!-- View Toggle Controls -->
         <div class="view-controls flex justify-center items-center mb-4">
             <div class="view-toggle-container bg-gray-100 rounded-full p-1 flex">
-                <button id="list-view-btn" class="view-toggle-btn active" data-view="list" title="List View">
+                <button id="list-view-btn" class="view-toggle-btn" data-view="list" title="List View">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
                     </svg>
                 </button>
-                <button id="grid-view-btn" class="view-toggle-btn" data-view="grid" title="Grid View">
+                <button id="grid-view-btn" class="view-toggle-btn active" data-view="grid" title="Grid View">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/>
                     </svg>
@@ -2785,7 +2785,7 @@
     <script>
         // Global variables
         let currentlyExpandedItem = null;
-        let currentView = 'list'; // Default to list view
+        let currentView = 'grid'; // Default to grid view
         
         // Generate menu from configuration
         document.addEventListener('DOMContentLoaded', function() {
