@@ -2011,7 +2011,6 @@
         /* Essential styles that don't rely on Tailwind */
         html, body {
             width: 100%;
-            min-height: 100%;
             height: auto;
             margin: 0;
             padding: 0;
@@ -2020,29 +2019,17 @@
             color: #555555;
             font-weight: 500;
             text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-            overflow: visible;
+            overflow: hidden;
         }
 
-        /* Smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Let the menu container expand to its full natural height */
+        /* Menu container - no internal scroll */
         #menu-container {
             width: 100%;
             height: auto;
-            min-height: 100vh;
             overflow: visible;
-            padding: 10px 10px 10px 10px;
+            padding: 10px;
             box-sizing: border-box;
             text-align: center;
-        }
-
-        /* Force massive bottom space so the iframe never needs internal scroll */
-        #bottom-spacer {
-            width: 100%;
-            height: 8000px;
         }
         
         /* Tab functionality */
@@ -4277,6 +4264,19 @@
             });
         });
     </script>
-    <div id="bottom-spacer"></div>
+    <script>
+        // Communicate content height to parent page so the iframe can auto-resize.
+        // The parent page needs a small script to listen for this message and resize the iframe.
+        function postHeight() {
+            const height = document.documentElement.scrollHeight;
+            window.parent.postMessage({ type: 'resize-iframe', height: height }, '*');
+        }
+        // Post height on load, after renders, and on any resize/mutation
+        window.addEventListener('load', () => setTimeout(postHeight, 200));
+        window.addEventListener('resize', postHeight);
+        new MutationObserver(postHeight).observe(document.body, { childList: true, subtree: true, attributes: true });
+        // Also post on tab switches
+        document.addEventListener('click', () => setTimeout(postHeight, 100));
+    </script>
 </body>
 </html>
