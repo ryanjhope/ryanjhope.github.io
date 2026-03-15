@@ -2034,9 +2034,15 @@
             height: auto;
             min-height: 100vh;
             overflow: visible;
-            padding: 10px 10px 2000px 10px;
+            padding: 10px 10px 10px 10px;
             box-sizing: border-box;
             text-align: center;
+        }
+
+        /* Force massive bottom space so the iframe never needs internal scroll */
+        #bottom-spacer {
+            width: 100%;
+            height: 8000px;
         }
         
         /* Tab functionality */
@@ -4271,5 +4277,6 @@
             });
         });
     </script>
+    <div id="bottom-spacer"></div>
 </body>
 </html>
